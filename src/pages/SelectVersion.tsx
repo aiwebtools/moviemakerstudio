@@ -46,25 +46,25 @@ export default function SelectVersion() {
                 </div>
                 
                 <p className="text-gray-300 mb-6">
-                  The classic experience that helps you craft industry-standard screenplays with comprehensive guidance through each step of the writing process.
+                  The classic experience with all the essential features to create professional screenplays. Export to DOCX available upon request.
                 </p>
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start">
                     <span className="text-script-accent mr-2">✓</span>
-                    <span>Scene-by-scene structured approach</span>
+                    <span>Advanced narrative techniques</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-script-accent mr-2">✓</span>
-                    <span>Character development assistance</span>
+                    <span>Complex character arcs</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-script-accent mr-2">✓</span>
-                    <span>Industry standard formatting</span>
+                    <span>Enhanced dialogue writing</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-script-accent mr-2">✓</span>
-                    <span>Export to docx capability</span>
+                    <span>Manual DOCX export (upon request)</span>
                   </li>
                 </ul>
                 
@@ -104,7 +104,7 @@ export default function SelectVersion() {
                 </div>
                 
                 <p className="text-gray-300 mb-6">
-                  Our enhanced version with advanced scriptwriting capabilities, deeper character development, and improved narrative structuring tools.
+                  Same great screenplay writing capabilities as Version 1, but with automatic DOCX export functionality built-in.
                 </p>
                 
                 <ul className="space-y-3 mb-8">
@@ -122,7 +122,7 @@ export default function SelectVersion() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-script-accent mr-2">✓</span>
-                    <span>Cinematic scene visualization</span>
+                    <span>Automatic DOCX export</span>
                   </li>
                 </ul>
                 
