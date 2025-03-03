@@ -18,9 +18,9 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-3 text-white">Writing Tools</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Script Creation</a></li>
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Character Development</a></li>
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Export Options</a></li>
+                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
+                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
+                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
               </ul>
             </div>
             <div>
