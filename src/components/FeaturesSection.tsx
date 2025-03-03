@@ -96,10 +96,10 @@ export default function FeaturesSection() {
     return () => observer.disconnect();
   }, []);
 
-  const scrollToFeatures = () => {
-    const featuresHeading = document.getElementById('features-heading');
-    if (featuresHeading) {
-      featuresHeading.scrollIntoView({ behavior: 'smooth' });
+  const scrollToProcess = () => {
+    const processSection = document.getElementById('process');
+    if (processSection) {
+      processSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -132,7 +132,7 @@ export default function FeaturesSection() {
               size="lg" 
               variant="outline" 
               className="border-white/20 text-white hover:bg-white/10 font-medium"
-              onClick={scrollToFeatures}
+              onClick={scrollToProcess}
             >
               See How It Works
             </Button>
