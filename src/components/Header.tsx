@@ -32,7 +32,14 @@ export default function Header() {
           <span className="text-2xl font-bold font-display tracking-tight group">
             Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
           </span>
-          <span className="text-xs text-gray-400">Presented by AiWebTools.Ai</span>
+          <a 
+            href="https://www.aiwebtools.ai" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xs text-gray-400 hover:text-script-accent transition-colors"
+          >
+            Presented by AiWebTools.Ai
+          </a>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">

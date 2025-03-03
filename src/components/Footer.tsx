@@ -1,3 +1,4 @@
+
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
       <div className="container mx-auto">
@@ -7,7 +8,14 @@ export default function Footer() {
               <span className="text-xl font-bold font-display tracking-tight group">
                 Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
               </span>
-              <span className="text-xs text-gray-400">Presented by AiWebTools.Ai</span>
+              <a 
+                href="https://www.aiwebtools.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 hover:text-script-accent transition-colors"
+              >
+                Presented by AiWebTools.Ai
+              </a>
             </div>
             <p className="text-sm text-script-muted mt-2 max-w-md">
               The ultimate AI assistant for creating industry-standard movie scripts from concept to final draft.
