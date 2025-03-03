@@ -1,7 +1,5 @@
-
 export default function Footer() {
-  return (
-    <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
+  return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -18,7 +16,7 @@ export default function Footer() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12">
             <div>
-              <h3 className="font-semibold mb-3 text-white">Other Writing Tools</h3>
+              <h3 className="font-semibold mb-3 text-white">Writing Tools</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Script Creation</a></li>
                 <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Character Development</a></li>
@@ -69,6 +67,5 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
