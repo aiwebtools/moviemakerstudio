@@ -69,10 +69,10 @@ export default function Header() {
       
       {/* Mobile Menu */}
       <div className={cn(
-        "absolute top-full left-0 right-0 bg-script-bg/95 backdrop-blur-md border-b border-white/5 shadow-lg transition-all duration-300 overflow-hidden",
-        mobileMenuOpen ? "max-h-60 py-4" : "max-h-0"
+        "fixed top-[72px] left-0 right-0 bg-script-bg/95 backdrop-blur-md border-b border-white/5 shadow-lg transition-all duration-300 overflow-hidden z-50",
+        mobileMenuOpen ? "max-h-screen py-4" : "max-h-0"
       )}>
-        <div className="container mx-auto px-6 flex flex-col space-y-4">
+        <div className="container mx-auto px-6 flex flex-col space-y-4 pb-4">
           <Link 
             to="/" 
             className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
