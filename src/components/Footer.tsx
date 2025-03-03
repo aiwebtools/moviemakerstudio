@@ -1,7 +1,5 @@
-
 export default function Footer() {
-  return (
-    <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
+  return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -25,14 +23,7 @@ export default function Footer() {
                 <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Export Options</a></li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-semibold mb-3 text-white">Resources</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Writing Guide</a></li>
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">FAQ</a></li>
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Support</a></li>
-              </ul>
-            </div>
+            
             <div>
               <h3 className="font-semibold mb-3 text-white">Company</h3>
               <ul className="space-y-2">
@@ -69,6 +60,5 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
