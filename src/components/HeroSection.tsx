@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -98,7 +97,6 @@ export default function HeroSection() {
           </Button>
         </div>
         
-        {/* YouTube Video Integration */}
         <div 
           className={`mt-12 w-full max-w-4xl transition-all delay-300 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
@@ -114,7 +112,7 @@ export default function HeroSection() {
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" 
+              src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0" 
               title="ScriptWriter AI Demo Video"
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
