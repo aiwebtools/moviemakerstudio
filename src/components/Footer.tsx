@@ -5,9 +5,12 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <span className="text-xl font-bold font-display tracking-tight">
-              Script<span className="text-script-accent">Writer</span>
-            </span>
+            <div className="flex flex-col items-start">
+              <span className="text-xl font-bold font-display tracking-tight group">
+                Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
+              </span>
+              <span className="text-xs text-gray-400">Presented by AiWebTools.Ai</span>
+            </div>
             <p className="text-sm text-muted-foreground mt-2 max-w-md">
               The ultimate AI assistant for creating industry-standard movie scripts from concept to final draft.
             </p>
