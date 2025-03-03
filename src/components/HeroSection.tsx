@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -124,7 +123,6 @@ export default function HeroSection() {
           </div>
         </div>
         
-        {/* CTA Section moved here, below the video */}
         <div className={`mt-12 w-full max-w-3xl transition-all delay-400 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4">
             Start Creating
