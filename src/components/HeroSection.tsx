@@ -112,7 +112,7 @@ export default function HeroSection() {
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0&autoplay=1&mute=1" 
+              src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0&autoplay=1" 
               title="ScriptWriter AI Demo Video"
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
