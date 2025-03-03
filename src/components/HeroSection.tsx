@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -6,17 +7,25 @@ export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isFacebookBrowser, setIsFacebookBrowser] = useState(false);
   
   useEffect(() => {
+    // Check if running in Facebook browser
+    const userAgent = navigator.userAgent || navigator.vendor;
+    const isFB = userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1;
+    setIsFacebookBrowser(isFB);
+
     const timer = setTimeout(() => {
       setLoaded(true);
     }, 100);
     
     const handleMouseMove = (e: MouseEvent) => {
-      setCursorPosition({
-        x: (e.clientX / window.innerWidth) - 0.5,
-        y: (e.clientY / window.innerHeight) - 0.5
-      });
+      if (!isFB) {
+        setCursorPosition({
+          x: (e.clientX / window.innerWidth) - 0.5,
+          y: (e.clientY / window.innerHeight) - 0.5
+        });
+      }
     };
     
     window.addEventListener('mousemove', handleMouseMove);
@@ -28,7 +37,7 @@ export default function HeroSection() {
   }, []);
 
   const parallaxStyle = {
-    transform: `translate(${cursorPosition.x * -20}px, ${cursorPosition.y * -20}px)`
+    transform: isFacebookBrowser ? 'none' : `translate(${cursorPosition.x * -20}px, ${cursorPosition.y * -20}px)`
   };
 
   const scrollToExamples = () => {
@@ -45,24 +54,32 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       <div className="absolute inset-0 bg-dark-gradient opacity-90 z-0"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(229,9,20,0.15),_transparent_800px)] opacity-80 z-0"></div>
-      <div className="absolute inset-0 bg-paper-texture opacity-5 z-0"></div>
       
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute h-full w-full bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-      </div>
+      {!isFacebookBrowser && (
+        <>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(229,9,20,0.15),_transparent_800px)] opacity-80 z-0"></div>
+          <div className="absolute inset-0 bg-paper-texture opacity-5 z-0"></div>
+          <div className="absolute inset-0 z-0 opacity-20">
+            <div className="absolute h-full w-full bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+          </div>
+          <div 
+            className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/5 blur-[80px] animate-pulse-subtle z-0"
+            style={parallaxStyle}
+          ></div>
+          <div 
+            className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/5 blur-[60px] animate-pulse-subtle z-0"
+            style={{
+              transform: isFacebookBrowser ? 'none' : `translate(${cursorPosition.x * 30}px, ${cursorPosition.y * 30}px)`,
+              animationDelay: '0.5s'
+            }}
+          ></div>
+        </>
+      )}
       
-      <div 
-        className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/5 blur-[80px] animate-pulse-subtle z-0"
-        style={parallaxStyle}
-      ></div>
-      <div 
-        className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/5 blur-[60px] animate-pulse-subtle z-0"
-        style={{
-          transform: `translate(${cursorPosition.x * 30}px, ${cursorPosition.y * 30}px)`,
-          animationDelay: '0.5s'
-        }}
-      ></div>
+      {/* For Facebook browser, add a solid background as fallback */}
+      {isFacebookBrowser && (
+        <div className="absolute inset-0 bg-script-bg z-0"></div>
+      )}
       
       <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-8 max-w-4xl">
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
@@ -125,7 +142,7 @@ export default function HeroSection() {
         
         <div 
           className={`mt-12 w-full max-w-3xl transition-all delay-500 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{
+          style={isFacebookBrowser ? {} : {
             transform: `perspective(1000px) rotateX(${cursorPosition.y * 5}deg) rotateY(${cursorPosition.x * -5}deg)`
           }}
         >

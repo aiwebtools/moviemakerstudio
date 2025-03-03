@@ -8,8 +8,14 @@ import { Link } from "react-router-dom";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isFacebookBrowser, setIsFacebookBrowser] = useState(false);
 
   useEffect(() => {
+    // Check if running in Facebook browser
+    const userAgent = navigator.userAgent || navigator.vendor;
+    const isFB = userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1;
+    setIsFacebookBrowser(isFB);
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -25,7 +31,13 @@ export default function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-8",
-      isScrolled ? "bg-script-bg/90 backdrop-blur-md shadow-md border-b border-white/5" : "bg-transparent"
+      isScrolled 
+        ? isFacebookBrowser 
+          ? "bg-script-bg border-b border-white/5" 
+          : "bg-script-bg/90 backdrop-blur-md shadow-md border-b border-white/5" 
+        : isFacebookBrowser 
+          ? "bg-script-bg" 
+          : "bg-transparent"
     )}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex flex-col items-start">
@@ -69,7 +81,10 @@ export default function Header() {
       
       {/* Mobile Menu */}
       <div className={cn(
-        "fixed top-[72px] left-0 right-0 bg-script-bg/95 backdrop-blur-md border-b border-white/5 shadow-lg transition-all duration-300 overflow-hidden z-50",
+        "fixed top-[72px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-50",
+        isFacebookBrowser 
+          ? "bg-script-bg border-b border-white/5" 
+          : "bg-script-bg/95 backdrop-blur-md border-b border-white/5",
         mobileMenuOpen ? "max-h-screen py-4" : "max-h-0"
       )}>
         <div className="container mx-auto px-6 flex flex-col space-y-4 pb-4">
