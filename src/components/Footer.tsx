@@ -1,6 +1,5 @@
 
-import { TiktokIcon } from "lucide-react";
-
+// Remove the import that's causing the error
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
       <div className="container mx-auto">
@@ -73,7 +72,10 @@ export default function Footer() {
               </svg>
             </a>
             <a href="https://www.tiktok.com/@aiwebtools" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-script-accent">
-              <TiktokIcon size={20} />
+              {/* Custom TikTok SVG icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
             </a>
           </div>
         </div>
