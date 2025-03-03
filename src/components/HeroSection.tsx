@@ -4,42 +4,97 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaded(true);
     }, 100);
     
-    return () => clearTimeout(timer);
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursorPosition({
+        x: (e.clientX / window.innerWidth) - 0.5,
+        y: (e.clientY / window.innerHeight) - 0.5
+      });
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
+  const parallaxStyle = {
+    transform: `translate(${cursorPosition.x * -20}px, ${cursorPosition.y * -20}px)`
+  };
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#f5f5f5,_transparent)] opacity-60 z-0"></div>
-      <div className="absolute inset-0 bg-paper-texture opacity-10 z-0"></div>
+      <div className="absolute inset-0 bg-dark-gradient opacity-90 z-0"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(229,9,20,0.15),_transparent_800px)] opacity-80 z-0"></div>
+      <div className="absolute inset-0 bg-paper-texture opacity-5 z-0"></div>
+      
+      {/* Animated particle grid */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute h-full w-full bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      </div>
+      
+      {/* Floating elements */}
+      <div 
+        className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/5 blur-[80px] animate-pulse-subtle z-0"
+        style={parallaxStyle}
+      ></div>
+      <div 
+        className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/5 blur-[60px] animate-pulse-subtle z-0"
+        style={{
+          transform: `translate(${cursorPosition.x * 30}px, ${cursorPosition.y * 30}px)`,
+          animationDelay: '0.5s'
+        }}
+      ></div>
       
       <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-8 max-w-4xl">
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/10 text-script-accent rounded-full mb-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4 animate-pulse-subtle">
             Industry Standard AI Script Writing
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 tracking-tight">
-            Craft Award-Winning Movie Scripts with AI
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 tracking-tight glow-text">
+            Craft Award-Winning Movie Scripts <br/>
+            <span className="text-gradient">with AI</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
             The most sophisticated AI screenwriting assistant that guides you through every step of the script creation process, from concept to final draft.
           </p>
         </div>
         
         <div className={`flex flex-col sm:flex-row gap-4 mt-8 transition-all delay-200 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <Button size="lg" className="font-medium">Start Your Script</Button>
-          <Button size="lg" variant="outline" className="font-medium">See Examples</Button>
+          <Button 
+            size="lg" 
+            className="font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300"
+          >
+            Start Your Script
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="font-medium border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300"
+          >
+            See Examples
+          </Button>
         </div>
         
-        {/* Script sample preview */}
-        <div className={`mt-12 w-full max-w-3xl transition-all delay-400 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <div className="script-page transform rotate-[-1deg] mx-auto max-w-2xl">
+        {/* Script sample preview with parallax effect */}
+        <div 
+          className={`mt-12 w-full max-w-3xl transition-all delay-400 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{
+            transform: `perspective(1000px) rotateX(${cursorPosition.y * 5}deg) rotateY(${cursorPosition.x * -5}deg)`
+          }}
+        >
+          <div className="script-page transform rotate-[-1deg] mx-auto max-w-2xl hover:shadow-glow transition-all duration-500 relative">
+            <div className="absolute -top-2 -left-2 w-4 h-4 bg-script-accent rounded-full animate-pulse-glow"></div>
+            <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-script-accent rounded-full animate-pulse-glow delay-150"></div>
             <div className="scene-heading">INT. STUDIO APARTMENT - NIGHT</div>
             <div className="action-text">A dim-lit room. ALEX (30s, disheveled but determined) hunches over a laptop, the blue glow illuminating their exhausted face. Empty coffee cups surround them.</div>
             <div className="character-name">ALEX</div>
@@ -51,7 +106,7 @@ export default function HeroSection() {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-script-accent">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 5v14M5 12l7 7 7-7"/>
         </svg>

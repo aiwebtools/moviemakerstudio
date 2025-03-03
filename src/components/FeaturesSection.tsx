@@ -73,6 +73,7 @@ const features = [
 
 export default function FeaturesSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -94,14 +95,18 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <section id="features" ref={sectionRef} className="py-20 px-4">
-      <div className="container mx-auto">
+    <section id="features" ref={sectionRef} className="py-20 px-4 bg-script-bg relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(229,9,20,0.1),_transparent_800px)] opacity-70 z-0"></div>
+      <div className="absolute inset-0 bg-paper-texture opacity-5 z-0"></div>
+      
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/10 text-script-accent rounded-full mb-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4">
             Powerful Features
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything You Need to Write Your Masterpiece</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Everything You Need to Write Your Masterpiece</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Our AI assistant guides you through the entire scriptwriting process, from concept to final draft, with industry-standard formatting and expert creative guidance.
           </p>
         </div>
@@ -111,16 +116,22 @@ export default function FeaturesSection() {
             <Card 
               key={index}
               className={cn(
-                "p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 glass-card overflow-hidden",
-                isVisible ? "animate-fade-up" : "opacity-0"
+                "p-6 border border-white/5 shadow-md overflow-hidden interactive-card relative",
+                isVisible ? "animate-fade-up" : "opacity-0",
+                hoverIndex === index ? "bg-script-highlight/70" : "glass-card"
               )}
               style={{ animationDelay: `${100 * index}ms` }}
+              onMouseEnter={() => setHoverIndex(index)}
+              onMouseLeave={() => setHoverIndex(null)}
             >
-              <div className="h-12 w-12 rounded-lg bg-script-accent/10 flex items-center justify-center text-script-accent mb-4">
+              <div className="h-12 w-12 rounded-lg bg-script-accent/20 flex items-center justify-center text-script-accent mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+              {hoverIndex === index && (
+                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-script-accent rounded-full animate-pulse-glow"></div>
+              )}
             </Card>
           ))}
         </div>

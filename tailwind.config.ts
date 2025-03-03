@@ -64,11 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				script: {
-					'bg': '#f8f7f3',
-					'paper': '#ffffff',
-					'text': '#1a1a1a',
+					'bg': '#1A1F2C',
+					'paper': '#221F26',
+					'text': '#E1E1E6',
 					'accent': '#E50914',
-					'muted': '#6b7280'
+					'muted': '#9CA3AF',
+					'highlight': '#2A2D3A',
+					'glow': '#E50914'
 				}
 			},
 			fontFamily: {
@@ -112,6 +114,18 @@ export default {
 				'pulse-subtle': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.85' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 10px 0px rgba(229, 9, 20, 0.7)' },
+					'50%': { boxShadow: '0 0 20px 5px rgba(229, 9, 20, 0.9)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -121,16 +135,22 @@ export default {
 				'fade-up': 'fade-up 0.7s ease-out',
 				'typewriter': 'typewriter 2s steps(40) forwards',
 				'blink': 'blink 0.7s infinite',
-				'pulse-subtle': 'pulse-subtle 3s infinite'
+				'pulse-subtle': 'pulse-subtle 3s infinite',
+				'pulse-glow': 'pulse-glow 2s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 20s linear infinite'
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
 				'elevation': '0 10px 30px -10px rgba(0, 0, 0, 0.3)',
 				'button': '0 4px 14px 0 rgba(0,0,0,0.10)',
+				'glow': '0 0 15px rgba(229, 9, 20, 0.7)',
+				'neon': '0 0 10px #E50914, 0 0 20px #E50914, 0 0 40px #E50914'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'paper-texture': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDAgTDQgNCBNNCAwIEwwIDQiIHN0cm9rZT0iI2YwZjBmMCIgc3Ryb2tlLXdpZHRoPSIwLjUiPjwvcGF0aD4KPC9zdmc+')",
+				'paper-texture': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMjQyNDI0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDAgTDQgNCBNNCAwIEwwIDQiIHN0cm9rZT0iIzJBMkQzQSIgc3Ryb2tlLXdpZHRoPSIwLjUiPjwvcGF0aD4KPC9zdmc+')",
+				'dark-gradient': 'linear-gradient(to bottom, rgba(26, 31, 44, 0.8) 0%, rgba(26, 31, 44, 1) 100%)'
 			}
 		}
 	},
