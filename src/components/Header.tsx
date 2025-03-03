@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,9 +39,11 @@ export default function Header() {
           <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Features</a>
           <a href="#process" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Process</a>
           <a href="#examples" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Examples</a>
-          <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
-            Start Writing
-          </Button>
+          <Link to="/select-version">
+            <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
+              Start Writing
+            </Button>
+          </Link>
         </nav>
         
         <Button 
@@ -80,14 +83,15 @@ export default function Header() {
           >
             Examples
           </a>
-          <Button 
-            size="sm" 
-            variant="default" 
-            className="bg-script-accent hover:bg-script-accent/90 shadow-glow w-full"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Start Writing
-          </Button>
+          <Link to="/select-version" onClick={() => setMobileMenuOpen(false)}>
+            <Button 
+              size="sm" 
+              variant="default" 
+              className="bg-script-accent hover:bg-script-accent/90 shadow-glow w-full"
+            >
+              Start Writing
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

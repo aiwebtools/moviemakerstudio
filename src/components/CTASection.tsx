@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function CTASection() {
   const [isHovered, setIsHovered] = useState(false);
@@ -50,12 +51,14 @@ export default function CTASection() {
           From concept to final draft, our AI assistant guides you through every step of creating an industry-standard, award-worthy screenplay.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button 
-            size="lg" 
-            className="bg-script-accent hover:bg-script-accent/90 text-white hover:shadow-neon transition-all duration-300 font-medium"
-          >
-            Start Writing Now
-          </Button>
+          <Link to="/select-version">
+            <Button 
+              size="lg" 
+              className="bg-script-accent hover:bg-script-accent/90 text-white hover:shadow-neon transition-all duration-300 font-medium"
+            >
+              Start Writing Now
+            </Button>
+          </Link>
           <Button 
             size="lg" 
             variant="outline" 
