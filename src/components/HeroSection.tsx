@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -31,19 +30,23 @@ export default function HeroSection() {
     transform: `translate(${cursorPosition.x * -20}px, ${cursorPosition.y * -20}px)`
   };
 
+  const scrollToExamples = () => {
+    const examplesSection = document.getElementById('examples');
+    if (examplesSection) {
+      examplesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
-      {/* Background effects */}
       <div className="absolute inset-0 bg-dark-gradient opacity-90 z-0"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(229,9,20,0.15),_transparent_800px)] opacity-80 z-0"></div>
       <div className="absolute inset-0 bg-paper-texture opacity-5 z-0"></div>
       
-      {/* Animated particle grid */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute h-full w-full bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
       </div>
       
-      {/* Floating elements */}
       <div 
         className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/5 blur-[80px] animate-pulse-subtle z-0"
         style={parallaxStyle}
@@ -83,12 +86,12 @@ export default function HeroSection() {
             size="lg" 
             variant="outline" 
             className="font-medium border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300"
+            onClick={scrollToExamples}
           >
             See Examples
           </Button>
         </div>
         
-        {/* Script sample preview with parallax effect */}
         <div 
           className={`mt-12 w-full max-w-3xl transition-all delay-400 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           style={{
@@ -108,7 +111,6 @@ export default function HeroSection() {
         </div>
       </div>
       
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-script-accent">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 5v14M5 12l7 7 7-7"/>
