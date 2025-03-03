@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const examples = [
   {
@@ -121,6 +123,18 @@ export default function ExampleSection() {
               </TabsContent>
             ))}
           </Tabs>
+          
+          {/* Added Start Writing button */}
+          <div className="text-center mt-16">
+            <Link to="/select-version">
+              <Button 
+                size="lg" 
+                className="font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300"
+              >
+                Start Writing
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
