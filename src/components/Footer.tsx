@@ -1,4 +1,3 @@
-
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
       <div className="container mx-auto">
@@ -61,7 +60,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400">© 2023 ScriptWriter AI. All rights reserved.</p>
+          <p className="text-sm text-gray-400">© 2025 AI WEB TOOLS LLC. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-4">
             <a href="#" className="text-gray-400 hover:text-script-accent">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
