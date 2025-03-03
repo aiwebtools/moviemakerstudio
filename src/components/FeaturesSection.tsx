@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -94,6 +96,13 @@ export default function FeaturesSection() {
     return () => observer.disconnect();
   }, []);
 
+  const scrollToFeatures = () => {
+    const featuresHeading = document.getElementById('features-heading');
+    if (featuresHeading) {
+      featuresHeading.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="features" ref={sectionRef} className="py-20 px-4 bg-script-bg relative overflow-hidden">
       {/* Background elements */}
@@ -101,7 +110,36 @@ export default function FeaturesSection() {
       <div className="absolute inset-0 bg-paper-texture opacity-5 z-0"></div>
       
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-16">
+        {/* CTA Section moved here from HeroSection */}
+        <div className="w-full max-w-3xl mx-auto mb-24 text-center">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4">
+            Start Creating
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white glow-text">Ready to Write Your Masterpiece?</h2>
+          <p className="text-base md:text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+            From concept to final draft, our AI assistant guides you through every step of creating an industry-standard, award-worthy screenplay.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link to="/select-version">
+              <Button 
+                size="lg" 
+                className="bg-script-accent hover:bg-script-accent/90 text-white hover:shadow-neon transition-all duration-300 font-medium"
+              >
+                Start Writing Now
+              </Button>
+            </Link>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white/20 text-white hover:bg-white/10 font-medium"
+              onClick={scrollToFeatures}
+            >
+              See How It Works
+            </Button>
+          </div>
+        </div>
+
+        <div className="text-center mb-16" id="features-heading">
           <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4">
             Powerful Features
           </span>
