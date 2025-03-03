@@ -21,10 +21,11 @@ export default function Header() {
       isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
     )}>
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-col items-start">
           <span className="text-2xl font-bold font-display tracking-tight">
-            Script<span className="text-script-accent">Writer</span>
+            Movie Script Writer <span className="text-script-accent">GPT</span>
           </span>
+          <span className="text-xs text-gray-600">Presented by AiWebTools.Ai</span>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
