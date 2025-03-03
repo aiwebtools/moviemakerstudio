@@ -5,7 +5,6 @@ import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ProcessSection from '@/components/ProcessSection';
 import ExampleSection from '@/components/ExampleSection';
-import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -40,11 +39,10 @@ const Index = () => {
         <FeaturesSection />
         <ProcessSection />
         <ExampleSection />
-        <CTASection />
       </main>
       <Footer />
     </div>
   );
-};
+}
 
 export default Index;
