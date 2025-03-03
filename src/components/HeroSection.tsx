@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
@@ -70,12 +71,14 @@ export default function HeroSection() {
         </div>
         
         <div className={`flex flex-col sm:flex-row gap-4 mt-8 transition-all delay-200 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <Button 
-            size="lg" 
-            className="font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300"
-          >
-            Start Your Script
-          </Button>
+          <Link to="/select-version">
+            <Button 
+              size="lg" 
+              className="font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300"
+            >
+              Start Your Script
+            </Button>
+          </Link>
           <Button 
             size="lg" 
             variant="outline" 
