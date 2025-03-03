@@ -170,7 +170,7 @@ export default function ProcessSection() {
                   </ul>
                   {activeIndex === index && (
                     <div className="mt-4 animate-fade-in">
-                      <Link to="/select-version">
+                      <Link to="/select-version" onClick={() => window.scrollTo(0, 0)}>
                         <Button variant="ghost" className="text-script-accent hover:text-script-accent hover:bg-script-accent/10 border border-script-accent/20">
                           Learn more
                         </Button>

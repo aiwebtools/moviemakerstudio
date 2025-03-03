@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,6 +7,11 @@ import { ArrowRight, Sparkles, Zap } from "lucide-react";
 
 export default function SelectVersion() {
   const [hoveredVersion, setHoveredVersion] = useState<number | null>(null);
+  
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <div className="min-h-screen bg-script-bg text-white">
