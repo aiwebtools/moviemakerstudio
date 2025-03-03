@@ -18,7 +18,7 @@ export default function Footer() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12">
             <div>
-              <h3 className="font-semibold mb-3 text-white">Features</h3>
+              <h3 className="font-semibold mb-3 text-white">Other Writing Tools</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Script Creation</a></li>
                 <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Character Development</a></li>
