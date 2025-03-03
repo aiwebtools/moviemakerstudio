@@ -19,7 +19,7 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-3 text-white">Writing Tools</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
+                <li><a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
                 <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
                 <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
               </ul>
