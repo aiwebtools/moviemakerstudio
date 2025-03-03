@@ -51,6 +51,21 @@ export default function HeroSection() {
     setVideoLoaded(true);
   };
 
+  // Preload video when component mounts
+  useEffect(() => {
+    // Create a preload link for the YouTube thumbnail
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preload';
+    preloadLink.as = 'image';
+    preloadLink.href = 'https://i.ytimg.com/vi/4e3Rkurt3-c/maxresdefault.jpg';
+    document.head.appendChild(preloadLink);
+
+    // Remove preload link when component unmounts
+    return () => {
+      document.head.removeChild(preloadLink);
+    };
+  }, []);
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       <div className="absolute inset-0 bg-dark-gradient opacity-90 z-0"></div>
@@ -129,11 +144,13 @@ export default function HeroSection() {
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0&autoplay=1" 
+              src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0&autoplay=1&mute=0&playsinline=1&enablejsapi=1&modestbranding=1&origin=https://www.aiwebtools.ai" 
               title="ScriptWriter AI Demo Video"
               frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
               allowFullScreen
+              loading="eager"
+              importance="high"
               className="z-10"
               onLoad={handleVideoLoad}
             ></iframe>
