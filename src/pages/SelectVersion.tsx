@@ -69,7 +69,9 @@ export default function SelectVersion() {
                 </ul>
                 
                 <a 
-                  href="#" 
+                  href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1"
+                  target="_blank"
+                  rel="noopener noreferrer" 
                   className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${
                     hoveredVersion === 1 ? "shadow-neon" : ""
                   }`}
