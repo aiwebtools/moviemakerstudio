@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -5,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [videoLoaded, setVideoLoaded] = useState(false);
   
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -35,6 +37,10 @@ export default function HeroSection() {
     if (examplesSection) {
       examplesSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
   };
 
   return (
@@ -90,6 +96,33 @@ export default function HeroSection() {
           >
             See Examples
           </Button>
+        </div>
+        
+        {/* YouTube Video Integration */}
+        <div 
+          className={`mt-12 w-full max-w-4xl transition-all delay-300 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+        >
+          <div className="relative w-full rounded-xl overflow-hidden shadow-glow border border-white/10 aspect-video transform hover:scale-[1.02] transition-all duration-300">
+            {!videoLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center bg-script-bg/80">
+                <div className="animate-pulse flex flex-col items-center">
+                  <div className="h-12 w-12 rounded-full border-2 border-script-accent border-t-transparent animate-spin mb-3"></div>
+                  <span className="text-script-accent text-sm">Loading video...</span>
+                </div>
+              </div>
+            )}
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" 
+              title="ScriptWriter AI Demo Video"
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              className="z-10"
+              onLoad={handleVideoLoad}
+            ></iframe>
+          </div>
         </div>
         
         <div 
