@@ -1,12 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect, useState } from 'react';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import FeaturesSection from '@/components/FeaturesSection';
+import ProcessSection from '@/components/ProcessSection';
+import ExampleSection from '@/components/ExampleSection';
+import CTASection from '@/components/CTASection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading to ensure smooth transitions
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-pulse">
+          <span className="text-2xl font-bold font-display tracking-tight">
+            Script<span className="text-script-accent">Writer</span>
+          </span>
+        </div>
       </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <ProcessSection />
+        <ExampleSection />
+        <CTASection />
+      </main>
+      <Footer />
     </div>
   );
 };
