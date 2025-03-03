@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -43,6 +43,10 @@ export default function Header() {
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
+          <Link to="/" className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent transition-colors">
+            <Home className="h-4 w-4 mr-1" />
+            Home
+          </Link>
           <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Features</a>
           <a href="#process" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Process</a>
           <a href="#examples" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Examples</a>
@@ -69,6 +73,14 @@ export default function Header() {
         mobileMenuOpen ? "max-h-60 py-4" : "max-h-0"
       )}>
         <div className="container mx-auto px-6 flex flex-col space-y-4">
+          <Link 
+            to="/" 
+            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <Home className="h-4 w-4 mr-1" />
+            Home
+          </Link>
           <a 
             href="#features" 
             className="text-sm font-medium py-2 text-gray-300 hover:text-white hover:text-script-accent transition-colors"
