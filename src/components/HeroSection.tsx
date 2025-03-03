@@ -96,21 +96,21 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-script-bg z-0"></div>
       )}
       
-      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-8 max-w-4xl">
+      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-8 max-w-4xl pt-20 sm:pt-16">
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4 animate-pulse-subtle">
             Industry Standard AI Script Writing
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 tracking-tight glow-text">
-            Craft Award-Winning Movie Scripts <br/>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 tracking-tight glow-text">
+            Craft Award-Winning Movie Scripts <br className="hidden sm:block" />
             <span className="text-gradient">with AI</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
             The most sophisticated AI screenwriting assistant that guides you through every step of the script creation process, from concept to final draft.
           </p>
         </div>
         
-        <div className={`flex flex-col sm:flex-row gap-4 mt-8 transition-all delay-200 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8 transition-all delay-200 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <Link to="/select-version">
             <Button 
               size="lg" 
@@ -130,7 +130,7 @@ export default function HeroSection() {
         </div>
         
         <div 
-          className={`mt-12 w-full max-w-4xl transition-all delay-300 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`mt-8 sm:mt-12 w-full max-w-4xl transition-all delay-300 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <div className="relative w-full rounded-xl overflow-hidden shadow-glow border border-white/10 aspect-video transform hover:scale-[1.02] transition-all duration-300">
             {!videoLoaded && (
@@ -157,7 +157,7 @@ export default function HeroSection() {
         </div>
         
         <div 
-          className={`mt-12 w-full max-w-3xl transition-all delay-500 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`mt-8 sm:mt-12 w-full max-w-3xl transition-all delay-500 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           style={isFacebookBrowser ? {} : {
             transform: `perspective(1000px) rotateX(${cursorPosition.y * 5}deg) rotateY(${cursorPosition.x * -5}deg)`
           }}

@@ -41,7 +41,7 @@ export default function Header() {
     )}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex flex-col items-start">
-          <span className="text-2xl font-bold font-display tracking-tight group">
+          <span className="text-xl sm:text-2xl font-bold font-display tracking-tight group">
             Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
           </span>
           <a 
