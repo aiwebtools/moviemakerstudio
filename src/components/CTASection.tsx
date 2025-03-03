@@ -15,6 +15,13 @@ export default function CTASection() {
     });
   };
 
+  const scrollToExamples = () => {
+    const examplesSection = document.getElementById('examples');
+    if (examplesSection) {
+      examplesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
       className="py-20 px-4 relative overflow-hidden"
@@ -63,6 +70,7 @@ export default function CTASection() {
             size="lg" 
             variant="outline" 
             className="border-white/20 text-white hover:bg-white/10 font-medium"
+            onClick={scrollToExamples}
           >
             See How It Works
           </Button>
