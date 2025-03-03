@@ -1,4 +1,3 @@
-
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
       <div className="container mx-auto">
@@ -20,8 +19,8 @@ export default function Footer() {
               <h3 className="font-semibold mb-3 text-white">Writing Tools</h3>
               <ul className="space-y-2">
                 <li><a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
-                <li><a href="#" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
+                <li><a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
+                <li><a href="https://aiwebtools.ai/#c3933588-cf26-4596-a258-ed7d739ef38b" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
               </ul>
             </div>
             <div>
