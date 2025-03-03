@@ -1,4 +1,6 @@
 
+import { TiktokIcon } from "lucide-react";
+
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
       <div className="container mx-auto">
@@ -69,6 +71,9 @@ export default function Footer() {
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
               </svg>
+            </a>
+            <a href="https://www.tiktok.com/@aiwebtools" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-script-accent">
+              <TiktokIcon size={20} />
             </a>
           </div>
         </div>
