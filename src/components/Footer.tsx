@@ -1,4 +1,3 @@
-
 // Remove the import that's causing the error
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-12 px-4">
@@ -29,7 +28,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li><a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
                 <li><a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
-                <li><a href="https://aiwebtools.ai/#c3933588-cf26-4596-a258-ed7d739ef38b" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
+                <li><a href="https://bookwritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
               </ul>
             </div>
             <div>
@@ -72,7 +71,6 @@ export default function Footer() {
               </svg>
             </a>
             <a href="https://www.tiktok.com/@aiwebtools" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-script-accent">
-              {/* Custom TikTok SVG icon */}
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
               </svg>
