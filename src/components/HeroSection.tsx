@@ -8,12 +8,21 @@ export default function HeroSection() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isFacebookBrowser, setIsFacebookBrowser] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
     // Check if running in Facebook browser
     const userAgent = navigator.userAgent || navigator.vendor;
     const isFB = userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1;
     setIsFacebookBrowser(isFB);
+    
+    // Check if mobile device
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
 
     const timer = setTimeout(() => {
       setLoaded(true);
@@ -33,11 +42,12 @@ export default function HeroSection() {
     return () => {
       clearTimeout(timer);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
   const parallaxStyle = {
-    transform: isFacebookBrowser ? 'none' : `translate(${cursorPosition.x * -20}px, ${cursorPosition.y * -20}px)`
+    transform: isFacebookBrowser || isMobile ? 'none' : `translate(${cursorPosition.x * -20}px, ${cursorPosition.y * -20}px)`
   };
 
   const scrollToExamples = () => {
@@ -62,7 +72,9 @@ export default function HeroSection() {
 
     // Remove preload link when component unmounts
     return () => {
-      document.head.removeChild(preloadLink);
+      if (document.head.contains(preloadLink)) {
+        document.head.removeChild(preloadLink);
+      }
     };
   }, []);
 
@@ -70,7 +82,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       <div className="absolute inset-0 bg-dark-gradient opacity-90 z-0"></div>
       
-      {!isFacebookBrowser && (
+      {!isFacebookBrowser && !isMobile && (
         <>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(229,9,20,0.15),_transparent_800px)] opacity-80 z-0"></div>
           <div className="absolute inset-0 bg-paper-texture opacity-5 z-0"></div>
@@ -84,45 +96,45 @@ export default function HeroSection() {
           <div 
             className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/5 blur-[60px] animate-pulse-subtle z-0"
             style={{
-              transform: isFacebookBrowser ? 'none' : `translate(${cursorPosition.x * 30}px, ${cursorPosition.y * 30}px)`,
+              transform: isFacebookBrowser || isMobile ? 'none' : `translate(${cursorPosition.x * 30}px, ${cursorPosition.y * 30}px)`,
               animationDelay: '0.5s'
             }}
           ></div>
         </>
       )}
       
-      {/* For Facebook browser, add a solid background as fallback */}
-      {isFacebookBrowser && (
+      {/* For Facebook browser or mobile, add a solid background as fallback */}
+      {(isFacebookBrowser || isMobile) && (
         <div className="absolute inset-0 bg-script-bg z-0"></div>
       )}
       
-      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-8 max-w-4xl pt-20 sm:pt-16">
+      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-6 md:space-y-8 max-w-4xl pt-24 sm:pt-20 md:pt-16">
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4 animate-pulse-subtle">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-3 md:mb-4">
             Industry Standard AI Script Writing
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 tracking-tight glow-text">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-display mb-3 md:mb-4 tracking-tight glow-text">
             Craft Award-Winning Movie Scripts <br className="hidden sm:block" />
             <span className="text-gradient">with AI</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto">
             The most sophisticated AI screenwriting assistant that guides you through every step of the script creation process, from concept to final draft.
           </p>
         </div>
         
-        <div className={`flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8 transition-all delay-200 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 transition-all delay-200 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <Link to="/select-version">
             <Button 
-              size="lg" 
-              className="font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300"
+              size={isMobile ? "default" : "lg"} 
+              className="font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 w-full sm:w-auto"
             >
               Start Your Script
             </Button>
           </Link>
           <Button 
-            size="lg" 
+            size={isMobile ? "default" : "lg"} 
             variant="outline" 
-            className="font-medium border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300"
+            className="font-medium border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300 w-full sm:w-auto"
             onClick={scrollToExamples}
           >
             See Examples
@@ -130,14 +142,14 @@ export default function HeroSection() {
         </div>
         
         <div 
-          className={`mt-8 sm:mt-12 w-full max-w-4xl transition-all delay-300 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`mt-6 sm:mt-8 md:mt-10 w-full max-w-4xl transition-all delay-300 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
-          <div className="relative w-full rounded-xl overflow-hidden shadow-glow border border-white/10 aspect-video transform hover:scale-[1.02] transition-all duration-300">
+          <div className="relative w-full rounded-xl overflow-hidden shadow-glow border border-white/10 aspect-video transform hover:scale-[1.01] transition-all duration-300">
             {!videoLoaded && (
               <div className="absolute inset-0 flex items-center justify-center bg-script-bg/80">
                 <div className="animate-pulse flex flex-col items-center">
-                  <div className="h-12 w-12 rounded-full border-2 border-script-accent border-t-transparent animate-spin mb-3"></div>
-                  <span className="text-script-accent text-sm">Loading video...</span>
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full border-2 border-script-accent border-t-transparent animate-spin mb-3"></div>
+                  <span className="text-script-accent text-xs sm:text-sm">Loading video...</span>
                 </div>
               </div>
             )}
@@ -157,26 +169,26 @@ export default function HeroSection() {
         </div>
         
         <div 
-          className={`mt-8 sm:mt-12 w-full max-w-3xl transition-all delay-500 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={isFacebookBrowser ? {} : {
+          className={`mt-6 sm:mt-8 w-full max-w-3xl transition-all delay-500 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={(isFacebookBrowser || isMobile) ? {} : {
             transform: `perspective(1000px) rotateX(${cursorPosition.y * 5}deg) rotateY(${cursorPosition.x * -5}deg)`
           }}
         >
           <div className="script-page transform rotate-[-1deg] mx-auto max-w-2xl hover:shadow-glow transition-all duration-500 relative">
-            <div className="absolute -top-2 -left-2 w-4 h-4 bg-script-accent rounded-full animate-pulse-glow"></div>
-            <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-script-accent rounded-full animate-pulse-glow delay-150"></div>
-            <div className="scene-heading">INT. STUDIO APARTMENT - NIGHT</div>
-            <div className="action-text">A dim-lit room. ALEX (30s, disheveled but determined) hunches over a laptop, the blue glow illuminating their exhausted face. Empty coffee cups surround them.</div>
-            <div className="character-name">ALEX</div>
-            <div className="dialogue">This time... this time it's going to be perfect.</div>
-            <div className="action-text">The cursor blinks on a blank document titled "BREAKTHROUGH - Final Draft v23."</div>
-            <div className="transition">FADE TO BLACK.</div>
+            <div className="absolute -top-2 -left-2 w-3 h-3 sm:w-4 sm:h-4 bg-script-accent rounded-full animate-pulse-glow"></div>
+            <div className="absolute -bottom-2 -right-2 w-3 h-3 sm:w-4 sm:h-4 bg-script-accent rounded-full animate-pulse-glow delay-150"></div>
+            <div className="scene-heading text-sm sm:text-base">INT. STUDIO APARTMENT - NIGHT</div>
+            <div className="action-text text-xs sm:text-sm">A dim-lit room. ALEX (30s, disheveled but determined) hunches over a laptop, the blue glow illuminating their exhausted face. Empty coffee cups surround them.</div>
+            <div className="character-name text-xs sm:text-sm">ALEX</div>
+            <div className="dialogue text-xs sm:text-sm">This time... this time it's going to be perfect.</div>
+            <div className="action-text text-xs sm:text-sm">The cursor blinks on a blank document titled "BREAKTHROUGH - Final Draft v23."</div>
+            <div className="transition text-xs sm:text-sm">FADE TO BLACK.</div>
           </div>
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-script-accent">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-script-accent">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 5v14M5 12l7 7 7-7"/>
         </svg>
       </div>

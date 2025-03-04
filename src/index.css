@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -56,10 +57,16 @@
 
   body {
     @apply bg-script-bg text-foreground antialiased;
+    -webkit-tap-highlight-color: transparent;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold tracking-tight;
+  }
+  
+  /* Improve button tap targets on mobile */
+  button, a {
+    @apply touch-manipulation;
   }
 }
 
@@ -79,7 +86,7 @@
   }
 
   .script-page {
-    @apply bg-script-paper font-script text-script-text p-8 shadow-md leading-relaxed border border-white/5;
+    @apply bg-script-paper font-script text-script-text p-4 sm:p-6 md:p-8 shadow-md leading-relaxed border border-white/5;
   }
 
   .typewriter {
@@ -87,27 +94,27 @@
   }
 
   .scene-heading {
-    @apply font-script font-bold uppercase text-left mb-4;
+    @apply font-script font-bold uppercase text-left mb-3 md:mb-4;
   }
 
   .action-text {
-    @apply font-script text-left mb-4;
+    @apply font-script text-left mb-3 md:mb-4;
   }
 
   .character-name {
-    @apply font-script text-center uppercase font-bold mb-1 mt-4;
+    @apply font-script text-center uppercase font-bold mb-1 mt-3 md:mt-4;
   }
 
   .dialogue {
-    @apply font-script text-center max-w-md mx-auto mb-4 italic;
+    @apply font-script text-center max-w-md mx-auto mb-3 md:mb-4 italic;
   }
 
   .transition {
-    @apply font-script text-right uppercase font-bold mb-6 mt-4;
+    @apply font-script text-right uppercase font-bold mb-4 md:mb-6 mt-3 md:mt-4;
   }
   
   .interactive-card {
-    @apply transition-all duration-300 hover:translate-y-[-8px] hover:shadow-glow;
+    @apply transition-all duration-300 hover:translate-y-[-5px] sm:hover:translate-y-[-8px] hover:shadow-glow;
   }
   
   .glow-text {
@@ -147,7 +154,7 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -186,4 +193,19 @@
   background-color: #1A1F2C;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .touch-action-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .content-visibility-auto {
+    content-visibility: auto;
+  }
 }

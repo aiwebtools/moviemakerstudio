@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-8",
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8",
       isScrolled 
         ? isFacebookBrowser 
           ? "bg-script-bg border-b border-white/5" 
@@ -41,7 +41,7 @@ export default function Header() {
     )}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex flex-col items-start">
-          <span className="text-xl sm:text-2xl font-bold font-display tracking-tight group">
+          <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
             Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
           </span>
           <a 
@@ -74,6 +74,7 @@ export default function Header() {
           size="icon" 
           className="md:hidden text-white hover:bg-script-accent/20"
           onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
         >
           <Menu className="h-6 w-6" />
         </Button>
@@ -87,7 +88,7 @@ export default function Header() {
           : "bg-script-bg/95 backdrop-blur-md border-b border-white/5",
         mobileMenuOpen ? "max-h-screen py-4" : "max-h-0"
       )}>
-        <div className="container mx-auto px-6 flex flex-col space-y-4 pb-4">
+        <div className="container mx-auto px-4 flex flex-col space-y-4 pb-4">
           <Link 
             to="/" 
             className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
