@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -11,12 +10,10 @@ export default function HeroSection() {
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
-    // Check if running in Facebook browser
     const userAgent = navigator.userAgent || navigator.vendor;
     const isFB = userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1;
     setIsFacebookBrowser(isFB);
     
-    // Check if mobile device
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -61,16 +58,13 @@ export default function HeroSection() {
     setVideoLoaded(true);
   };
 
-  // Preload video when component mounts
   useEffect(() => {
-    // Create a preload link for the YouTube thumbnail
     const preloadLink = document.createElement('link');
     preloadLink.rel = 'preload';
     preloadLink.as = 'image';
     preloadLink.href = 'https://i.ytimg.com/vi/4e3Rkurt3-c/maxresdefault.jpg';
     document.head.appendChild(preloadLink);
 
-    // Remove preload link when component unmounts
     return () => {
       if (document.head.contains(preloadLink)) {
         document.head.removeChild(preloadLink);
@@ -103,7 +97,6 @@ export default function HeroSection() {
         </>
       )}
       
-      {/* For Facebook browser or mobile, add a solid background as fallback */}
       {(isFacebookBrowser || isMobile) && (
         <div className="absolute inset-0 bg-script-bg z-0"></div>
       )}
@@ -156,7 +149,7 @@ export default function HeroSection() {
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0&autoplay=1&mute=1&playsinline=1&enablejsapi=1&modestbranding=1&origin=https://www.aiwebtools.ai&vq=hd1080" 
+              src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0&autoplay=1&playsinline=1&enablejsapi=1&modestbranding=1&origin=https://www.aiwebtools.ai&vq=hd1080" 
               title="ScriptWriter AI Demo Video"
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
