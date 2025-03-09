@@ -68,7 +68,7 @@ export default function Header() {
             rel="noopener noreferrer" 
             className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
           >
-            <span className="mr-1">🎭</span> StageMaster
+            <span className="mr-1">🎭</span> StageMaster AI Suite
           </a>
           <Link to="/select-version">
             <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
