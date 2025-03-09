@@ -62,6 +62,14 @@ export default function Header() {
           <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Features</a>
           <a href="#process" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Process</a>
           <a href="#examples" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Examples</a>
+          <a 
+            href="https://stagemasterai.lovable.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
+          >
+            <span className="mr-1">🎭</span> StageMaster
+          </a>
           <Link to="/select-version">
             <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
               Start Writing
@@ -117,6 +125,15 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
           >
             Examples
+          </a>
+          <a 
+            href="https://stagemasterai.lovable.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <span className="mr-1">🎭</span> StageMaster AI Suite
           </a>
           <Link to="/select-version" onClick={() => setMobileMenuOpen(false)}>
             <Button 

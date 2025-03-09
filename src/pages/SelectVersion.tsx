@@ -1,14 +1,18 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Theater } from "lucide-react";
+
 export default function SelectVersion() {
   const [hoveredVersion, setHoveredVersion] = useState<number | null>(null);
+  
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
+  
   return <div className="min-h-screen bg-script-bg text-white">
       <Header />
       
@@ -21,7 +25,7 @@ export default function SelectVersion() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Version 1 Card */}
             <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 1 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(1)} onMouseLeave={() => setHoveredVersion(null)}>
               {/* Background gradient effect */}
@@ -103,6 +107,49 @@ export default function SelectVersion() {
                 
                 <a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 2 ? "shadow-neon" : ""}`}>
                   Select Version 2
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </div>
+            </div>
+            
+            {/* StageMaster AI Suite Card */}
+            <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 3 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(3)} onMouseLeave={() => setHoveredVersion(null)}>
+              {/* Background gradient effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 3 ? "opacity-100" : ""}`}></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold">StageMaster</h2>
+                  <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                    <span className="mr-1">🎭</span> Suite
+                  </span>
+                </div>
+                
+                <p className="text-gray-300 mb-6">
+                  Complete AI Creative Suite for Stage & Screen. Transform your creative vision with specialized tools for the entire production process.
+                </p>
+                
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>Theater Set Design GPT</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>Costume Design GPT</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>Choreography GPT</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>Stage Lighting GPT & more</span>
+                  </li>
+                </ul>
+                
+                <a href="https://stagemasterai.lovable.app/" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 3 ? "shadow-neon" : ""}`}>
+                  Explore StageMaster Suite
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>

@@ -30,6 +30,16 @@ export default function Footer() {
                 <li><a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
                 <li><a href="https://screenplaywritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">ScreenPlay Writer GPT</a></li>
                 <li><a href="https://bookwritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
+                <li>
+                  <a 
+                    href="https://stagemasterai.lovable.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors flex items-center"
+                  >
+                    <span className="mr-1">🎭</span> StageMaster AI Suite
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
