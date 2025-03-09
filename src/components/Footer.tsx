@@ -40,6 +40,16 @@ export default function Footer() {
                     <span className="mr-1">🎭</span> StageMaster AI Suite
                   </a>
                 </li>
+                <li>
+                  <a 
+                    href="https://www.aiwebtools.ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center mt-1 px-2 py-1 sm:px-3 sm:py-1.5 bg-script-accent text-white rounded-md text-xs font-medium hover:bg-script-accent/90 transition-colors"
+                  >
+                    MORE AI TOOLS
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
@@ -56,16 +66,6 @@ export default function Footer() {
                 <li><a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">About Us</a></li>
                 <li><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Privacy</a></li>
                 <li><a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Terms</a></li>
-                <li>
-                  <a 
-                    href="https://www.aiwebtools.ai" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center mt-1 px-2 py-1 sm:px-3 sm:py-1.5 bg-script-accent text-white rounded-md text-xs font-medium hover:bg-script-accent/90 transition-colors"
-                  >
-                    MORE AI TOOLS
-                  </a>
-                </li>
               </ul>
             </div>
           </div>

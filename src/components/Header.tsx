@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, Home } from "lucide-react";
+import { Menu, Home, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -70,6 +70,14 @@ export default function Header() {
           >
             <span className="mr-1">🎭</span> StageMaster AI Suite
           </a>
+          <a 
+            href="https://www.aiwebtools.ai" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent transition-colors"
+          >
+            <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
+          </a>
           <Link to="/select-version">
             <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
               USE MOVIE SCRIPT WRITER GPT
@@ -134,6 +142,15 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
           >
             <span className="mr-1">🎭</span> StageMaster AI Suite
+          </a>
+          <a 
+            href="https://www.aiwebtools.ai" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
           </a>
           <Link to="/select-version" onClick={() => setMobileMenuOpen(false)}>
             <Button 
