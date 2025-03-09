@@ -72,7 +72,7 @@ export default function Header() {
           </a>
           <Link to="/select-version">
             <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
-              Start Writing
+              USE MOVIE SCRIPT WRITER GPT
             </Button>
           </Link>
         </nav>
@@ -141,7 +141,7 @@ export default function Header() {
               variant="default" 
               className="bg-script-accent hover:bg-script-accent/90 shadow-glow w-full"
             >
-              Start Writing
+              USE MOVIE SCRIPT WRITER GPT
             </Button>
           </Link>
         </div>
