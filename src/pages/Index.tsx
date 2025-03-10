@@ -6,6 +6,7 @@ import FeaturesSection from '@/components/FeaturesSection';
 import ProcessSection from '@/components/ProcessSection';
 import ExampleSection from '@/components/ExampleSection';
 import Footer from '@/components/Footer';
+import DisclaimerDialog from '@/components/DisclaimerDialog';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +34,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <DisclaimerDialog />
       <Header />
       <main>
         <HeroSection />
