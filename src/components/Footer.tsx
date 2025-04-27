@@ -1,4 +1,3 @@
-
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-8 md:py-12 px-4">
       <div className="container mx-auto">
@@ -28,6 +27,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li><a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
                 <li><a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
+                <li><a href="https://chatgpt.com/g/g-680ea46ceb708191b9dcb9a4d2983f4f-movie-scene-maker-gpt" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Scene Maker GPT</a></li>
                 <li><a href="https://screenplaywritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">ScreenPlay Writer GPT</a></li>
                 <li><a href="https://bookwritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Book Writer GPT</a></li>
                 <li>

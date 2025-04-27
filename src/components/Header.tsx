@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -11,7 +10,6 @@ export default function Header() {
   const [isFacebookBrowser, setIsFacebookBrowser] = useState(false);
 
   useEffect(() => {
-    // Check if running in Facebook browser
     const userAgent = navigator.userAgent || navigator.vendor;
     const isFB = userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1;
     setIsFacebookBrowser(isFB);
@@ -63,6 +61,14 @@ export default function Header() {
           <a href="#process" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Process</a>
           <a href="#examples" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Examples</a>
           <a 
+            href="https://chatgpt.com/g/g-680ea46ceb708191b9dcb9a4d2983f4f-movie-scene-maker-gpt" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
+          >
+            <span className="mr-1">🎬</span> Movie Scene Maker GPT
+          </a>
+          <a 
             href="https://stagemasterai.lovable.app/" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -96,7 +102,6 @@ export default function Header() {
         </Button>
       </div>
       
-      {/* Mobile Menu */}
       <div className={cn(
         "fixed top-[72px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-50",
         isFacebookBrowser 
@@ -133,6 +138,15 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
           >
             Examples
+          </a>
+          <a 
+            href="https://chatgpt.com/g/g-680ea46ceb708191b9dcb9a4d2983f4f-movie-scene-maker-gpt" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <span className="mr-1">🎬</span> Movie Scene Maker GPT
           </a>
           <a 
             href="https://stagemasterai.lovable.app/" 
