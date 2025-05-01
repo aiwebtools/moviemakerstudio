@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -61,7 +62,7 @@ export default function Header() {
           <a href="#process" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Process</a>
           <a href="#examples" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Examples</a>
           <a 
-            href="https://chatgpt.com/g/g-680ea46ceb708191b9dcb9a4d2983f4f-movie-scene-maker-gpt" 
+            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
@@ -140,7 +141,7 @@ export default function Header() {
             Examples
           </a>
           <a 
-            href="https://chatgpt.com/g/g-680ea46ceb708191b9dcb9a4d2983f4f-movie-scene-maker-gpt" 
+            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
