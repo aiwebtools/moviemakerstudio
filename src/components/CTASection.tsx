@@ -15,13 +15,6 @@ export default function CTASection() {
     });
   };
 
-  const scrollToExamples = () => {
-    const examplesSection = document.getElementById('examples');
-    if (examplesSection) {
-      examplesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section 
       className="py-20 px-4 relative overflow-hidden"
@@ -57,13 +50,13 @@ export default function CTASection() {
         <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
           From concept to final draft, our AI assistant guides you through every step of creating an industry-standard, award-worthy screenplay.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <Link to="/select-version">
             <Button 
               size="lg" 
               className="bg-script-accent hover:bg-script-accent/90 text-white hover:shadow-neon transition-all duration-300 font-medium"
             >
-              Start Writing Now
+              Write Your Movie Script Now
             </Button>
           </Link>
           <a 
@@ -76,7 +69,20 @@ export default function CTASection() {
               variant="outline" 
               className="border-white/20 text-white hover:bg-white/10 font-medium"
             >
-              Start Creating Your Movie Scenes
+              Start Creating Your Movie Scene Visuals Click Here
+            </Button>
+          </a>
+          <a 
+            href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-[#1EAEDB]/20 text-[#1EAEDB] hover:bg-[#1EAEDB]/10 font-medium"
+            >
+              Make Your Movie Trailer Poster
             </Button>
           </a>
         </div>
