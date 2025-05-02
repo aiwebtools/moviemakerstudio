@@ -104,7 +104,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         <Button 
           size="sm"
           variant="default"
-          className="bg-[#33C3F0] hover:bg-[#33C3F0]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+          className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
         >
           StageMaster AI Suite for the Performing Arts
         </Button>
