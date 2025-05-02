@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, Sparkles, Zap, Theater, Camera } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Theater, Camera, Image, Film } from "lucide-react";
 
 export default function SelectVersion() {
   const [hoveredVersion, setHoveredVersion] = useState<number | null>(null);
@@ -25,7 +25,7 @@ export default function SelectVersion() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-6 mx-auto">
+          <div className="grid md:grid-cols-5 gap-6 mx-auto">
             {/* Version 1 Card */}
             <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 1 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(1)} onMouseLeave={() => setHoveredVersion(null)}>
               {/* Background gradient effect */}
@@ -150,6 +150,49 @@ export default function SelectVersion() {
                 
                 <a href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 4 ? "shadow-neon" : ""}`}>
                   Become the Star
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </div>
+            </div>
+            
+            {/* Movie Trailer Poster Maker Card - NEW CARD */}
+            <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 5 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(5)} onMouseLeave={() => setHoveredVersion(null)}>
+              {/* Background gradient effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 5 ? "opacity-100" : ""}`}></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold">Poster Maker</h2>
+                  <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                    <Film className="w-3 h-3 mr-1" /> Visual
+                  </span>
+                </div>
+                
+                <p className="text-gray-300 mb-6">
+                  Create eye-catching movie trailers and posters with GPT-4o powered image generation. Turn your script into professional marketing materials.
+                </p>
+                
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>AI poster generation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>Trailer concept design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>Marketing copy creation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-script-accent mr-2">✓</span>
+                    <span>Professional visual styles</span>
+                  </li>
+                </ul>
+                
+                <a href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 5 ? "shadow-neon" : ""}`}>
+                  Create Visual Assets
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
