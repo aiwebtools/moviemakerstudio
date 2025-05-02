@@ -80,7 +80,7 @@ export default function Header() {
             rel="noopener noreferrer" 
             className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
           >
-            <span className="mr-1">🎭</span> StageMaster AI Suite
+            <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
           </a>
           <a 
             href="https://www.aiwebtools.ai" 
@@ -149,7 +149,7 @@ export default function Header() {
             className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <span className="mr-1">🎭</span> StageMaster AI Suite
+            <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
           </a>
           <a 
             href="https://www.aiwebtools.ai" 
