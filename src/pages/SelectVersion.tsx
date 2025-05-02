@@ -1,254 +1,116 @@
-import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
+
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, Sparkles, Zap, Theater, Camera, Image, Film } from "lucide-react";
+import VersionCard from '@/components/VersionCard';
+import StageVersionCard from '@/components/StageVersionCard';
+import VersionPageHeader from '@/components/VersionPageHeader';
+import { Sparkles, Zap, Theater, Camera, Film } from "lucide-react";
 
 export default function SelectVersion() {
-  const [hoveredVersion, setHoveredVersion] = useState<number | null>(null);
-  
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
   
-  return <div className="min-h-screen bg-script-bg text-white">
+  return (
+    <div className="min-h-screen bg-script-bg text-white">
       <Header />
       
       <main className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 glow-text">Choose Your Movie Script Writing Experience</h1>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Select the version of Movie Script Writer GPT that best fits your creative needs and start crafting your award-winning screenplay today.
-            </p>
-          </div>
+          <VersionPageHeader />
           
           <div className="grid md:grid-cols-5 gap-6 mx-auto">
             {/* Version 1 Card */}
-            <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 1 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(1)} onMouseLeave={() => setHoveredVersion(null)}>
-              {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 1 ? "opacity-100" : ""}`}></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Movie Script Writer Version 1</h2>
-                  <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <Sparkles className="w-3 h-3 mr-1" /> Original
-                  </span>
-                </div>
-                
-                <p className="text-gray-300 mb-6">
-                  The classic experience with all the essential features to create professional screenplays. Export to DOCX available upon request.
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Advanced narrative techniques</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Complex character arcs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Enhanced dialogue writing</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Manual DOCX export (upon request)</span>
-                  </li>
-                </ul>
-                
-                <a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 1 ? "shadow-neon" : ""}`}>
-                  Select Movie Script Writer Version 1
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </div>
+            <VersionCard
+              title="Movie Script Writer Version 1"
+              description="The classic experience with all the essential features to create professional screenplays. Export to DOCX available upon request."
+              features={[
+                "Advanced narrative techniques",
+                "Complex character arcs",
+                "Enhanced dialogue writing",
+                "Manual DOCX export (upon request)"
+              ]}
+              link="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1"
+              badgeText="Original"
+              BadgeIcon={Sparkles}
+              buttonText="Select Movie Script Writer Version 1"
+            />
             
             {/* Version 2 Card */}
-            <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 2 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(2)} onMouseLeave={() => setHoveredVersion(null)}>
-              {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 2 ? "opacity-100" : ""}`}></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Movie Script Writer Version 2</h2>
-                  <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <Zap className="w-3 h-3 mr-1" /> Enhanced
-                  </span>
-                </div>
-                
-                <p className="text-gray-300 mb-6">
-                  Same great screenplay writing capabilities as Version 1, but with automatic DOCX export functionality built-in.
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Advanced narrative techniques</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Complex character arcs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Enhanced dialogue writing</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Automatic DOCX export</span>
-                  </li>
-                </ul>
-                
-                <a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 2 ? "shadow-neon" : ""}`}>
-                  Select Movie Script Writer Version 2
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </div>
+            <VersionCard
+              title="Movie Script Writer Version 2"
+              description="Same great screenplay writing capabilities as Version 1, but with automatic DOCX export functionality built-in."
+              features={[
+                "Advanced narrative techniques",
+                "Complex character arcs",
+                "Enhanced dialogue writing",
+                "Automatic DOCX export"
+              ]}
+              link="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt"
+              badgeText="Enhanced"
+              BadgeIcon={Zap}
+              buttonText="Select Movie Script Writer Version 2"
+            />
             
             {/* Movie Scene Maker GPT Card */}
-            <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 4 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(4)} onMouseLeave={() => setHoveredVersion(null)}>
-              {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 4 ? "opacity-100" : ""}`}></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Movie Scene Maker</h2>
-                  <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <Camera className="w-3 h-3 mr-1" /> Star
-                  </span>
-                </div>
-                
-                <p className="text-gray-300 mb-6">
-                  Become the star in your own Hollywood productions with GPT-4o powered image generation. Upload your picture and create customized movie scenes.
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Personal scene generation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Use your own scripts</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>AI image generation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Customizable scenarios</span>
-                  </li>
-                </ul>
-                
-                <a href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 4 ? "shadow-neon" : ""}`}>
-                  Use Movie Scene Maker
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </div>
+            <VersionCard
+              title="Movie Scene Maker"
+              description="Become the star in your own Hollywood productions with GPT-4o powered image generation. Upload your picture and create customized movie scenes."
+              features={[
+                "Personal scene generation",
+                "Use your own scripts",
+                "AI image generation",
+                "Customizable scenarios"
+              ]}
+              link="https://moviescenemakergpt.lovable.app/?via=aiwebtools"
+              badgeText="Star"
+              BadgeIcon={Camera}
+              buttonText="Use Movie Scene Maker"
+            />
             
             {/* Movie Trailer Poster Maker Card */}
-            <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 5 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(5)} onMouseLeave={() => setHoveredVersion(null)}>
-              {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 5 ? "opacity-100" : ""}`}></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Movie Trailer Poster Maker</h2>
-                  <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <Film className="w-3 h-3 mr-1" /> Visual
-                  </span>
-                </div>
-                
-                <p className="text-gray-300 mb-6">
-                  Create eye-catching movie trailers and posters with GPT-4o powered image generation. Turn your script into professional marketing materials.
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>AI poster generation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Trailer concept design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Marketing copy creation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Professional visual styles</span>
-                  </li>
-                </ul>
-                
-                <a href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 5 ? "shadow-neon" : ""}`}>
-                  Use Movie Trailer Poster Maker
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </div>
+            <VersionCard
+              title="Movie Trailer Poster Maker"
+              description="Create eye-catching movie trailers and posters with GPT-4o powered image generation. Turn your script into professional marketing materials."
+              features={[
+                "AI poster generation",
+                "Trailer concept design",
+                "Marketing copy creation",
+                "Professional visual styles"
+              ]}
+              link="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt"
+              badgeText="Visual"
+              BadgeIcon={Film}
+              buttonText="Use Movie Trailer Poster Maker"
+            />
             
-            {/* StageMaster AI Suite Card - UPDATED */}
-            <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 3 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(3)} onMouseLeave={() => setHoveredVersion(null)}>
-              {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 3 ? "opacity-100" : ""}`}></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">StageMaster AI</h2>
-                  <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <Theater className="w-3 h-3 mr-1" /> Performing Arts
-                  </span>
-                </div>
-                
-                <p className="text-gray-300 mb-6">
-                  Complete AI Creative Suite designed specifically for theater, stage production, and performing arts. From set design to choreography.
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <span className="text-purple-400 mr-2">✓</span>
-                    <span>Theater & Stage Set Design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-400 mr-2">✓</span>
-                    <span>Costume Design for Stage</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-400 mr-2">✓</span>
-                    <span>Choreography Planning</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-400 mr-2">✓</span>
-                    <span>Stage Lighting & Production</span>
-                  </li>
-                </ul>
-                
-                <a href="https://stagemasterai.lovable.app/" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 3 ? "shadow-[0_0_10px_#8b5cf6,0_0_20px_#8b5cf6]" : ""}`}>
-                  Explore StageMaster for Performing Arts
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </div>
+            {/* StageMaster AI Suite Card */}
+            <StageVersionCard
+              title="StageMaster AI"
+              description="Complete AI Creative Suite designed specifically for theater, stage production, and performing arts. From set design to choreography."
+              features={[
+                "Theater & Stage Set Design",
+                "Costume Design for Stage",
+                "Choreography Planning",
+                "Stage Lighting & Production"
+              ]}
+              link="https://stagemasterai.lovable.app/"
+              badgeText="Performing Arts"
+              BadgeIcon={Theater}
+            />
           </div>
           
           {/* Decorative elements */}
           <div className="absolute top-20 left-10 w-20 h-20 border border-white/10 rounded-full animate-rotate-slow opacity-20"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 border border-script-accent/20 rounded-full animate-rotate-slow opacity-30" style={{
-          animationDirection: 'reverse'
-        }}></div>
+            animationDirection: 'reverse'
+          }}></div>
         </div>
       </main>
       
       <Footer />
-    </div>;
+    </div>
+  );
 }
