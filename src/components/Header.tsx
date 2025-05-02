@@ -90,32 +90,6 @@ export default function Header() {
             <Home className="h-4 w-4 mr-1" />
             Home
           </Link>
-          
-          {/* REORDERED BUTTONS */}
-          <Link to="/select-version">
-            <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
-              USE MOVIE SCRIPT WRITER GPT
-            </Button>
-          </Link>
-
-          <a 
-            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
-          >
-            <span className="mr-1">🎬</span> Movie Scene Maker GPT
-          </a>
-          
-          <a 
-            href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
-          >
-            <span className="mr-1">🎬</span> Movie Trailer Poster Maker
-          </a>
-          
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="text-sm font-medium text-gray-300 hover:text-script-accent transition-colors">
@@ -169,16 +143,22 @@ export default function Header() {
               </Accordion>
             </DropdownMenuContent>
           </DropdownMenu>
-          
           <a 
-            href="https://www.aiwebtools.ai" 
+            href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent transition-colors"
+            className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
           >
-            <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
+            <span className="mr-1">🎬</span> Movie Trailer Poster Maker
           </a>
-          
+          <a 
+            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
+          >
+            <span className="mr-1">🎬</span> Movie Scene Maker GPT
+          </a>
           <a 
             href="https://stagemasterai.lovable.app/" 
             target="_blank" 
@@ -187,6 +167,19 @@ export default function Header() {
           >
             <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
           </a>
+          <a 
+            href="https://www.aiwebtools.ai" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent transition-colors"
+          >
+            <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
+          </a>
+          <Link to="/select-version">
+            <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
+              USE MOVIE SCRIPT WRITER GPT
+            </Button>
+          </Link>
         </nav>
         
         <Button 
@@ -216,37 +209,6 @@ export default function Header() {
             <Home className="h-4 w-4 mr-1" />
             Home
           </Link>
-          
-          {/* REORDERED BUTTONS FOR MOBILE */}
-          <Link to="/select-version" onClick={() => setMobileMenuOpen(false)}>
-            <Button 
-              size="sm" 
-              variant="default" 
-              className="bg-script-accent hover:bg-script-accent/90 shadow-glow w-full"
-            >
-              USE MOVIE SCRIPT WRITER GPT
-            </Button>
-          </Link>
-          
-          <a 
-            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <span className="mr-1">🎬</span> Movie Scene Maker GPT
-          </a>
-          
-          <a 
-            href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <span className="mr-1">🎬</span> Movie Trailer Poster Maker
-          </a>
           
           <Collapsible
             open={toolsOpen}
@@ -309,17 +271,25 @@ export default function Header() {
               </div>
             </CollapsibleContent>
           </Collapsible>
-
+          
           <a 
-            href="https://www.aiwebtools.ai" 
+            href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
+            <span className="mr-1">🎬</span> Movie Trailer Poster Maker
           </a>
-          
+          <a 
+            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <span className="mr-1">🎬</span> Movie Scene Maker GPT
+          </a>
           <a 
             href="https://stagemasterai.lovable.app/" 
             target="_blank" 
@@ -329,6 +299,24 @@ export default function Header() {
           >
             <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
           </a>
+          <a 
+            href="https://www.aiwebtools.ai" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
+          </a>
+          <Link to="/select-version" onClick={() => setMobileMenuOpen(false)}>
+            <Button 
+              size="sm" 
+              variant="default" 
+              className="bg-script-accent hover:bg-script-accent/90 shadow-glow w-full"
+            >
+              USE MOVIE SCRIPT WRITER GPT
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
