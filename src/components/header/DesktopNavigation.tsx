@@ -81,7 +81,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         <DropdownMenuTrigger asChild>
           <Button 
             variant="ghost" 
-            className="text-sm font-medium text-gray-300 hover:text-script-accent hover:bg-white/5 transition-colors px-2 py-1.5 h-auto"
+            className="text-sm font-medium text-gray-300 hover:text-script-accent hover:bg-white/5 transition-colors px-2 py-1.5 h-auto border border-white/10 rounded-md"
           >
             <Film className="h-4 w-4 mr-1" />
             ANIMATION & SOUND TOOLS

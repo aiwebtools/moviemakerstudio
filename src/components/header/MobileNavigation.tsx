@@ -110,7 +110,7 @@ export default function MobileNavigation({
           className="w-full animate-fade-in"
           style={{animationDelay: '200ms'}}
         >
-          <CollapsibleTrigger className="w-full flex items-center justify-between py-2 text-sm font-medium text-gray-300 hover:text-script-accent transition-colors">
+          <CollapsibleTrigger className="w-full flex items-center justify-between py-2 text-sm font-medium text-gray-300 hover:text-script-accent transition-colors border border-white/10 rounded-md px-2">
             <div className="flex items-center">
               <Film className="h-4 w-4 mr-1" />
               ANIMATION & SOUND TOOLS
