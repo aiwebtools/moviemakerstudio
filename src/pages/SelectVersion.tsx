@@ -33,7 +33,7 @@ export default function SelectVersion() {
               
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Version 1</h2>
+                  <h2 className="text-2xl font-bold">Movie Script Writer Version 1</h2>
                   <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <Sparkles className="w-3 h-3 mr-1" /> Original
                   </span>
@@ -63,7 +63,7 @@ export default function SelectVersion() {
                 </ul>
                 
                 <a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 1 ? "shadow-neon" : ""}`}>
-                  Select Version 1
+                  Select Movie Script Writer Version 1
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
@@ -76,7 +76,7 @@ export default function SelectVersion() {
               
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Version 2</h2>
+                  <h2 className="text-2xl font-bold">Movie Script Writer Version 2</h2>
                   <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <Zap className="w-3 h-3 mr-1" /> Enhanced
                   </span>
@@ -106,7 +106,7 @@ export default function SelectVersion() {
                 </ul>
                 
                 <a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 2 ? "shadow-neon" : ""}`}>
-                  Select Version 2
+                  Select Movie Script Writer Version 2
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
@@ -119,7 +119,7 @@ export default function SelectVersion() {
               
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Scene Maker</h2>
+                  <h2 className="text-2xl font-bold">Movie Scene Maker</h2>
                   <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <Camera className="w-3 h-3 mr-1" /> Star
                   </span>
@@ -149,7 +149,7 @@ export default function SelectVersion() {
                 </ul>
                 
                 <a href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 4 ? "shadow-neon" : ""}`}>
-                  Become the Star
+                  Use Movie Scene Maker
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
@@ -162,7 +162,7 @@ export default function SelectVersion() {
               
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">Poster Maker</h2>
+                  <h2 className="text-2xl font-bold">Movie Trailer Poster Maker</h2>
                   <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <Film className="w-3 h-3 mr-1" /> Visual
                   </span>
@@ -192,7 +192,7 @@ export default function SelectVersion() {
                 </ul>
                 
                 <a href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 5 ? "shadow-neon" : ""}`}>
-                  Create Visual Assets
+                  Use Movie Trailer Poster Maker
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
