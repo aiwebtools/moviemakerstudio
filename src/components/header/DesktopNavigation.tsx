@@ -100,9 +100,14 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         href="https://stagemasterai.lovable.app/" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
       >
-        <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
+        <Button 
+          size="sm"
+          variant="default"
+          className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+        >
+          StageMaster AI Suite
+        </Button>
       </a>
       
       <a 

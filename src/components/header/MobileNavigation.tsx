@@ -133,11 +133,17 @@ export default function MobileNavigation({
           href="https://stagemasterai.lovable.app/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-all duration-200 hover:translate-x-1 animate-fade-in"
           onClick={onToggleMenu}
+          className="animate-fade-in"
           style={{animationDelay: '250ms'}}
         >
-          <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
+          <Button 
+            size="sm"
+            variant="default"
+            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+          >
+            StageMaster AI Suite
+          </Button>
         </a>
         
         <a 
