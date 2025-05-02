@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import Header from '@/components/Header';
@@ -155,7 +154,7 @@ export default function SelectVersion() {
               </div>
             </div>
             
-            {/* Movie Trailer Poster Maker Card - NEW CARD */}
+            {/* Movie Trailer Poster Maker Card */}
             <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 5 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(5)} onMouseLeave={() => setHoveredVersion(null)}>
               {/* Background gradient effect */}
               <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 5 ? "opacity-100" : ""}`}></div>
@@ -198,44 +197,44 @@ export default function SelectVersion() {
               </div>
             </div>
             
-            {/* StageMaster AI Suite Card */}
+            {/* StageMaster AI Suite Card - UPDATED */}
             <div className={`glass-panel p-8 rounded-xl transition-all duration-300 relative overflow-hidden ${hoveredVersion === 3 ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`} onMouseEnter={() => setHoveredVersion(3)} onMouseLeave={() => setHoveredVersion(null)}>
               {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 3 ? "opacity-100" : ""}`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 transition-opacity duration-300 ${hoveredVersion === 3 ? "opacity-100" : ""}`}></div>
               
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold">StageMaster</h2>
-                  <span className="bg-script-accent/20 text-script-accent px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <span className="mr-1">🎭</span> Suite
+                  <h2 className="text-2xl font-bold">StageMaster AI</h2>
+                  <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                    <Theater className="w-3 h-3 mr-1" /> Performing Arts
                   </span>
                 </div>
                 
                 <p className="text-gray-300 mb-6">
-                  Complete AI Creative Suite for Stage & Screen. Transform your creative vision with specialized tools for the entire production process.
+                  Complete AI Creative Suite designed specifically for theater, stage production, and performing arts. From set design to choreography.
                 </p>
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Theater Set Design GPT</span>
+                    <span className="text-purple-400 mr-2">✓</span>
+                    <span>Theater & Stage Set Design</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Costume Design GPT</span>
+                    <span className="text-purple-400 mr-2">✓</span>
+                    <span>Costume Design for Stage</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Choreography GPT</span>
+                    <span className="text-purple-400 mr-2">✓</span>
+                    <span>Choreography Planning</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-script-accent mr-2">✓</span>
-                    <span>Stage Lighting GPT & more</span>
+                    <span className="text-purple-400 mr-2">✓</span>
+                    <span>Stage Lighting & Production</span>
                   </li>
                 </ul>
                 
-                <a href="https://stagemasterai.lovable.app/" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-script-accent hover:bg-script-accent/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 3 ? "shadow-neon" : ""}`}>
-                  Explore StageMaster Suite
+                <a href="https://stagemasterai.lovable.app/" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 ${hoveredVersion === 3 ? "shadow-[0_0_10px_#8b5cf6,0_0_20px_#8b5cf6]" : ""}`}>
+                  Explore StageMaster for Performing Arts
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
