@@ -60,7 +60,14 @@ export default function Header() {
           </Link>
           <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Features</a>
           <a href="#process" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Process</a>
-          <a href="#examples" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Examples</a>
+          <a 
+            href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
+          >
+            <span className="mr-1">🎬</span> Movie Trailer Poster Maker
+          </a>
           <a 
             href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
             target="_blank" 
@@ -134,11 +141,13 @@ export default function Header() {
             Process
           </a>
           <a 
-            href="#examples" 
-            className="text-sm font-medium py-2 text-gray-300 hover:text-white hover:text-script-accent transition-colors"
+            href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Examples
+            <span className="mr-1">🎬</span> Movie Trailer Poster Maker
           </a>
           <a 
             href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
