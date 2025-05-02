@@ -60,11 +60,14 @@ export default function Header() {
         <Button 
           variant="ghost" 
           size="icon" 
-          className="md:hidden text-white hover:bg-script-accent/20"
+          className="md:hidden text-white hover:bg-script-accent/20 transition-colors"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
-          <Menu className="h-6 w-6" />
+          <Menu className={cn(
+            "h-6 w-6 transition-transform duration-300",
+            mobileMenuOpen ? "transform rotate-90" : ""
+          )} />
         </Button>
       </div>
       

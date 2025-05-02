@@ -35,14 +35,15 @@ export default function AnimationSoundTools({
         </AccordionTrigger>
         <AccordionContent className={isMobile ? "" : "px-2"}>
           <div className={`flex flex-col space-y-${isMobile ? '3' : '1'} ${isMobile ? 'py-2' : ''}`}>
-            {animationTools.map((tool) => (
+            {animationTools.map((tool, index) => (
               <a 
                 key={tool.name}
                 href={tool.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className={`${isMobile ? 'text-sm text-gray-300 hover:text-script-accent' : 'px-3 py-2 rounded-md text-sm hover:bg-white/5'} flex items-center`}
+                className={`${isMobile ? 'text-sm text-gray-300 hover:text-script-accent' : 'px-3 py-2 rounded-md text-sm hover:bg-white/5'} flex items-center transition-all duration-200 hover:translate-x-1 animate-fade-in`}
                 onClick={onItemClick}
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <span className="mr-1">🎬</span> {tool.name}
               </a>
@@ -58,14 +59,15 @@ export default function AnimationSoundTools({
         </AccordionTrigger>
         <AccordionContent className={isMobile ? "" : "px-2"}>
           <div className={`flex flex-col space-y-${isMobile ? '3' : '1'} ${isMobile ? 'py-2' : ''}`}>
-            {soundTools.map((tool) => (
+            {soundTools.map((tool, index) => (
               <a 
                 key={tool.name}
                 href={tool.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className={`${isMobile ? 'text-sm text-gray-300 hover:text-script-accent' : 'px-3 py-2 rounded-md text-sm hover:bg-white/5'} flex items-center`}
+                className={`${isMobile ? 'text-sm text-gray-300 hover:text-script-accent' : 'px-3 py-2 rounded-md text-sm hover:bg-white/5'} flex items-center transition-all duration-200 hover:translate-x-1 animate-fade-in`}
                 onClick={onItemClick}
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <span className="mr-1">🎵</span> {tool.name}
               </a>

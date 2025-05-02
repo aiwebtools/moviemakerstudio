@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Home, ExternalLink, ChevronDown, Film } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -27,6 +27,10 @@ export default function MobileNavigation({
   onToggleMenu,
 }: MobileNavigationProps) {
   const [toolsOpen, setToolsOpen] = useState(false);
+  const location = useLocation();
+  
+  // Determine if a route is active
+  const isActiveRoute = (path: string) => location.pathname === path;
 
   return (
     <div className={cn(
@@ -34,23 +38,33 @@ export default function MobileNavigation({
       isFacebookBrowser 
         ? "bg-script-bg border-b border-white/5" 
         : "bg-script-bg/95 backdrop-blur-md border-b border-white/5",
-      isOpen ? "max-h-screen py-4" : "max-h-0"
+      isOpen 
+        ? "max-h-screen py-4 animate-fade-in" 
+        : "max-h-0 animate-fade-out"
     )}>
       <div className="container mx-auto px-4 flex flex-col space-y-4 pb-4">
         <Link 
           to="/" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+          className={cn(
+            "flex items-center text-sm font-medium py-2 transition-all duration-200 hover:translate-x-1",
+            isActiveRoute("/") 
+              ? "text-script-accent" 
+              : "text-gray-300 hover:text-script-accent"
+          )}
           onClick={onToggleMenu}
         >
-          <Home className="h-4 w-4 mr-1" />
+          <Home className={cn("h-4 w-4 mr-1", isActiveRoute("/") && "text-script-accent")} />
           Home
+          {isActiveRoute("/") && (
+            <span className="ml-auto h-1.5 w-1.5 rounded-full bg-script-accent animate-pulse" />
+          )}
         </Link>
         
-        <Link to="/select-version" onClick={onToggleMenu}>
+        <Link to="/select-version" onClick={onToggleMenu} className="animate-fade-in" style={{animationDelay: '50ms'}}>
           <Button 
             size="sm" 
             variant="default" 
-            className="bg-script-accent hover:bg-script-accent/90 shadow-glow w-full"
+            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
           >
             USE MOVIE SCRIPT WRITER GPT
           </Button>
@@ -60,8 +74,9 @@ export default function MobileNavigation({
           href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-all duration-200 hover:translate-x-1 animate-fade-in"
           onClick={onToggleMenu}
+          style={{animationDelay: '100ms'}}
         >
           <span className="mr-1">🎬</span> Movie Scene Maker GPT
         </a>
@@ -70,8 +85,9 @@ export default function MobileNavigation({
           href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-all duration-200 hover:translate-x-1 animate-fade-in"
           onClick={onToggleMenu}
+          style={{animationDelay: '150ms'}}
         >
           <span className="mr-1">🎬</span> Movie Trailer Poster Maker
         </a>
@@ -79,7 +95,8 @@ export default function MobileNavigation({
         <Collapsible
           open={toolsOpen}
           onOpenChange={setToolsOpen}
-          className="w-full"
+          className="w-full animate-fade-in"
+          style={{animationDelay: '200ms'}}
         >
           <CollapsibleTrigger className="w-full flex items-center justify-between py-2 text-sm font-medium text-gray-300 hover:text-script-accent transition-colors">
             <div className="flex items-center">
@@ -88,7 +105,7 @@ export default function MobileNavigation({
             </div>
             <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${toolsOpen ? 'transform rotate-180' : ''}`} />
           </CollapsibleTrigger>
-          <CollapsibleContent>
+          <CollapsibleContent className="animate-accordion-down">
             <div className="ml-6 mt-2 space-y-2">
               <AnimationSoundTools 
                 animationTools={animationTools} 
@@ -104,8 +121,9 @@ export default function MobileNavigation({
           href="https://stagemasterai.lovable.app/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-all duration-200 hover:translate-x-1 animate-fade-in"
           onClick={onToggleMenu}
+          style={{animationDelay: '250ms'}}
         >
           <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
         </a>
@@ -114,8 +132,9 @@ export default function MobileNavigation({
           href="https://www.aiwebtools.ai" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-colors"
+          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-all duration-200 hover:translate-x-1 animate-fade-in"
           onClick={onToggleMenu}
+          style={{animationDelay: '300ms'}}
         >
           <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
         </a>

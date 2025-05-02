@@ -1,11 +1,11 @@
 
 import { Home, ExternalLink, ChevronDown, Film } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import AnimationSoundTools from "./AnimationSoundTools";
@@ -16,15 +16,35 @@ interface DesktopNavigationProps {
 }
 
 export default function DesktopNavigation({ animationTools, soundTools }: DesktopNavigationProps) {
+  const location = useLocation();
+  
+  // Determine if a route is active
+  const isActiveRoute = (path: string) => location.pathname === path;
+  
   return (
-    <nav className="hidden md:flex items-center space-x-6">
-      <Link to="/" className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent transition-colors">
-        <Home className="h-4 w-4 mr-1" />
+    <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
+      <Link 
+        to="/" 
+        className={cn(
+          "flex items-center text-sm font-medium relative px-2 py-1.5 rounded-md transition-all duration-200",
+          isActiveRoute("/") 
+            ? "text-script-accent" 
+            : "text-gray-300 hover:text-script-accent hover:bg-white/5"
+        )}
+      >
+        <Home className={cn("h-4 w-4 mr-1", isActiveRoute("/") && "text-script-accent")} />
         Home
+        {isActiveRoute("/") && (
+          <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-script-accent"></span>
+        )}
       </Link>
       
       <Link to="/select-version">
-        <Button size="sm" variant="default" className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
+        <Button 
+          size="sm" 
+          variant="default" 
+          className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+        >
           USE MOVIE SCRIPT WRITER GPT
         </Button>
       </Link>
@@ -33,7 +53,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
+        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
       >
         <span className="mr-1">🎬</span> Movie Scene Maker GPT
       </a>
@@ -42,20 +62,26 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
+        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
       >
         <span className="mr-1">🎬</span> Movie Trailer Poster Maker
       </a>
       
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="text-sm font-medium text-gray-300 hover:text-script-accent transition-colors">
+          <Button 
+            variant="ghost" 
+            className="text-sm font-medium text-gray-300 hover:text-script-accent hover:bg-white/5 transition-colors px-2 py-1.5 h-auto"
+          >
             <Film className="h-4 w-4 mr-1" />
             ANIMATION & SOUND TOOLS
-            <ChevronDown className="h-3 w-3 ml-1" />
+            <ChevronDown className="h-3 w-3 ml-1 transition-transform duration-200 group-data-[state=open]:rotate-180" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-72 bg-script-bg border border-white/10 text-white">
+        <DropdownMenuContent 
+          className="w-72 bg-script-bg border border-white/10 text-white shadow-lg animate-fade-in"
+          sideOffset={8}
+        >
           <AnimationSoundTools animationTools={animationTools} soundTools={soundTools} />
         </DropdownMenuContent>
       </DropdownMenu>
@@ -64,7 +90,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         href="https://stagemasterai.lovable.app/" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center transition-colors"
+        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
       >
         <span className="mr-1">🎭</span> StageMaster AI Suite for the Performing Arts
       </a>
@@ -73,7 +99,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         href="https://www.aiwebtools.ai" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent transition-colors"
+        className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
       >
         <ExternalLink className="h-4 w-4 mr-1" /> MORE AI TOOLS
       </a>

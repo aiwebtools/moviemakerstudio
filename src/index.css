@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -125,6 +124,25 @@
   .neon-border {
     @apply border border-script-accent relative;
     box-shadow: 0 0 5px #E50914, inset 0 0 5px #E50914;
+  }
+
+  .nav-button {
+    @apply px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-300;
+  }
+
+  .nav-button-active {
+    @apply text-script-accent relative;
+  }
+
+  .nav-button-active::after {
+    content: '';
+    @apply absolute bottom-[-4px] left-0 w-full h-[2px] bg-script-accent rounded-full;
+    animation: expand 0.3s ease forwards;
+  }
+
+  @keyframes expand {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
   }
 }
 
