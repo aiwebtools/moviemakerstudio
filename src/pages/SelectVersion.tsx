@@ -21,7 +21,8 @@ export default function SelectVersion() {
         <div className="container mx-auto max-w-7xl">
           <VersionPageHeader />
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mx-auto">
+          {/* Modified grid layout with better desktop sizing */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mx-auto">
             {/* Version 1 Card */}
             <VersionCard
               title="Movie Script Writer Version 1"
@@ -95,7 +96,7 @@ export default function SelectVersion() {
             />
             
             {/* StageMaster AI Suite Card */}
-            <StageVersionCard
+            <VersionCard
               title="StageMaster AI"
               description="Complete AI Creative Suite designed specifically for theater, stage production, and performing arts. From set design to choreography."
               features={[
@@ -109,6 +110,7 @@ export default function SelectVersion() {
               BadgeIcon={Theater}
               buttonColor="bg-fuchsia-600 hover:bg-fuchsia-700"
               buttonShadow="shadow-[0_0_10px_#c026d3,0_0_20px_#c026d3]"
+              buttonText="Explore StageMaster for Performing Arts"
             />
           </div>
           

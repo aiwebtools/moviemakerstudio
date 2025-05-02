@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { ArrowRight, LucideIcon } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
 interface VersionCardProps {
   title: string;
@@ -32,16 +31,17 @@ const VersionCard = ({
 
   return (
     <div 
-      className={`glass-panel p-6 h-full rounded-xl transition-all duration-300 relative overflow-hidden flex flex-col ${isHovered ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`}
+      className={`glass-panel p-6 h-full w-full rounded-xl transition-all duration-300 relative overflow-hidden flex flex-col ${isHovered ? "transform scale-[1.02] shadow-neon border-script-accent/50" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      style={{ minHeight: "450px" }} // Ensure a minimum height
     >
       {/* Background gradient effect */}
       <div className={`absolute inset-0 bg-gradient-to-br from-script-accent/20 to-transparent opacity-0 transition-opacity duration-300 ${isHovered ? "opacity-100" : ""}`}></div>
       
       <div className="relative z-10 flex flex-col h-full">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl sm:text-2xl font-bold">{title}</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold">{title}</h2>
           <span className={`${badgeColor} px-2 py-1 rounded-full text-xs font-medium flex items-center`}>
             <BadgeIcon className="w-3 h-3 mr-1" /> {badgeText}
           </span>
