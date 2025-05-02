@@ -66,14 +66,19 @@ export default function CTASection() {
               Start Writing Now
             </Button>
           </Link>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-white/20 text-white hover:bg-white/10 font-medium"
-            onClick={scrollToExamples}
+          <a 
+            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            See How It Works
-          </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white/20 text-white hover:bg-white/10 font-medium"
+            >
+              Start Creating Your Movie Scenes
+            </Button>
+          </a>
         </div>
         
         {/* Decorative elements */}

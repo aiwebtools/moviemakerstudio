@@ -124,14 +124,19 @@ export default function HeroSection() {
               Start Your Script
             </Button>
           </Link>
-          <Button 
-            size={isMobile ? "default" : "lg"} 
-            variant="outline" 
-            className="font-medium border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300 w-full sm:w-auto"
-            onClick={scrollToExamples}
+          <a 
+            href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            See Examples
-          </Button>
+            <Button 
+              size={isMobile ? "default" : "lg"} 
+              variant="outline" 
+              className="font-medium border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300 w-full sm:w-auto"
+            >
+              Start Creating Your Movie Scenes
+            </Button>
+          </a>
         </div>
         
         <div 
