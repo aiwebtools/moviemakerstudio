@@ -36,6 +36,8 @@ export default function SelectVersion() {
               badgeText="Original"
               BadgeIcon={Sparkles}
               buttonText="Select Movie Script Writer Version 1"
+              buttonColor="bg-purple-600 hover:bg-purple-700"
+              buttonShadow="shadow-[0_0_10px_#8b5cf6,0_0_20px_#8b5cf6]"
             />
             
             {/* Version 2 Card */}
@@ -52,6 +54,8 @@ export default function SelectVersion() {
               badgeText="Enhanced"
               BadgeIcon={Zap}
               buttonText="Select Movie Script Writer Version 2"
+              buttonColor="bg-blue-600 hover:bg-blue-700"
+              buttonShadow="shadow-[0_0_10px_#3b82f6,0_0_20px_#3b82f6]"
             />
             
             {/* Movie Scene Maker GPT Card */}
@@ -68,6 +72,8 @@ export default function SelectVersion() {
               badgeText="Star"
               BadgeIcon={Camera}
               buttonText="Use Movie Scene Maker"
+              buttonColor="bg-green-600 hover:bg-green-700"
+              buttonShadow="shadow-[0_0_10px_#22c55e,0_0_20px_#22c55e]"
             />
             
             {/* Movie Trailer Poster Maker Card */}
@@ -84,6 +90,8 @@ export default function SelectVersion() {
               badgeText="Visual"
               BadgeIcon={Film}
               buttonText="Use Movie Trailer Poster Maker"
+              buttonColor="bg-amber-600 hover:bg-amber-700"
+              buttonShadow="shadow-[0_0_10px_#d97706,0_0_20px_#d97706]"
             />
             
             {/* StageMaster AI Suite Card */}
@@ -99,6 +107,8 @@ export default function SelectVersion() {
               link="https://stagemasterai.lovable.app/"
               badgeText="Performing Arts"
               BadgeIcon={Theater}
+              buttonColor="bg-fuchsia-600 hover:bg-fuchsia-700"
+              buttonShadow="shadow-[0_0_10px_#c026d3,0_0_20px_#c026d3]"
             />
           </div>
           

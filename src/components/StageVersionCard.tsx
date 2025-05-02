@@ -9,6 +9,8 @@ interface StageVersionCardProps {
   link: string;
   badgeText: string;
   BadgeIcon: LucideIcon;
+  buttonColor?: string;
+  buttonShadow?: string;
 }
 
 const StageVersionCard = ({
@@ -17,7 +19,9 @@ const StageVersionCard = ({
   features,
   link,
   badgeText,
-  BadgeIcon
+  BadgeIcon,
+  buttonColor = "bg-purple-600 hover:bg-purple-700",
+  buttonShadow = "shadow-[0_0_10px_#8b5cf6,0_0_20px_#8b5cf6]"
 }: StageVersionCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -55,7 +59,7 @@ const StageVersionCard = ({
           href={link} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className={`mt-auto inline-flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 rounded-md transition-all duration-300 ${isHovered ? "shadow-[0_0_10px_#8b5cf6,0_0_20px_#8b5cf6]" : ""}`}
+          className={`mt-auto inline-flex items-center justify-center w-full ${buttonColor} text-white font-medium py-3 px-4 rounded-md transition-all duration-300 ${isHovered ? buttonShadow : ""}`}
         >
           Explore StageMaster for Performing Arts
           <ArrowRight className="ml-2 h-4 w-4" />
