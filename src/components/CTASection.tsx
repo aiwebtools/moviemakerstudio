@@ -50,11 +50,11 @@ export default function CTASection() {
         <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
           From concept to final draft, our AI assistant guides you through every step of creating an industry-standard, award-worthy screenplay.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-2 sm:gap-3">
           <Link to="/select-version">
             <Button 
               size="lg" 
-              className="bg-script-accent hover:bg-script-accent/90 text-white hover:shadow-neon transition-all duration-300 font-medium"
+              className="bg-script-accent hover:bg-script-accent/90 text-white hover:shadow-neon transition-all duration-300 font-medium text-sm sm:text-base"
             >
               Write Your Movie Script Now
             </Button>
@@ -67,7 +67,7 @@ export default function CTASection() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/20 text-white hover:bg-white/10 font-medium"
+              className="border-white/20 text-white hover:bg-white/10 font-medium text-sm sm:text-base whitespace-normal md:whitespace-nowrap"
             >
               Start Creating Your Movie Scene Visuals Click Here
             </Button>
@@ -80,7 +80,7 @@ export default function CTASection() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-[#1EAEDB]/20 text-[#1EAEDB] hover:bg-[#1EAEDB]/10 font-medium"
+              className="border-[#1EAEDB]/20 text-[#1EAEDB] hover:bg-[#1EAEDB]/10 font-medium text-sm sm:text-base"
             >
               Make Your Movie Trailer Poster
             </Button>
