@@ -18,10 +18,10 @@ export default function SelectVersion() {
       <Header />
       
       <main className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <VersionPageHeader />
           
-          <div className="grid md:grid-cols-5 gap-6 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mx-auto">
             {/* Version 1 Card */}
             <VersionCard
               title="Movie Script Writer Version 1"
