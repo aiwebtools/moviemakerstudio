@@ -26,14 +26,14 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
       <Link 
         to="/" 
         className={cn(
-          "flex items-center text-sm font-medium relative px-2 py-1.5 rounded-md transition-all duration-200",
+          "flex items-center justify-center w-9 h-9 relative rounded-md transition-all duration-200",
           isActiveRoute("/") 
-            ? "text-script-accent" 
+            ? "text-script-accent bg-white/5" 
             : "text-gray-300 hover:text-script-accent hover:bg-white/5"
         )}
+        title="Home"
       >
-        <Home className={cn("h-4 w-4 mr-1", isActiveRoute("/") && "text-script-accent")} />
-        Home
+        <Home className={cn("h-5 w-5", isActiveRoute("/") && "text-script-accent")} />
         {isActiveRoute("/") && (
           <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-script-accent"></span>
         )}
