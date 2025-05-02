@@ -53,18 +53,28 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
       >
-        <span className="mr-1">🎬</span> Movie Scene Maker GPT
+        <Button 
+          size="sm"
+          variant="default"
+          className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+        >
+          Movie Scene Maker GPT
+        </Button>
       </a>
       
       <a 
         href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-sm font-medium text-gray-300 hover:text-script-accent flex items-center px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
       >
-        <span className="mr-1">🎬</span> Movie Trailer Poster Maker
+        <Button 
+          size="sm"
+          variant="default"
+          className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+        >
+          Movie Trailer Poster Maker
+        </Button>
       </a>
       
       <DropdownMenu>

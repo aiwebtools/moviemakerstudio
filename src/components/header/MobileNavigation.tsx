@@ -74,22 +74,34 @@ export default function MobileNavigation({
           href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-all duration-200 hover:translate-x-1 animate-fade-in"
           onClick={onToggleMenu}
+          className="animate-fade-in" 
           style={{animationDelay: '100ms'}}
         >
-          <span className="mr-1">🎬</span> Movie Scene Maker GPT
+          <Button 
+            size="sm"
+            variant="default"
+            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+          >
+            Movie Scene Maker GPT
+          </Button>
         </a>
         
         <a 
           href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="flex items-center text-sm font-medium py-2 text-gray-300 hover:text-script-accent transition-all duration-200 hover:translate-x-1 animate-fade-in"
           onClick={onToggleMenu}
+          className="animate-fade-in"
           style={{animationDelay: '150ms'}}
         >
-          <span className="mr-1">🎬</span> Movie Trailer Poster Maker
+          <Button 
+            size="sm"
+            variant="default"
+            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+          >
+            Movie Trailer Poster Maker
+          </Button>
         </a>
         
         <Collapsible
