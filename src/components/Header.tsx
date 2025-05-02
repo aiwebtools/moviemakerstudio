@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, Film } from "lucide-react";
 import DesktopNavigation from "./header/DesktopNavigation";
 import MobileNavigation from "./header/MobileNavigation";
 import { animationTools, soundTools } from "@/data/tools";
@@ -40,35 +40,42 @@ export default function Header() {
           ? "bg-script-bg" 
           : "bg-transparent"
     )}>
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex flex-col items-start">
-          <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
-            Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
-          </span>
-          <a 
-            href="https://www.aiwebtools.ai" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-xs text-gray-400 hover:text-script-accent transition-colors"
+      <div className="container mx-auto flex flex-col">
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center">
+            <Film className="h-6 w-6 text-script-accent mr-2" />
+            <div className="flex flex-col items-start">
+              <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
+                Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
+              </span>
+              <a 
+                href="https://www.aiwebtools.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 hover:text-script-accent transition-colors"
+              >
+                Presented by AiWebTools.Ai
+              </a>
+            </div>
+          </div>
+          
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="md:hidden text-white hover:bg-script-accent/20 transition-colors"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
           >
-            Presented by AiWebTools.Ai
-          </a>
+            <Menu className={cn(
+              "h-6 w-6 transition-transform duration-300",
+              mobileMenuOpen ? "transform rotate-90" : ""
+            )} />
+          </Button>
         </div>
         
-        <DesktopNavigation animationTools={animationTools} soundTools={soundTools} />
-        
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          className="md:hidden text-white hover:bg-script-accent/20 transition-colors"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          <Menu className={cn(
-            "h-6 w-6 transition-transform duration-300",
-            mobileMenuOpen ? "transform rotate-90" : ""
-          )} />
-        </Button>
+        <div className="hidden md:block">
+          <DesktopNavigation animationTools={animationTools} soundTools={soundTools} />
+        </div>
       </div>
       
       <MobileNavigation 

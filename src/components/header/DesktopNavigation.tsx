@@ -22,7 +22,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
   const isActiveRoute = (path: string) => location.pathname === path;
   
   return (
-    <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
+    <nav className="flex items-center justify-between space-x-4 lg:space-x-6">
       <Link 
         to="/" 
         className={cn(
