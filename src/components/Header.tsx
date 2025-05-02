@@ -58,8 +58,6 @@ export default function Header() {
             <Home className="h-4 w-4 mr-1" />
             Home
           </Link>
-          <a href="#features" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Features</a>
-          <a href="#process" className="text-sm font-medium text-gray-300 hover:text-white hover:text-script-accent transition-colors">Process</a>
           <a 
             href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
             target="_blank" 
@@ -126,20 +124,6 @@ export default function Header() {
             <Home className="h-4 w-4 mr-1" />
             Home
           </Link>
-          <a 
-            href="#features" 
-            className="text-sm font-medium py-2 text-gray-300 hover:text-white hover:text-script-accent transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Features
-          </a>
-          <a 
-            href="#process" 
-            className="text-sm font-medium py-2 text-gray-300 hover:text-white hover:text-script-accent transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Process
-          </a>
           <a 
             href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
             target="_blank" 
