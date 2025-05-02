@@ -81,7 +81,7 @@ export default function MobileNavigation({
           <Button 
             size="sm"
             variant="default"
-            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+            className="bg-[#D946EF] hover:bg-[#D946EF]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
           >
             Movie Scene Maker GPT
           </Button>
@@ -98,7 +98,7 @@ export default function MobileNavigation({
           <Button 
             size="sm"
             variant="default"
-            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+            className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
           >
             Movie Trailer Poster Maker
           </Button>
@@ -140,9 +140,9 @@ export default function MobileNavigation({
           <Button 
             size="sm"
             variant="default"
-            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+            className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
           >
-            StageMaster AI Suite
+            StageMaster AI Suite for the Performing Arts
           </Button>
         </a>
         
