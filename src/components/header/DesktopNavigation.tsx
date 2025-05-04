@@ -14,9 +14,15 @@ interface DesktopNavigationProps {
   animationTools: { name: string; url: string }[];
   soundTools: { name: string; url: string }[];
   lipsyncTools?: { name: string; url: string }[];
+  editingTools?: { name: string; url: string }[];
 }
 
-export default function DesktopNavigation({ animationTools, soundTools, lipsyncTools = [] }: DesktopNavigationProps) {
+export default function DesktopNavigation({ 
+  animationTools, 
+  soundTools, 
+  lipsyncTools = [],
+  editingTools = []
+}: DesktopNavigationProps) {
   const location = useLocation();
   
   // Determine if a route is active
@@ -96,7 +102,8 @@ export default function DesktopNavigation({ animationTools, soundTools, lipsyncT
           <AnimationSoundTools 
             animationTools={animationTools} 
             soundTools={soundTools}
-            lipsyncTools={lipsyncTools} 
+            lipsyncTools={lipsyncTools}
+            editingTools={editingTools}
           />
         </DropdownMenuContent>
       </DropdownMenu>

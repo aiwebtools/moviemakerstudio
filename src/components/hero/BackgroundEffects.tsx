@@ -26,6 +26,8 @@ export const BackgroundEffects = ({
       { x: 20, y: 60, size: 320, speed: 0.4, delay: 1.5, direction: 1 },
       { x: 80, y: 40, size: 350, speed: 0.6, delay: 0.8, direction: -1 },
       { x: 50, y: 70, size: 270, speed: 0.35, delay: 2.5, direction: 1 },
+      { x: 60, y: 30, size: 290, speed: 0.45, delay: 3.2, direction: -1 },
+      { x: 40, y: 50, size: 330, speed: 0.55, delay: 1.2, direction: 1 },
     ];
     setSpotlights(initialSpotlights);
     
@@ -78,23 +80,24 @@ export const BackgroundEffects = ({
                   background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%)',
                   transform: `rotate(${rotation}deg) translateY(${yOffset}px)`,
                   transition: 'transform 0.5s ease-out',
+                  pointerEvents: 'none', // Make sure spotlights don't interfere with UI interactions
                 }}
               ></div>
             );
           })}
           
           {/* Subtle grid pattern */}
-          <div className="absolute inset-0 z-0 opacity-10">
+          <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
             <div className="absolute h-full w-full bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
           </div>
           
           {/* Glow effects */}
           <div 
-            className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/5 blur-[80px] animate-pulse-subtle z-0"
+            className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/5 blur-[80px] animate-pulse-subtle z-0 pointer-events-none"
             style={parallaxStyle}
           ></div>
           <div 
-            className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/5 blur-[60px] animate-pulse-subtle z-0"
+            className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/5 blur-[60px] animate-pulse-subtle z-0 pointer-events-none"
             style={{
               transform: isFacebookBrowser || isMobile ? 'none' : `translate(${cursorPosition.x * 30}px, ${cursorPosition.y * 30}px)`,
               animationDelay: '0.5s'

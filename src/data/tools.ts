@@ -22,3 +22,7 @@ export const soundTools: Tool[] = [
 export const lipsyncTools: Tool[] = [
   { name: "Hedra", url: "https://www.hedra.com/" },
 ];
+
+export const editingTools: Tool[] = [
+  { name: "Filmora", url: "https://download.wondershare.com/filmora_full846.exe?_gl=1*5tb5lz*_ga*MjEyMDY2ODg1OC4xNzQ2Mzc1ODk0*_ga_24WTSJBD5B*czE3NDYzNzU4OTMkbzEkZzEkdDE3NDYzNzU5MDAkajU0JGwwJGg0NzQwMjI0NjY.*_gcl_au*MTYxNzMzMTQ1Ni4xNzQ2Mzc1ODk1" },
+];
