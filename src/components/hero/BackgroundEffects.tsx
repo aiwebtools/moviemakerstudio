@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface BackgroundEffectsProps {
   cursorPosition: { x: number; y: number };
@@ -15,6 +15,8 @@ export const BackgroundEffects = ({
   loaded 
 }: BackgroundEffectsProps) => {
   const [spotlights, setSpotlights] = useState<{ x: number; y: number; size: number; speed: number; delay: number; direction: number }[]>([]);
+  const animationRef = useRef<number | null>(null);
+  const [time, setTime] = useState(0);
   
   useEffect(() => {
     // Create spotlight positions
@@ -22,8 +24,29 @@ export const BackgroundEffects = ({
       { x: 30, y: 20, size: 300, speed: 0.5, delay: 0, direction: 1 },
       { x: 70, y: 80, size: 280, speed: 0.3, delay: 2, direction: -1 },
       { x: 20, y: 60, size: 320, speed: 0.4, delay: 1.5, direction: 1 },
+      { x: 80, y: 40, size: 350, speed: 0.6, delay: 0.8, direction: -1 },
+      { x: 50, y: 70, size: 270, speed: 0.35, delay: 2.5, direction: 1 },
     ];
     setSpotlights(initialSpotlights);
+    
+    // Set up continuous animation
+    let lastTime = 0;
+    const animate = (currentTime: number) => {
+      if (lastTime === 0) lastTime = currentTime;
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+      
+      setTime(prev => prev + deltaTime * 0.001); // Convert to seconds
+      animationRef.current = requestAnimationFrame(animate);
+    };
+    
+    animationRef.current = requestAnimationFrame(animate);
+    
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, []);
   
   const parallaxStyle = {
@@ -37,22 +60,28 @@ export const BackgroundEffects = ({
       {/* Hollywood-style spotlights */}
       {!isFacebookBrowser && !isMobile && (
         <>
-          {spotlights.map((spotlight, index) => (
-            <div 
-              key={index}
-              className="absolute origin-bottom z-0 opacity-15"
-              style={{
-                left: `${spotlight.x}%`,
-                bottom: '0',
-                width: `${spotlight.size}px`,
-                height: `${spotlight.size * 2}px`,
-                background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%)',
-                transform: `rotate(${Math.sin((Date.now() / 1000 + spotlight.delay) * spotlight.speed) * 30 * spotlight.direction}deg)`,
-                animation: `spotlight-sweep ${6 / spotlight.speed}s infinite ease-in-out ${spotlight.delay}s`,
-                animationDirection: spotlight.direction > 0 ? 'normal' : 'reverse'
-              }}
-            ></div>
-          ))}
+          {spotlights.map((spotlight, index) => {
+            // Calculate dynamic position based on time
+            const xOffset = Math.sin((time + spotlight.delay) * spotlight.speed) * 15;
+            const yOffset = Math.cos((time + spotlight.delay) * spotlight.speed * 0.7) * 10;
+            const rotation = Math.sin((time + spotlight.delay) * spotlight.speed) * 25 * spotlight.direction;
+            
+            return (
+              <div 
+                key={index}
+                className="absolute origin-bottom z-0 opacity-15"
+                style={{
+                  left: `calc(${spotlight.x}% + ${xOffset}px)`,
+                  bottom: '0',
+                  width: `${spotlight.size}px`,
+                  height: `${spotlight.size * 2}px`,
+                  background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%)',
+                  transform: `rotate(${rotation}deg) translateY(${yOffset}px)`,
+                  transition: 'transform 0.5s ease-out',
+                }}
+              ></div>
+            );
+          })}
           
           {/* Subtle grid pattern */}
           <div className="absolute inset-0 z-0 opacity-10">
