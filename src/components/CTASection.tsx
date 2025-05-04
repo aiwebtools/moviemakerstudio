@@ -46,9 +46,9 @@ export default function CTASection() {
         <span className="inline-block px-3 py-1 text-xs font-medium bg-script-accent/20 text-script-accent rounded-full mb-4">
           Start Creating
         </span>
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white glow-text">Ready to Write Your Masterpiece?</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white glow-text">Ready to Create Your Cinematic Masterpiece?</h2>
         <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-          From concept to final draft, our AI assistant guides you through every step of creating an industry-standard, award-worthy screenplay.
+          From concept to screen, our complete filmmaking suite guides you through every step of creating professional movie content.
         </p>
         <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-2 sm:gap-3">
           <Link to="/select-version">

@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, ExternalLink, ChevronDown, Film } from "lucide-react";
+import { Home, ExternalLink, ChevronDown, Clapperboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
@@ -112,7 +112,7 @@ export default function MobileNavigation({
         >
           <CollapsibleTrigger className="w-full flex items-center justify-between py-2 text-sm font-medium text-gray-300 hover:text-script-accent transition-colors border border-white/10 rounded-md px-2">
             <div className="flex items-center">
-              <Film className="h-4 w-4 mr-1" />
+              <Clapperboard className="h-4 w-4 mr-1" />
               ANIMATION & SOUND TOOLS
             </div>
             <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${toolsOpen ? 'transform rotate-180' : ''}`} />

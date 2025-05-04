@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, Film } from "lucide-react";
+import { Clapperboard, Menu } from "lucide-react";
 import DesktopNavigation from "./header/DesktopNavigation";
 import MobileNavigation from "./header/MobileNavigation";
 import { animationTools, soundTools } from "@/data/tools";
@@ -43,10 +43,10 @@ export default function Header() {
       <div className="container mx-auto flex flex-col">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center">
-            <Film className="h-6 w-6 text-script-accent mr-2" />
+            <Clapperboard className="h-6 w-6 text-script-accent mr-2" />
             <div className="flex flex-col items-start">
               <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
-                Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
+                MOVIE Maker <span className="text-script-accent group-hover:animate-pulse-glow">Studio</span>
               </span>
               <a 
                 href="https://www.aiwebtools.ai" 

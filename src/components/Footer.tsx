@@ -1,13 +1,18 @@
 
+import { Clapperboard } from "lucide-react";
+
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-8 md:py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="flex flex-col items-start">
-              <span className="text-lg sm:text-xl font-bold font-display tracking-tight group">
-                Movie Script Writer <span className="text-script-accent group-hover:animate-pulse-glow">GPT</span>
-              </span>
+              <div className="flex items-center">
+                <Clapperboard className="h-5 w-5 text-script-accent mr-2" />
+                <span className="text-lg sm:text-xl font-bold font-display tracking-tight group">
+                  MOVIE Maker <span className="text-script-accent group-hover:animate-pulse-glow">Studio</span>
+                </span>
+              </div>
               <a 
                 href="https://www.aiwebtools.ai" 
                 target="_blank" 
@@ -18,13 +23,13 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-xs sm:text-sm text-script-muted mt-2 max-w-md">
-              The ultimate AI assistant for creating industry-standard movie scripts from concept to final draft.
+              The ultimate all-in-one AI suite for creating professional movie content from concept to final production.
             </p>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
             <div>
-              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Writing Tools</h3>
+              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Movie Tools</h3>
               <ul className="space-y-2">
                 <li><a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
                 <li><a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
@@ -57,7 +62,7 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Resources</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Writing Guide</a></li>
+                <li><a href="#" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Filmmaking Guide</a></li>
                 <li><a href="#" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">FAQ</a></li>
                 <li><a href="#" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Support</a></li>
               </ul>
