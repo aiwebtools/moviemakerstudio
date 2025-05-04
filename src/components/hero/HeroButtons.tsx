@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 interface HeroButtonsProps {
   loaded: boolean;
@@ -10,14 +9,18 @@ interface HeroButtonsProps {
 export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
   return (
     <div className={`flex flex-row flex-wrap md:flex-nowrap justify-center gap-2 sm:gap-3 mt-4 sm:mt-6 transition-all delay-200 duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-      <Link to="/select-version">
+      <a 
+        href="https://moviescriptwritergpt.lovable.app/select-version" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
         <Button 
           size={isMobile ? "default" : "lg"} 
           className="font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 text-sm sm:text-base"
         >
           Write Your Movie Script Now
         </Button>
-      </Link>
+      </a>
       <a 
         href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
         target="_blank" 

@@ -1,9 +1,7 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const steps = [
   {
@@ -170,7 +168,7 @@ export default function ProcessSection() {
                   </ul>
                   {activeIndex === index && (
                     <div className="mt-4 animate-fade-in">
-                      <a href="/select-version" target="_blank" rel="noopener noreferrer">
+                      <a href="https://moviescriptwritergpt.lovable.app/select-version" target="_blank" rel="noopener noreferrer">
                         <Button variant="ghost" className="text-script-accent hover:text-script-accent hover:bg-script-accent/10 border border-script-accent/20">
                           Learn more
                         </Button>

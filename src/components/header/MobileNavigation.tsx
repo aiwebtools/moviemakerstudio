@@ -60,7 +60,14 @@ export default function MobileNavigation({
           )}
         </Link>
         
-        <Link to="/select-version" onClick={onToggleMenu} className="animate-fade-in" style={{animationDelay: '50ms'}}>
+        <a 
+          href="https://moviescriptwritergpt.lovable.app/select-version" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          onClick={onToggleMenu} 
+          className="animate-fade-in" 
+          style={{animationDelay: '50ms'}}
+        >
           <Button 
             size="sm" 
             variant="default" 
@@ -68,7 +75,7 @@ export default function MobileNavigation({
           >
             USE MOVIE SCRIPT WRITER GPT
           </Button>
-        </Link>
+        </a>
         
         <a 
           href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 

@@ -39,7 +39,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         )}
       </Link>
       
-      <Link to="/select-version">
+      <a href="https://moviescriptwritergpt.lovable.app/select-version" target="_blank" rel="noopener noreferrer">
         <Button 
           size="sm" 
           variant="default" 
@@ -47,7 +47,7 @@ export default function DesktopNavigation({ animationTools, soundTools }: Deskto
         >
           USE MOVIE SCRIPT WRITER GPT
         </Button>
-      </Link>
+      </a>
       
       <a 
         href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
