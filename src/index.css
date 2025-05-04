@@ -8,7 +8,7 @@
 
 @layer base {
   :root {
-    --background: 225 20% 14%;
+    --background: 0 0% 0%;
     --foreground: 240 10% 92%;
 
     --card: 225 18% 18%;
@@ -55,7 +55,7 @@
   }
 
   body {
-    @apply bg-script-bg text-foreground antialiased;
+    @apply bg-black text-foreground antialiased;
     -webkit-tap-highlight-color: transparent;
   }
 

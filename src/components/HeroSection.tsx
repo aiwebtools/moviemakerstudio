@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { BackgroundEffects } from './hero/BackgroundEffects';
 import { HeroContent } from './hero/HeroContent';
 import { HeroButtons } from './hero/HeroButtons';
@@ -28,23 +28,27 @@ export default function HeroSection() {
       setLoaded(true);
     }, 100);
     
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isFB) {
-        setCursorPosition({
-          x: (e.clientX / window.innerWidth) - 0.5,
-          y: (e.clientY / window.innerHeight) - 0.5
-        });
-      }
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', checkMobile);
     };
   }, []);
+
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    if (!isFacebookBrowser && !isMobile) {
+      setCursorPosition({
+        x: (e.clientX / window.innerWidth) - 0.5,
+        y: (e.clientY / window.innerHeight) - 0.5
+      });
+    }
+  }, [isFacebookBrowser, isMobile]);
+  
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [handleMouseMove]);
 
   const scrollToExamples = () => {
     const examplesSection = document.getElementById('examples');

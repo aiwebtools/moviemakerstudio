@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #1A1F2C;
+  background-color: #000000;
   color: #E1E1E6;
 }
 
@@ -78,6 +78,28 @@ body {
   }
   100% {
     width: 0;
+  }
+}
+
+/* Hollywood Spotlight animation */
+@keyframes spotlight-sweep {
+  0% {
+    opacity: 0.05;
+    transform: rotate(-30deg);
+  }
+  25% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.05;
+    transform: rotate(30deg);
+  }
+  75% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0.05;
+    transform: rotate(-30deg);
   }
 }
 
