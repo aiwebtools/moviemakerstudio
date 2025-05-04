@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Clapperboard, Menu } from "lucide-react";
 import DesktopNavigation from "./header/DesktopNavigation";
 import MobileNavigation from "./header/MobileNavigation";
-import { animationTools, soundTools } from "@/data/tools";
+import { animationTools, soundTools, lipsyncTools } from "@/data/tools";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,7 +74,11 @@ export default function Header() {
         </div>
         
         <div className="hidden md:block">
-          <DesktopNavigation animationTools={animationTools} soundTools={soundTools} />
+          <DesktopNavigation 
+            animationTools={animationTools} 
+            soundTools={soundTools} 
+            lipsyncTools={lipsyncTools}
+          />
         </div>
       </div>
       
@@ -83,6 +87,7 @@ export default function Header() {
         isFacebookBrowser={isFacebookBrowser} 
         animationTools={animationTools} 
         soundTools={soundTools} 
+        lipsyncTools={lipsyncTools}
         onToggleMenu={toggleMobileMenu} 
       />
     </header>
