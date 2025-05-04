@@ -16,7 +16,6 @@ interface MobileNavigationProps {
   isFacebookBrowser: boolean;
   animationTools: { name: string; url: string }[];
   soundTools: { name: string; url: string }[];
-  lipsyncTools?: { name: string; url: string }[];
   onToggleMenu: () => void;
 }
 
@@ -25,7 +24,6 @@ export default function MobileNavigation({
   isFacebookBrowser,
   animationTools,
   soundTools,
-  lipsyncTools = [],
   onToggleMenu,
 }: MobileNavigationProps) {
   const [toolsOpen, setToolsOpen] = useState(false);
@@ -131,7 +129,6 @@ export default function MobileNavigation({
               <AnimationSoundTools 
                 animationTools={animationTools} 
                 soundTools={soundTools} 
-                lipsyncTools={lipsyncTools}
                 isMobile={true} 
                 onItemClick={onToggleMenu} 
               />

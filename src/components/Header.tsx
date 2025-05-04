@@ -1,77 +1,89 @@
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+
+import { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Logo from "./Logo";
-import MobileMenuButton from "./MobileMenuButton";
-import MobileNavigation from "./header/MobileNavigation";
+import { Clapperboard, Menu } from "lucide-react";
 import DesktopNavigation from "./header/DesktopNavigation";
-import { animationTools, soundTools, lipsyncTools } from "@/data/tools";
+import MobileNavigation from "./header/MobileNavigation";
+import { animationTools, soundTools } from "@/data/tools";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-  
-  // Function to toggle the mobile menu
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-  
-  // Detect Facebook in-app browser
-  const isFacebookBrowser = /FBAN|FBAV/.test(navigator.userAgent);
-  
-  // Scroll event listener to change header style on scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isFacebookBrowser, setIsFacebookBrowser] = useState(false);
+
   useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor;
+    const isFB = userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1;
+    setIsFacebookBrowser(isFB);
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20);
     };
     
     window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
-  // Close the mobile menu when the route changes
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location.pathname]);
-  
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 h-[72px] z-50 transition-colors duration-300",
-      isFacebookBrowser 
-        ? "bg-script-bg border-b border-white/5" 
-        : scrolled 
-          ? "bg-script-bg/95 backdrop-blur-md border-b border-white/5" 
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8",
+      isScrolled 
+        ? isFacebookBrowser 
+          ? "bg-script-bg border-b border-white/5" 
+          : "bg-script-bg/90 backdrop-blur-md shadow-md border-b border-white/5" 
+        : isFacebookBrowser 
+          ? "bg-script-bg" 
           : "bg-transparent"
     )}>
-      <div className="container mx-auto h-full px-4">
-        <div className="flex items-center justify-between h-full">
-          {/* Logo */}
-          <Logo />
-          
-          {/* Desktop Navigation - Hidden on mobile */}
-          <div className="hidden lg:flex">
-            <DesktopNavigation animationTools={animationTools} soundTools={soundTools} lipsyncTools={lipsyncTools} />
+      <div className="container mx-auto flex flex-col">
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center">
+            <Clapperboard className="h-6 w-6 text-script-accent mr-2" />
+            <div className="flex flex-col items-start">
+              <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
+                MOVIE Maker <span className="text-script-accent group-hover:animate-pulse-glow">Studio</span>
+              </span>
+              <a 
+                href="https://www.aiwebtools.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 hover:text-script-accent transition-colors"
+              >
+                Presented by AiWebTools.Ai
+              </a>
+            </div>
           </div>
           
-          {/* Mobile Button - Shown only on mobile */}
-          <div className="flex lg:hidden">
-            <MobileMenuButton isOpen={isMenuOpen} onClick={toggleMenu} />
-          </div>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="md:hidden text-white hover:bg-script-accent/20 transition-colors"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <Menu className={cn(
+              "h-6 w-6 transition-transform duration-300",
+              mobileMenuOpen ? "transform rotate-90" : ""
+            )} />
+          </Button>
+        </div>
+        
+        <div className="hidden md:block">
+          <DesktopNavigation animationTools={animationTools} soundTools={soundTools} />
         </div>
       </div>
       
-      {/* Mobile Menu - Shown only on mobile when open */}
       <MobileNavigation 
-        isOpen={isMenuOpen} 
+        isOpen={mobileMenuOpen} 
         isFacebookBrowser={isFacebookBrowser} 
         animationTools={animationTools} 
         soundTools={soundTools} 
-        lipsyncTools={lipsyncTools}
-        onToggleMenu={toggleMenu} 
+        onToggleMenu={toggleMobileMenu} 
       />
     </header>
   );

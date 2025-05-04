@@ -13,10 +13,9 @@ import AnimationSoundTools from "./AnimationSoundTools";
 interface DesktopNavigationProps {
   animationTools: { name: string; url: string }[];
   soundTools: { name: string; url: string }[];
-  lipsyncTools?: { name: string; url: string }[];
 }
 
-export default function DesktopNavigation({ animationTools, soundTools, lipsyncTools }: DesktopNavigationProps) {
+export default function DesktopNavigation({ animationTools, soundTools }: DesktopNavigationProps) {
   const location = useLocation();
   
   // Determine if a route is active
@@ -93,7 +92,7 @@ export default function DesktopNavigation({ animationTools, soundTools, lipsyncT
           className="w-72 bg-script-bg border border-white/10 text-white shadow-lg animate-fade-in"
           sideOffset={8}
         >
-          <AnimationSoundTools animationTools={animationTools} soundTools={soundTools} lipsyncTools={lipsyncTools} />
+          <AnimationSoundTools animationTools={animationTools} soundTools={soundTools} />
         </DropdownMenuContent>
       </DropdownMenu>
       
