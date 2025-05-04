@@ -62,9 +62,9 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Resources</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Filmmaking Guide</a></li>
-                <li><a href="#" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">FAQ</a></li>
-                <li><a href="#" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Support</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Filmmaking Guide</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">FAQ</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Support</a></li>
               </ul>
             </div>
             <div>
