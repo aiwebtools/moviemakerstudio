@@ -12,7 +12,7 @@ export const VideoPreview = ({ loaded }: VideoPreviewProps) => {
     const preloadLink = document.createElement('link');
     preloadLink.rel = 'preload';
     preloadLink.as = 'image';
-    preloadLink.href = 'https://i.ytimg.com/vi/4e3Rkurt3-c/maxresdefault.jpg';
+    preloadLink.href = 'https://i.ytimg.com/vi/9fpWIE20z7s/maxresdefault.jpg';
     document.head.appendChild(preloadLink);
 
     return () => {
@@ -42,8 +42,8 @@ export const VideoPreview = ({ loaded }: VideoPreviewProps) => {
         <iframe 
           width="100%" 
           height="100%" 
-          src="https://www.youtube.com/embed/4e3Rkurt3-c?rel=0&autoplay=1&playsinline=1&enablejsapi=1&modestbranding=1&origin=https://www.aiwebtools.ai&vq=hd1080&playlist=4e3Rkurt3-c&controls=1" 
-          title="ScriptWriter AI Demo Video"
+          src="https://www.youtube.com/embed/9fpWIE20z7s?rel=0&autoplay=1&playsinline=1&enablejsapi=1&modestbranding=1&origin=https://www.aiwebtools.ai&vq=hd1080&playlist=9fpWIE20z7s&controls=1" 
+          title="MOVIE Maker Studio Demo Video"
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
           allowFullScreen
