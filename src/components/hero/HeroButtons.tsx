@@ -20,7 +20,7 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
       </Link>
       <a 
         href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
-        target="_blank"
+        target="_blank" 
         rel="noopener noreferrer"
       >
         <Button 
