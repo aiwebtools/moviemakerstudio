@@ -38,15 +38,15 @@ export default function MobileNavigation({
 
   return (
     <div className={cn(
-      "fixed top-[72px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-50",
+      "fixed top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-50",
       isFacebookBrowser 
-        ? "bg-script-bg border-b border-white/5" 
-        : "bg-script-bg/95 backdrop-blur-md border-b border-white/5",
+        ? "bg-script-bg" 
+        : "bg-script-bg/95 backdrop-blur-md",
       isOpen 
-        ? "max-h-screen py-4 animate-fade-in" 
+        ? "max-h-screen py-3 animate-fade-in" 
         : "max-h-0 animate-fade-out"
     )}>
-      <div className="container mx-auto px-4 flex flex-col space-y-4 pb-4">
+      <div className="container mx-auto px-4 flex flex-col space-y-3 pb-3">
         <Link 
           to="/" 
           className={cn(
@@ -73,9 +73,8 @@ export default function MobileNavigation({
           style={{animationDelay: '50ms'}}
         >
           <Button 
-            size="sm" 
             variant="default" 
-            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
           >
             USE MOVIE SCRIPT WRITER GPT
           </Button>
@@ -90,9 +89,8 @@ export default function MobileNavigation({
           style={{animationDelay: '100ms'}}
         >
           <Button 
-            size="sm"
             variant="default"
-            className="bg-[#F97316] hover:bg-[#F97316]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+            className="bg-[#F97316] hover:bg-[#F97316]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
           >
             Movie Scene Maker GPT
           </Button>
@@ -107,9 +105,8 @@ export default function MobileNavigation({
           style={{animationDelay: '150ms'}}
         >
           <Button 
-            size="sm"
             variant="default"
-            className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+            className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
           >
             Movie Trailer Poster Maker
           </Button>
@@ -121,7 +118,7 @@ export default function MobileNavigation({
           className="w-full animate-fade-in"
           style={{animationDelay: '200ms'}}
         >
-          <CollapsibleTrigger className="w-full flex items-center justify-between py-2 text-sm font-medium text-gray-300 hover:text-script-accent transition-colors border border-white/10 rounded-md px-2">
+          <CollapsibleTrigger className="w-full flex items-center justify-between py-1.5 text-sm font-medium text-gray-300 hover:text-script-accent transition-colors border border-white/10 rounded-md px-2">
             <div className="flex items-center">
               <Clapperboard className="h-4 w-4 mr-1" />
               ANIMATION & SOUND TOOLS
@@ -129,7 +126,7 @@ export default function MobileNavigation({
             <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${toolsOpen ? 'transform rotate-180' : ''}`} />
           </CollapsibleTrigger>
           <CollapsibleContent className="animate-accordion-down">
-            <div className="ml-6 mt-2 space-y-2">
+            <div className="ml-4 mt-2 space-y-2">
               <AnimationSoundTools 
                 animationTools={animationTools} 
                 soundTools={soundTools} 
@@ -151,11 +148,10 @@ export default function MobileNavigation({
           style={{animationDelay: '250ms'}}
         >
           <Button 
-            size="sm"
             variant="default"
-            className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02]"
+            className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
           >
-            StageMaster AI Suite for the Performing Arts
+            StageMaster AI Suite 
           </Button>
         </a>
         

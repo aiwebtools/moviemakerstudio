@@ -6,11 +6,13 @@ import { Clapperboard, Menu } from "lucide-react";
 import DesktopNavigation from "./header/DesktopNavigation";
 import MobileNavigation from "./header/MobileNavigation";
 import { animationTools, soundTools, lipsyncTools, editingTools } from "@/data/tools";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isFacebookBrowser, setIsFacebookBrowser] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor;
@@ -31,11 +33,11 @@ export default function Header() {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8",
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 px-4 md:px-8",
       isScrolled 
         ? isFacebookBrowser 
           ? "bg-script-bg" 
-          : "bg-script-bg/90 backdrop-blur-md shadow-md" 
+          : "bg-script-bg/95 backdrop-blur-md shadow-md" 
         : isFacebookBrowser 
           ? "bg-script-bg" 
           : "bg-transparent"
@@ -59,12 +61,12 @@ export default function Header() {
             </div>
           </div>
           
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-2">
             <a href="https://moviescriptwritergpt.lovable.app/select-version" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="sm" 
                 variant="default" 
-                className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+                className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 text-sm font-medium h-8 px-3"
               >
                 USE MOVIE SCRIPT WRITER GPT
               </Button>
@@ -78,7 +80,7 @@ export default function Header() {
               <Button 
                 size="sm"
                 variant="default"
-                className="bg-[#F97316] hover:bg-[#F97316]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+                className="bg-[#F97316] hover:bg-[#F97316]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 text-sm font-medium h-8 px-3"
               >
                 Movie Scene Maker GPT
               </Button>
@@ -92,7 +94,7 @@ export default function Header() {
               <Button 
                 size="sm"
                 variant="default"
-                className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+                className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 text-sm font-medium h-8 px-3"
               >
                 Movie Trailer Poster Maker
               </Button>
@@ -109,7 +111,7 @@ export default function Header() {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
+              className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent px-2 py-1 rounded-md hover:bg-white/5 transition-all duration-200 h-8"
             >
               MORE AI TOOLS
             </a>

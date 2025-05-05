@@ -71,10 +71,19 @@
   animation: header-button-glow 1.5s infinite;
 }
 
+/* Shadow and glow effects */
+.shadow-glow {
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+}
+
+.shadow-neon {
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
 /* Mobile-specific animations */
 @media (max-width: 768px) {
   .animate-gradient-x {
-    animation: gradient-x 3.5s ease infinite;
+    animation: gradient-x 3s ease infinite;
   }
   
   .animate-gradient-slow {
@@ -82,6 +91,18 @@
   }
   
   .shadow-glow {
-    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+    box-shadow: 0 0 6px rgba(229, 9, 20, 0.4);
+  }
+  
+  /* Tighter spacing for mobile */
+  .mobile-spacing-tight > * {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Better button rendering on mobile */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 }

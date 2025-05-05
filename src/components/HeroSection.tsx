@@ -5,32 +5,25 @@ import { HeroContent } from './hero/HeroContent';
 import { HeroButtons } from './hero/HeroButtons';
 import { VideoPreview } from './hero/VideoPreview';
 import { ScriptPreview } from './hero/ScriptPreview';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isFacebookBrowser, setIsFacebookBrowser] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor;
     const isFB = userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1;
     setIsFacebookBrowser(isFB);
     
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
     const timer = setTimeout(() => {
       setLoaded(true);
     }, 100);
     
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
@@ -59,7 +52,7 @@ export default function HeroSection() {
         loaded={loaded}
       />
       
-      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-4xl pt-24 sm:pt-20 md:pt-16">
+      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-4xl pt-28 sm:pt-26 md:pt-20">
         <HeroContent loaded={loaded} />
         
         <HeroButtons loaded={loaded} isMobile={isMobile} />
