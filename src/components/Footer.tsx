@@ -29,7 +29,7 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
             <div className="sm:col-span-1">
               <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Production AI Tools</h3>
               <ul className="space-y-2">
@@ -62,14 +62,6 @@ export default function Footer() {
               </ul>
             </div>
             <div className="sm:col-span-1">
-              <div className="mb-6">
-                <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Resources</h3>
-                <ul className="space-y-2">
-                  <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Filmmaking Guide</a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">FAQ</a></li>
-                  <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Support</a></li>
-                </ul>
-              </div>
               <div>
                 <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Company</h3>
                 <ul className="space-y-2">
@@ -78,17 +70,17 @@ export default function Footer() {
                   <li><a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Terms</a></li>
                 </ul>
               </div>
-            </div>
-            <div className="sm:col-span-1">
-              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Production Tools</h3>
-              <div className="mt-2">
-                <AnimationSoundTools 
-                  animationTools={animationTools}
-                  soundTools={soundTools}
-                  lipsyncTools={lipsyncTools}
-                  editingTools={editingTools}
-                  isMobile={true}
-                />
+              <div className="mt-6">
+                <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Production Tools</h3>
+                <div className="mt-2">
+                  <AnimationSoundTools 
+                    animationTools={animationTools}
+                    soundTools={soundTools}
+                    lipsyncTools={lipsyncTools}
+                    editingTools={editingTools}
+                    isMobile={true}
+                  />
+                </div>
               </div>
             </div>
           </div>
