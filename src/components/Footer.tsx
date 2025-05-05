@@ -91,7 +91,7 @@ export default function Footer() {
                    className="block">
                   <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-purple-500/20 to-transparent hover:from-purple-500/30 border-purple-500/30 hover:border-purple-500 transition-all duration-300 group">
                     <span className="mr-2">🎭</span>
-                    <span className="truncate">StageMaster AI Suite</span>
+                    <span className="truncate">StageMaster AI Suite for the Performing Arts</span>
                   </Button>
                 </a>
                 
