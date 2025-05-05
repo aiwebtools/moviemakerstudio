@@ -27,8 +27,8 @@ const Index = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-pulse">
-          <span className="text-2xl font-bold font-display tracking-tight rainbow-text">
-            Script<span>Writer</span>
+          <span className="text-2xl font-bold font-display tracking-tight">
+            Script<span className="text-script-accent">Writer</span>
           </span>
         </div>
       </div>

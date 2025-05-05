@@ -22,9 +22,9 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
       >
         <Button 
           size={isMobile ? "default" : "lg"} 
-          className={`font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 text-sm sm:text-base transform ${hoveredButton === 0 ? 'scale-110 button-glow' : ''}`}
+          className={`font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 text-sm sm:text-base transform ${hoveredButton === 0 ? 'scale-105' : ''}`}
         >
-          <span className="rainbow-text">
+          <span className="bg-gradient-to-r from-white via-white/80 to-white bg-size-200 animate-gradient-x bg-clip-text">
             Write Your Movie Script Now
           </span>
         </Button>
@@ -40,9 +40,9 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
         <Button 
           size={isMobile ? "default" : "lg"} 
           variant="outline" 
-          className={`font-medium border-script-accent/50 hover:bg-script-accent/10 transition-all duration-300 text-sm sm:text-base whitespace-normal md:whitespace-nowrap transform ${hoveredButton === 1 ? 'scale-110 button-glow animate-border-gradient' : ''}`}
+          className={`font-medium border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300 text-sm sm:text-base whitespace-normal md:whitespace-nowrap transform ${hoveredButton === 1 ? 'scale-105' : ''}`}
         >
-          <span className="rainbow-text">
+          <span className="bg-gradient-to-r from-[#E50914] via-[#1EAEDB] to-[#E50914] bg-size-200 animate-gradient-slow bg-clip-text text-transparent hover:text-script-accent">
             Start Creating Your Movie Scene Visuals Click Here
           </span>
         </Button>
@@ -58,9 +58,9 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
         <Button 
           size={isMobile ? "default" : "lg"} 
           variant="outline" 
-          className={`font-medium border-[#1EAEDB]/50 hover:bg-[#1EAEDB]/10 transition-all duration-300 text-sm sm:text-base transform ${hoveredButton === 2 ? 'scale-110 button-glow animate-border-gradient' : ''}`}
+          className={`font-medium border-[#1EAEDB]/50 text-[#1EAEDB] hover:bg-[#1EAEDB]/10 transition-all duration-300 text-sm sm:text-base transform ${hoveredButton === 2 ? 'scale-105' : ''}`}
         >
-          <span className="rainbow-text">
+          <span className="bg-gradient-to-r from-[#1EAEDB] via-white to-[#1EAEDB] bg-size-200 animate-gradient-slow bg-clip-text text-transparent hover:text-[#1EAEDB]">
             Make Your Movie Trailer Poster
           </span>
         </Button>
