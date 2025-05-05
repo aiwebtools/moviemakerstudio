@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0 max-w-[250px]">
             <div className="flex flex-col items-start">
               <div className="flex items-center">
-                <Clapperboard className="h-6 w-6 text-script-accent mr-2" />
+                <Clapperboard className="h-6 w-6 md:h-8 md:w-8 text-script-accent mr-2" />
                 <span className="text-base font-bold font-display tracking-tight group">
                   MOVIE Maker <span className="text-script-accent group-hover:animate-pulse-glow">Studio</span>
                 </span>
