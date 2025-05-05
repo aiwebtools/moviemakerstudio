@@ -13,20 +13,24 @@ import './animationStyles.css';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // Set mounted state to trigger animations
+    setIsMounted(true);
+    
     // Simulate loading to ensure smooth transitions
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 600);
     
     return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse">
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <div className={`animate-pulse transition-opacity duration-500 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
           <span className="text-2xl font-bold font-display tracking-tight">
             Script<span className="text-script-accent">Writer</span>
           </span>

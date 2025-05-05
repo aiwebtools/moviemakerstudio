@@ -56,3 +56,18 @@
 .text-color-animate {
   animation: text-color-cycle 8s infinite;
 }
+
+/* Mobile-specific animations */
+@media (max-width: 768px) {
+  .animate-gradient-x {
+    animation: gradient-x 4s ease infinite;
+  }
+  
+  .animate-gradient-slow {
+    animation: gradient-slow 6s ease infinite;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+  }
+}
