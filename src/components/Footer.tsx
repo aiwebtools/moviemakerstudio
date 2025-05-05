@@ -1,5 +1,7 @@
 
 import { Clapperboard } from "lucide-react";
+import AnimationSoundTools from "@/components/header/AnimationSoundTools";
+import { animationTools, soundTools, lipsyncTools, editingTools } from "@/data/tools";
 
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-8 md:py-12 px-4">
@@ -27,8 +29,8 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+            <div className="sm:col-span-1">
               <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Production AI Tools</h3>
               <ul className="space-y-2">
                 <li><a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
@@ -59,21 +61,35 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Resources</h3>
-              <ul className="space-y-2">
-                <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Filmmaking Guide</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">FAQ</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Support</a></li>
-              </ul>
+            <div className="sm:col-span-1">
+              <div className="mb-6">
+                <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Resources</h3>
+                <ul className="space-y-2">
+                  <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Filmmaking Guide</a></li>
+                  <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">FAQ</a></li>
+                  <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Support</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Company</h3>
+                <ul className="space-y-2">
+                  <li><a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">About Us</a></li>
+                  <li><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Privacy</a></li>
+                  <li><a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Terms</a></li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Company</h3>
-              <ul className="space-y-2">
-                <li><a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">About Us</a></li>
-                <li><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Privacy</a></li>
-                <li><a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Terms</a></li>
-              </ul>
+            <div className="sm:col-span-1">
+              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Production Tools</h3>
+              <div className="mt-2">
+                <AnimationSoundTools 
+                  animationTools={animationTools}
+                  soundTools={soundTools}
+                  lipsyncTools={lipsyncTools}
+                  editingTools={editingTools}
+                  isMobile={true}
+                />
+              </div>
             </div>
           </div>
         </div>
