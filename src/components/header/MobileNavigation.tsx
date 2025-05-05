@@ -149,9 +149,9 @@ export default function MobileNavigation({
         >
           <Button 
             variant="default"
-            className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
+            className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-xs"
           >
-            StageMaster AI Suite 
+            StageMaster AI Suite for the Performing Arts
           </Button>
         </a>
         
