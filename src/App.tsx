@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingButton from './components/FloatingButton';
 import { Toaster } from "@/components/ui/sonner";
-import { DisclaimerDialog } from './components/DisclaimerDialog';
+import DisclaimerDialog from './components/DisclaimerDialog';
 import './App.css';
 
 function App() {
