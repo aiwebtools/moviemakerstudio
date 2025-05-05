@@ -36,6 +36,7 @@ export default function DesktopNavigation({
       <DropdownMenuContent 
         className="w-72 bg-script-bg border border-white/10 text-white shadow-lg animate-fade-in"
         sideOffset={8}
+        align="end"
       >
         <AnimationSoundTools 
           animationTools={animationTools} 

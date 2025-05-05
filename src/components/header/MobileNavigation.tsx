@@ -46,7 +46,7 @@ export default function MobileNavigation({
         ? "max-h-screen py-2 animate-fade-in" 
         : "max-h-0 animate-fade-out"
     )}>
-      <div className="container mx-auto px-4 flex flex-col space-y-2 pb-2">
+      <div className="w-full px-4 flex flex-col space-y-2 pb-2">
         <Link 
           to="/" 
           className={cn(
