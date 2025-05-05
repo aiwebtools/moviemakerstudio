@@ -89,9 +89,9 @@ export default function Footer() {
                 
                 <a href="https://stagemasterai.lovable.app/" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-purple-500/20 to-transparent hover:from-purple-500/30 border-purple-500/30 hover:border-purple-500 transition-all duration-300 group">
+                  <Button variant="outline" className="w-full h-auto py-2 px-3 justify-start bg-gradient-to-r from-purple-500/20 to-transparent hover:from-purple-500/30 border-purple-500/30 hover:border-purple-500 transition-all duration-300 group">
                     <span className="mr-2 shrink-0">🎭</span>
-                    <span>StageMaster AI Suite for the Performing Arts</span>
+                    <span className="text-xs sm:text-sm whitespace-normal">StageMaster AI Suite for the Performing Arts</span>
                   </Button>
                 </a>
                 
