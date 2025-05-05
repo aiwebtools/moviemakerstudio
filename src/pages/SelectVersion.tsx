@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import VersionCard from '@/components/VersionCard';
 import StageVersionCard from '@/components/StageVersionCard';
 import VersionPageHeader from '@/components/VersionPageHeader';
-import { Sparkles, Zap, Theater, Camera, Film } from "lucide-react";
+import { Sparkles, Zap, Theater, Camera, Film, Music } from "lucide-react";
 
 export default function SelectVersion() {
   useEffect(() => {
@@ -93,6 +93,24 @@ export default function SelectVersion() {
               buttonText="Use Movie Trailer Poster Maker"
               buttonColor="bg-amber-600 hover:bg-amber-700"
               buttonShadow="shadow-[0_0_10px_#d97706,0_0_20px_#d97706]"
+            />
+            
+            {/* Music Video Maker GPT Card - NEW */}
+            <VersionCard
+              title="Music Video Maker GPT"
+              description="Create captivating music videos with AI-powered visual generation and music synchronization. Turn your song into a professional music video."
+              features={[
+                "Music video concept creation",
+                "Visual style development",
+                "Scene planning & storyboarding",
+                "Music & visuals synchronization"
+              ]}
+              link="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt"
+              badgeText="Music"
+              BadgeIcon={Music}
+              buttonText="Use Music Video Maker GPT"
+              buttonColor="bg-indigo-600 hover:bg-indigo-700"
+              buttonShadow="shadow-[0_0_10px_#4f46e5,0_0_20px_#4f46e5]"
             />
             
             {/* StageMaster AI Suite Card */}
