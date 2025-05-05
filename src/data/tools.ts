@@ -17,6 +17,7 @@ export const animationTools: Tool[] = [
 export const soundTools: Tool[] = [
   { name: "SUNO Music Generator", url: "https://suno.com/invite/@aiwebtools" },
   { name: "Eleven Labs Voice & Sound Generator", url: "https://elevenlabs.io/?from=kennybastian5304" },
+  { name: "Music Video Maker GPT", url: "https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" },
 ];
 
 export const lipsyncTools: Tool[] = [
