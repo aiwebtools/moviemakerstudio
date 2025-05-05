@@ -42,7 +42,7 @@ export default function Header() {
           ? "bg-script-bg" 
           : "bg-transparent"
     )}>
-      <div className="w-full mx-0 px-4">
+      <div className="w-full mx-0 px-3 md:px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Clapperboard className="h-8 w-8 md:h-10 md:w-10 text-script-accent mr-2" />

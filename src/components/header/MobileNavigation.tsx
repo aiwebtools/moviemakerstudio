@@ -46,7 +46,7 @@ export default function MobileNavigation({
         ? "max-h-screen py-2 animate-fade-in" 
         : "max-h-0 animate-fade-out"
     )}>
-      <div className="w-full px-4 flex flex-col space-y-2 pb-2">
+      <div className="w-full px-3 flex flex-col space-y-2 pb-3">
         <Link 
           to="/" 
           className={cn(
@@ -74,7 +74,7 @@ export default function MobileNavigation({
         >
           <Button 
             variant="default" 
-            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
+            className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-1 text-xs sm:text-sm"
           >
             USE MOVIE SCRIPT WRITER GPT
           </Button>
@@ -90,7 +90,7 @@ export default function MobileNavigation({
         >
           <Button 
             variant="default"
-            className="bg-[#F97316] hover:bg-[#F97316]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
+            className="bg-[#F97316] hover:bg-[#F97316]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-1 text-xs sm:text-sm"
           >
             Movie Scene Maker GPT
           </Button>
@@ -106,7 +106,7 @@ export default function MobileNavigation({
         >
           <Button 
             variant="default"
-            className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-sm"
+            className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-1 text-xs sm:text-sm"
           >
             Movie Trailer Poster Maker
           </Button>
@@ -149,7 +149,7 @@ export default function MobileNavigation({
         >
           <Button 
             variant="default"
-            className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-0 text-xs"
+            className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-auto min-h-10 py-1 px-2 text-[0.7rem] leading-tight"
           >
             StageMaster AI Suite for the Performing Arts
           </Button>
