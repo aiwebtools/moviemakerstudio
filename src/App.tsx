@@ -7,12 +7,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import SelectVersion from "./pages/SelectVersion";
 import NotFound from "./pages/NotFound";
+import DisclaimerDialog from "@/components/DisclaimerDialog";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <DisclaimerDialog />
       <Toaster />
       <Sonner />
       <BrowserRouter>

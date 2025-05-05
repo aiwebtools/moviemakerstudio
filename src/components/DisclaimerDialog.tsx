@@ -15,11 +15,19 @@ export default function DisclaimerDialog() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    // Clear localStorage during development if needed
+    // localStorage.removeItem("hasSeenDisclaimer");
+    
     // Check if the user has already seen the disclaimer
     const hasSeenDisclaimer = localStorage.getItem("hasSeenDisclaimer");
     
     if (!hasSeenDisclaimer) {
-      setOpen(true);
+      // Ensure dialog opens with a slight delay to allow component to fully mount
+      const timer = setTimeout(() => {
+        setOpen(true);
+      }, 500);
+      
+      return () => clearTimeout(timer);
     }
   }, []);
 
