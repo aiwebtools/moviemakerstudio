@@ -2,18 +2,18 @@
 import { Clapperboard, Film, BookText, PenTool, Video, BookOpen, Sparkles } from "lucide-react";
 import AnimationSoundTools from "@/components/header/AnimationSoundTools";
 import { animationTools, soundTools, lipsyncTools, editingTools } from "@/data/tools";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return <footer className="bg-script-paper border-t border-white/10 py-8 md:py-12 px-4">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-start">
+          {/* Shrinking the logo section */}
+          <div className="mb-6 md:mb-0 max-w-[250px]">
             <div className="flex flex-col items-start">
               <div className="flex items-center">
-                <Clapperboard className="h-5 w-5 text-script-accent mr-2" />
-                <span className="text-lg sm:text-xl font-bold font-display tracking-tight group">
+                <Clapperboard className="h-4 w-4 text-script-accent mr-2" />
+                <span className="text-base font-bold font-display tracking-tight group">
                   MOVIE Maker <span className="text-script-accent group-hover:animate-pulse-glow">Studio</span>
                 </span>
               </div>
@@ -26,72 +26,72 @@ export default function Footer() {
                 Presented by AiWebTools.Ai
               </a>
             </div>
-            <p className="text-xs sm:text-sm text-script-muted mt-2 max-w-md">
+            <p className="text-xs text-script-muted mt-2 max-w-md">
               The ultimate all-in-one AI suite for creating professional movie content from concept to final production.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+          {/* Enlarging the buttons section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12 flex-1 w-full md:pl-6">
             <div className="sm:col-span-1">
               <h3 className="font-semibold mb-3 md:mb-4 text-white text-sm sm:text-base flex items-center">
                 <Sparkles className="h-4 w-4 text-script-accent mr-2" />
                 Production AI Tools
-                <Badge variant="outline" className="ml-2 bg-script-accent/20 text-xs">Premium</Badge>
               </h3>
               <div className="space-y-3 mt-4">
                 <a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <Film className="mr-2 h-4 w-4 text-script-accent group-hover:animate-pulse-subtle" />
-                    <span className="truncate">Movie Script Writer GPT v1</span>
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Film className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <span>Movie Script Writer GPT v1</span>
                   </Button>
                 </a>
                 
                 <a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <Film className="mr-2 h-4 w-4 text-script-accent group-hover:animate-pulse-subtle" />
-                    <span className="truncate">Movie Script Writer GPT v2</span>
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Film className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <span>Movie Script Writer GPT v2</span>
                   </Button>
                 </a>
                 
                 <a href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <Video className="mr-2 h-4 w-4 text-script-accent group-hover:animate-pulse-subtle" />
-                    <span className="truncate">Movie Scene Maker GPT</span>
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Video className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <span>Movie Scene Maker GPT</span>
                   </Button>
                 </a>
                 
                 <a href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <PenTool className="mr-2 h-4 w-4 text-script-accent group-hover:animate-pulse-subtle" />
-                    <span className="truncate">Movie Trailer Poster Maker</span>
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <PenTool className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <span>Movie Trailer Poster Maker</span>
                   </Button>
                 </a>
                 
                 <a href="https://screenplaywritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <BookText className="mr-2 h-4 w-4 text-script-accent group-hover:animate-pulse-subtle" />
-                    <span className="truncate">ScreenPlay Writer GPT</span>
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <BookText className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <span>ScreenPlay Writer GPT</span>
                   </Button>
                 </a>
                 
                 <a href="https://bookwritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <BookOpen className="mr-2 h-4 w-4 text-script-accent group-hover:animate-pulse-subtle" />
-                    <span className="truncate">Book Writer GPT</span>
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <BookOpen className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <span>Book Writer GPT</span>
                   </Button>
                 </a>
                 
                 <a href="https://stagemasterai.lovable.app/" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full justify-start bg-gradient-to-r from-purple-500/20 to-transparent hover:from-purple-500/30 border-purple-500/30 hover:border-purple-500 transition-all duration-300 group">
-                    <span className="mr-2">🎭</span>
-                    <span className="truncate">StageMaster AI Suite for the Performing Arts</span>
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-purple-500/20 to-transparent hover:from-purple-500/30 border-purple-500/30 hover:border-purple-500 transition-all duration-300 group">
+                    <span className="mr-2 shrink-0">🎭</span>
+                    <span>StageMaster AI Suite for the Performing Arts</span>
                   </Button>
                 </a>
                 
