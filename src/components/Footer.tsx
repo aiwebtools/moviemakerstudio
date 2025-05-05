@@ -71,7 +71,7 @@ export default function Footer() {
                   </Button>
                 </a>
                 
-                <a href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" target="_blank" rel="noopener noreferrer" 
+                <a href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" 
                    className="block">
                   <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
                     <Music className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
