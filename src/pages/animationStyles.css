@@ -1,0 +1,58 @@
+
+/* Gradient Animation Utilities */
+.bg-size-200 {
+  background-size: 200% 200%;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-slow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-gradient-slow {
+  animation: gradient-slow 5s ease infinite;
+}
+
+/* Button Hover Effects */
+@keyframes pulse-border {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(229, 9, 20, 0);
+  }
+}
+
+.pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+/* Text Color Animation */
+@keyframes text-color-cycle {
+  0% { color: #E50914; }
+  25% { color: #1EAEDB; }
+  50% { color: #E50914; }
+  75% { color: #1EAEDB; }
+  100% { color: #E50914; }
+}
+
+.text-color-animate {
+  animation: text-color-cycle 8s infinite;
+}

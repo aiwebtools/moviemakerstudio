@@ -8,6 +8,9 @@ import ExampleSection from '@/components/ExampleSection';
 import Footer from '@/components/Footer';
 import DisclaimerDialog from '@/components/DisclaimerDialog';
 
+// Add animation styles
+import './animationStyles.css';
+
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
 
