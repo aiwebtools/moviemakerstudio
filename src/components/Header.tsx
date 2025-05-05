@@ -45,7 +45,7 @@ export default function Header() {
       <div className="w-full mx-0 px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Clapperboard className="h-6 w-6 text-script-accent mr-2" />
+            <Clapperboard className="h-8 w-8 text-script-accent mr-2" />
             <div className="flex flex-col items-start">
               <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
                 MOVIE Maker <span className="text-script-accent group-hover:animate-pulse-glow">Studio</span>
