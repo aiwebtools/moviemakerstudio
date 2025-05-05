@@ -40,8 +40,8 @@ export default function Header() {
           ? "bg-script-bg" 
           : "bg-transparent"
     )}>
-      <div className="container mx-auto flex flex-col">
-        <div className="flex items-center justify-between mb-3">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Clapperboard className="h-6 w-6 text-script-accent mr-2" />
             <div className="flex flex-col items-start">
@@ -59,6 +59,62 @@ export default function Header() {
             </div>
           </div>
           
+          <div className="hidden md:flex items-center space-x-3">
+            <a href="https://moviescriptwritergpt.lovable.app/select-version" target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="sm" 
+                variant="default" 
+                className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+              >
+                USE MOVIE SCRIPT WRITER GPT
+              </Button>
+            </a>
+            
+            <a 
+              href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <Button 
+                size="sm"
+                variant="default"
+                className="bg-[#F97316] hover:bg-[#F97316]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+              >
+                Movie Scene Maker GPT
+              </Button>
+            </a>
+            
+            <a 
+              href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <Button 
+                size="sm"
+                variant="default"
+                className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 font-medium"
+              >
+                Movie Trailer Poster Maker
+              </Button>
+            </a>
+            
+            <DesktopNavigation 
+              animationTools={animationTools} 
+              soundTools={soundTools} 
+              lipsyncTools={lipsyncTools}
+              editingTools={editingTools}
+            />
+            
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent px-2 py-1.5 rounded-md hover:bg-white/5 transition-all duration-200"
+            >
+              MORE AI TOOLS
+            </a>
+          </div>
+          
           <Button 
             variant="ghost" 
             size="icon" 
@@ -71,15 +127,6 @@ export default function Header() {
               mobileMenuOpen ? "transform rotate-90" : ""
             )} />
           </Button>
-        </div>
-        
-        <div className="hidden md:block">
-          <DesktopNavigation 
-            animationTools={animationTools} 
-            soundTools={soundTools} 
-            lipsyncTools={lipsyncTools}
-            editingTools={editingTools}
-          />
         </div>
       </div>
       

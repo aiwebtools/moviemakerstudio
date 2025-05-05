@@ -50,13 +50,6 @@ export default function HeroSection() {
     };
   }, [handleMouseMove]);
 
-  const scrollToExamples = () => {
-    const examplesSection = document.getElementById('examples');
-    if (examplesSection) {
-      examplesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16 overflow-hidden">
       <BackgroundEffects 
@@ -66,7 +59,7 @@ export default function HeroSection() {
         loaded={loaded}
       />
       
-      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-4xl pt-16 sm:pt-14 md:pt-10">
+      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-4xl pt-24 sm:pt-20 md:pt-16">
         <HeroContent loaded={loaded} />
         
         <HeroButtons loaded={loaded} isMobile={isMobile} />
