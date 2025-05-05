@@ -23,11 +23,11 @@
 }
 
 .animate-gradient-x {
-  animation: gradient-x 3s ease infinite;
+  animation: gradient-x 2.5s ease infinite;
 }
 
 .animate-gradient-slow {
-  animation: gradient-slow 5s ease infinite;
+  animation: gradient-slow 4s ease infinite;
 }
 
 /* Button Hover Effects */
@@ -60,11 +60,11 @@
 /* Mobile-specific animations */
 @media (max-width: 768px) {
   .animate-gradient-x {
-    animation: gradient-x 4s ease infinite;
+    animation: gradient-x 3.5s ease infinite;
   }
   
   .animate-gradient-slow {
-    animation: gradient-slow 6s ease infinite;
+    animation: gradient-slow 5s ease infinite;
   }
   
   .shadow-glow {

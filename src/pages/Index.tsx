@@ -22,7 +22,7 @@ const Index = () => {
     // Simulate loading to ensure smooth transitions
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 600);
+    }, 400); // Reduced from 600ms to 400ms
     
     return () => clearTimeout(timer);
   }, []);
@@ -30,7 +30,7 @@ const Index = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black">
-        <div className={`animate-pulse transition-opacity duration-500 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`animate-pulse transition-opacity duration-300 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
           <span className="text-2xl font-bold font-display tracking-tight">
             Script<span className="text-script-accent">Writer</span>
           </span>

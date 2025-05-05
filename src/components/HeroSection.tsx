@@ -58,7 +58,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16 overflow-hidden">
       <BackgroundEffects 
         cursorPosition={cursorPosition}
         isFacebookBrowser={isFacebookBrowser}
@@ -66,7 +66,7 @@ export default function HeroSection() {
         loaded={loaded}
       />
       
-      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-6 md:space-y-8 max-w-4xl pt-24 sm:pt-20 md:pt-16">
+      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-4xl pt-16 sm:pt-14 md:pt-10">
         <HeroContent loaded={loaded} />
         
         <HeroButtons loaded={loaded} isMobile={isMobile} />
