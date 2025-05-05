@@ -5,7 +5,7 @@ interface HeroContentProps {
 
 export const HeroContent = ({ loaded }: HeroContentProps) => {
   return (
-    <div className={`transition-all duration-700 px-3 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+    <div className={`transition-all duration-700 px-3 mt-0 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
       <span className="inline-block px-3 py-1 text-xs font-medium rounded-full mb-2 bg-gradient-to-r from-[#E50914] via-[#1EAEDB] to-[#E50914] bg-size-200 animate-gradient-x text-white">
         Complete AI-Powered Filmmaking Suite
       </span>

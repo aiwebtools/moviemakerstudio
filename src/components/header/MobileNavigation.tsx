@@ -38,15 +38,15 @@ export default function MobileNavigation({
 
   return (
     <div className={cn(
-      "fixed top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-50",
+      "fixed top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-50 border-t-0",
       isFacebookBrowser 
         ? "bg-script-bg" 
         : "bg-script-bg/95 backdrop-blur-md",
       isOpen 
-        ? "max-h-screen py-3 animate-fade-in" 
+        ? "max-h-screen py-2 animate-fade-in" 
         : "max-h-0 animate-fade-out"
     )}>
-      <div className="container mx-auto px-4 flex flex-col space-y-3 pb-3">
+      <div className="container mx-auto px-4 flex flex-col space-y-2 pb-2">
         <Link 
           to="/" 
           className={cn(

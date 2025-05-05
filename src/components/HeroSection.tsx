@@ -44,7 +44,7 @@ export default function HeroSection() {
   }, [handleMouseMove]);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-0 overflow-hidden">
       <BackgroundEffects 
         cursorPosition={cursorPosition}
         isFacebookBrowser={isFacebookBrowser}
@@ -52,7 +52,7 @@ export default function HeroSection() {
         loaded={loaded}
       />
       
-      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-4xl pt-28 sm:pt-26 md:pt-20">
+      <div className="container relative z-10 mx-auto flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-4xl pt-16 sm:pt-20 md:pt-20">
         <HeroContent loaded={loaded} />
         
         <HeroButtons loaded={loaded} isMobile={isMobile} />

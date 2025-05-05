@@ -26,7 +26,7 @@ export default function DesktopNavigation({
       <DropdownMenuTrigger asChild>
         <Button 
           variant="ghost" 
-          className="text-sm font-medium text-gray-300 hover:text-script-accent hover:bg-white/5 transition-colors px-3 py-1 h-8 rounded-md"
+          className="text-sm font-medium text-gray-300 hover:text-script-accent hover:bg-white/5 transition-colors px-3 py-1 h-8 rounded-md border-0"
         >
           <Clapperboard className="h-4 w-4 mr-1" />
           ANIMATION & SOUND TOOLS
