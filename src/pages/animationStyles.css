@@ -5,54 +5,135 @@
 }
 
 @keyframes gradient-x {
-  0%, 100% {
+  0% {
     background-position: 0% 50%;
+    background-color: rgba(229, 9, 20, 0.1);
+  }
+  25% {
+    background-position: 25% 50%;
+    background-color: rgba(30, 174, 219, 0.1);
   }
   50% {
     background-position: 100% 50%;
+    background-color: rgba(120, 9, 229, 0.1);
+  }
+  75% {
+    background-position: 75% 50%;
+    background-color: rgba(219, 30, 174, 0.1);
+  }
+  100% {
+    background-position: 0% 50%;
+    background-color: rgba(229, 9, 20, 0.1);
   }
 }
 
 @keyframes gradient-slow {
-  0%, 100% {
+  0% {
     background-position: 0% 50%;
+    background-color: rgba(255, 255, 255, 0.05);
   }
-  50% {
-    background-position: 100% 50%;
+  33% {
+    background-position: 33% 50%;
+    background-color: rgba(229, 9, 20, 0.05);
+  }
+  66% {
+    background-position: 66% 50%;
+    background-color: rgba(30, 174, 219, 0.05);
+  }
+  100% {
+    background-position: 0% 50%;
+    background-color: rgba(255, 255, 255, 0.05);
   }
 }
 
 .animate-gradient-x {
-  animation: gradient-x 3s ease infinite;
+  animation: gradient-x 6s ease infinite;
 }
 
 .animate-gradient-slow {
-  animation: gradient-slow 5s ease infinite;
+  animation: gradient-slow 8s ease infinite;
 }
 
 /* Button Hover Effects */
 @keyframes pulse-border {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.4);
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.6);
   }
   50% {
-    box-shadow: 0 0 0 5px rgba(229, 9, 20, 0);
+    box-shadow: 0 0 0 8px rgba(30, 174, 219, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.6);
   }
 }
 
 .pulse-border {
-  animation: pulse-border 2s infinite;
+  animation: pulse-border 3s infinite;
 }
 
 /* Text Color Animation */
 @keyframes text-color-cycle {
   0% { color: #E50914; }
-  25% { color: #1EAEDB; }
-  50% { color: #E50914; }
-  75% { color: #1EAEDB; }
+  20% { color: #FF5733; }
+  40% { color: #1EAEDB; }
+  60% { color: #8B5CF6; }
+  80% { color: #D946EF; }
   100% { color: #E50914; }
 }
 
 .text-color-animate {
   animation: text-color-cycle 8s infinite;
+}
+
+/* Enhanced text gradient animations */
+@keyframes rainbow-text-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.rainbow-text {
+  background: linear-gradient(to right, #E50914, #FF5733, #1EAEDB, #8B5CF6, #D946EF, #E50914);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow-text-animation 6s ease infinite;
+}
+
+/* Button hover enhancement */
+@keyframes button-glow {
+  0% { box-shadow: 0 0 5px rgba(229, 9, 20, 0.7); }
+  50% { box-shadow: 0 0 20px rgba(30, 174, 219, 0.9), 0 0 30px rgba(139, 92, 246, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(229, 9, 20, 0.7); }
+}
+
+.button-glow {
+  animation: button-glow 3s infinite;
+}
+
+/* Subtle text shadow pulsating */
+@keyframes text-shadow-pulse {
+  0% { text-shadow: 0 0 4px rgba(229, 9, 20, 0.4); }
+  25% { text-shadow: 0 0 8px rgba(30, 174, 219, 0.6); }
+  50% { text-shadow: 0 0 12px rgba(139, 92, 246, 0.8); }
+  75% { text-shadow: 0 0 8px rgba(217, 70, 239, 0.6); }
+  100% { text-shadow: 0 0 4px rgba(229, 9, 20, 0.4); }
+}
+
+.text-shadow-pulse {
+  animation: text-shadow-pulse 6s infinite;
+}
+
+/* Gradient border animation */
+@keyframes border-gradient {
+  0% { border-color: rgba(229, 9, 20, 0.6); }
+  25% { border-color: rgba(30, 174, 219, 0.6); }
+  50% { border-color: rgba(139, 92, 246, 0.6); }
+  75% { border-color: rgba(217, 70, 239, 0.6); }
+  100% { border-color: rgba(229, 9, 20, 0.6); }
+}
+
+.animate-border-gradient {
+  animation: border-gradient 6s infinite;
 }
