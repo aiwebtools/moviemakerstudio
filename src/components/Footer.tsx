@@ -29,7 +29,7 @@ export default function Footer() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
             <div>
-              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Movie Tools</h3>
+              <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Production AI Tools</h3>
               <ul className="space-y-2">
                 <li><a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer GPT Version 1</a></li>
                 <li><a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-300 hover:text-script-accent transition-colors">Movie Script Writer Version 2</a></li>
