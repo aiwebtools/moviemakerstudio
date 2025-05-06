@@ -79,19 +79,19 @@ export default function Footer() {
                   </Button>
                 </a>
                 
+                <a href="https://chatgpt.com/g/g-681a201fe69c8191b99e1636be90139e-commercial-scene-maker-gpt" target="_blank" rel="noopener noreferrer" 
+                   className="block">
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <BookText className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <span>Commercial Scene Maker GPT</span>
+                  </Button>
+                </a>
+                
                 <a href="https://screenplaywritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
                    className="block">
                   <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
                     <BookText className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
                     <span>ScreenPlay Writer GPT</span>
-                  </Button>
-                </a>
-                
-                <a href="https://bookwritergpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-                   className="block">
-                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <BookOpen className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
-                    <span>Book Writer GPT</span>
                   </Button>
                 </a>
                 
