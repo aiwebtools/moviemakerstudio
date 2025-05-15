@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import { Banner } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function ScrollingBanner() {
@@ -36,7 +36,7 @@ export default function ScrollingBanner() {
       )}>
         {[...Array(3)].map((_, index) => (
           <div key={index} className="flex items-center text-white gap-3 px-4">
-            <Banner className="h-4 w-4 md:h-5 md:w-5 text-white animate-pulse" />
+            <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white animate-pulse" />
             <span className="text-sm md:text-base font-medium">
               <span className="font-bold">AiWebTools.Ai:</span> Your gateway to <span className="font-bold">FREE</span> AI tools empowering humanity. Unlock your true potential without limitations.
             </span>
