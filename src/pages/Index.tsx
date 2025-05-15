@@ -7,7 +7,6 @@ import ProcessSection from '@/components/ProcessSection';
 import ExampleSection from '@/components/ExampleSection';
 import Footer from '@/components/Footer';
 import DisclaimerDialog from '@/components/DisclaimerDialog';
-import ScrollingBanner from '@/components/ScrollingBanner';
 
 // Add animation styles
 import './animationStyles.css';
@@ -44,7 +43,6 @@ const Index = () => {
     <div className="min-h-screen">
       <DisclaimerDialog />
       <Header />
-      <ScrollingBanner />
       <main>
         <HeroSection />
         <FeaturesSection />
