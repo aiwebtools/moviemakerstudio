@@ -36,7 +36,7 @@ export default function AnimationSoundTools({
       <AccordionItem value="animation" className="border-white/10">
         <AccordionTrigger className={isMobile ? "text-sm font-medium text-script-accent py-2" : "px-3 py-2 text-script-accent hover:text-script-accent/90 font-medium"}>
           <div className="flex items-center">
-            <Film className="h-4 w-4 mr-2" /> Animate Your Scenes
+            <Film className="h-4 w-4 mr-2" /> Animate Your Scenes - Video Generation Tools
           </div>
         </AccordionTrigger>
         <AccordionContent className={isMobile ? "" : "px-2"}>

@@ -5,8 +5,8 @@ export interface Tool {
 }
 
 export const animationTools: Tool[] = [
-  { name: "SORA", url: "https://www.sora.com" },
-  { name: "KLING", url: "https://klingai.com" },
+  { name: "SORA - Video Generator", url: "https://www.sora.com" },
+  { name: "KLING - Video Generator", url: "https://klingai.com" },
   { name: "HAILUO", url: "https://hailuoai.video/" },
   { name: "Higgsfield", url: "https://higgsfield.ai/" },
   { name: "RunwayML", url: "https://runwayml.com/" },
@@ -27,6 +27,7 @@ export const lipsyncTools: Tool[] = [
 export const editingTools: Tool[] = [
   { name: "Filmora", url: "https://download.wondershare.com/filmora_full846.exe?_gl=1*5tb5lz*_ga*MjEyMDY2ODg1OC4xNzQ2Mzc1ODk0*_ga_24WTSJBD5B*czE3NDYzNzU4OTMkbzEkZzEkdDE3NDYzNzU5MDAkajU0JGwwJGg0NzQwMjI0NjY.*_gcl_au*MTYxNzMzMTQ1Ni4xNzQ2Mzc1ODk1" },
   { name: "Videoleap", url: "https://www.videoleapapp.com/" },
+  { name: "CapCut", url: "http://capcut.com/" },
 ];
 
 export const gptShortcuts: Tool[] = [
