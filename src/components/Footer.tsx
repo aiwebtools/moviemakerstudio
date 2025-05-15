@@ -1,5 +1,5 @@
 
-import { Clapperboard, Film, BookText, PenTool, Video, BookOpen, Sparkles, Music, Image } from "lucide-react";
+import { Clapperboard, Film, BookText, PenTool, Video, Sparkles, Music, Image, Headphones, Scissors } from "lucide-react";
 import AnimationSoundTools from "@/components/header/AnimationSoundTools";
 import { animationTools, soundTools, lipsyncTools, editingTools } from "@/data/tools";
 import { Button } from "@/components/ui/button";
@@ -35,8 +35,11 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12 flex-1 w-full md:pl-6">
             <div className="sm:col-span-1">
               <h3 className="font-semibold mb-3 md:mb-4 text-white text-sm sm:text-base flex items-center">
-                <Sparkles className="h-4 w-4 text-script-accent mr-2" />
-                Production AI Tools
+                <Sparkles className="h-4 w-4 text-yellow-400 mr-2" />
+                <span className="flex items-center">
+                  <span className="bg-yellow-400 text-black px-2 py-0.5 rounded text-xs font-bold mr-2">STEP 1</span>
+                  Production AI Tools
+                </span>
               </h3>
               <div className="space-y-3 mt-4">
                 <a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" 
@@ -121,7 +124,13 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-6">
-                <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base">Production Tools</h3>
+                <h3 className="font-semibold mb-2 md:mb-3 text-white text-sm sm:text-base flex items-center">
+                  <Film className="h-4 w-4 mr-2 text-amber-400" />
+                  <span className="flex items-center">
+                    <span className="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold mr-2">STEP 2</span>
+                    Production Tools
+                  </span>
+                </h3>
                 <div className="mt-2">
                   <AnimationSoundTools 
                     animationTools={animationTools}
