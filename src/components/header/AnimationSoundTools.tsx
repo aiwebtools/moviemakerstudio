@@ -101,7 +101,12 @@ export default function AnimationSoundTools({
                 onClick={onItemClick}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <span className="mr-1">🎵</span> {tool.name}
+                {tool.name === "Eleven Labs Voice & Sound Generator" ? (
+                  <span className="mr-1">🔊</span>
+                ) : (
+                  <span className="mr-1">🎵</span>
+                )} 
+                {tool.name}
               </a>
             ))}
           </div>
