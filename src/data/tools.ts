@@ -17,7 +17,6 @@ export const animationTools: Tool[] = [
 export const soundTools: Tool[] = [
   { name: "SUNO Music Generator", url: "https://suno.com/invite/@aiwebtools" },
   { name: "Eleven Labs Voice & Sound Generator", url: "https://elevenlabs.io/?from=kennybastian5304" },
-  { name: "Music Video Maker GPT", url: "https://musicvideomakergpt.lovable.app/?via=aiwebtools" },
   { name: "UDIO", url: "https://www.udio.com/" },
 ];
 
@@ -28,4 +27,11 @@ export const lipsyncTools: Tool[] = [
 export const editingTools: Tool[] = [
   { name: "Filmora", url: "https://download.wondershare.com/filmora_full846.exe?_gl=1*5tb5lz*_ga*MjEyMDY2ODg1OC4xNzQ2Mzc1ODk0*_ga_24WTSJBD5B*czE3NDYzNzU4OTMkbzEkZzEkdDE3NDYzNzU5MDAkajU0JGwwJGg0NzQwMjI0NjY.*_gcl_au*MTYxNzMzMTQ1Ni4xNzQ2Mzc1ODk1" },
   { name: "Videoleap", url: "https://www.videoleapapp.com/" },
+];
+
+export const gptShortcuts: Tool[] = [
+  { name: "Music Video Maker GPT", url: "https://musicvideomakergpt.lovable.app/?via=aiwebtools" },
+  { name: "Movie Scene Maker GPT", url: "https://moviescenemakergpt.lovable.app/?via=aiwebtools" },
+  { name: "Movie Script Writer GPT", url: "https://moviescriptwritergpt.lovable.app/select-version" },
+  { name: "Movie Trailer Poster GPT", url: "https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" },
 ];

@@ -13,13 +13,15 @@ interface DesktopNavigationProps {
   soundTools: { name: string; url: string }[];
   lipsyncTools?: { name: string; url: string }[];
   editingTools?: { name: string; url: string }[];
+  gptShortcuts?: { name: string; url: string }[];
 }
 
 export default function DesktopNavigation({ 
   animationTools, 
   soundTools, 
   lipsyncTools = [],
-  editingTools = []
+  editingTools = [],
+  gptShortcuts = []
 }: DesktopNavigationProps) {
   return (
     <DropdownMenu>
@@ -43,6 +45,7 @@ export default function DesktopNavigation({
           soundTools={soundTools}
           lipsyncTools={lipsyncTools}
           editingTools={editingTools}
+          gptShortcuts={gptShortcuts}
         />
       </DropdownMenuContent>
     </DropdownMenu>

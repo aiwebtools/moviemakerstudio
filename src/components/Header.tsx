@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Clapperboard, Menu } from "lucide-react";
 import DesktopNavigation from "./header/DesktopNavigation";
 import MobileNavigation from "./header/MobileNavigation";
-import { animationTools, soundTools, lipsyncTools, editingTools } from "@/data/tools";
+import { animationTools, soundTools, lipsyncTools, editingTools, gptShortcuts } from "@/data/tools";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Header() {
@@ -105,6 +105,7 @@ export default function Header() {
               soundTools={soundTools} 
               lipsyncTools={lipsyncTools}
               editingTools={editingTools}
+              gptShortcuts={gptShortcuts}
             />
             
             <a 
@@ -139,6 +140,7 @@ export default function Header() {
         soundTools={soundTools} 
         lipsyncTools={lipsyncTools}
         editingTools={editingTools}
+        gptShortcuts={gptShortcuts}
         onToggleMenu={toggleMobileMenu} 
       />
     </header>

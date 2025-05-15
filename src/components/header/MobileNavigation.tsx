@@ -18,6 +18,7 @@ interface MobileNavigationProps {
   soundTools: { name: string; url: string }[];
   lipsyncTools?: { name: string; url: string }[];
   editingTools?: { name: string; url: string }[];
+  gptShortcuts?: { name: string; url: string }[];
   onToggleMenu: () => void;
 }
 
@@ -28,6 +29,7 @@ export default function MobileNavigation({
   soundTools,
   lipsyncTools = [],
   editingTools = [],
+  gptShortcuts = [],
   onToggleMenu,
 }: MobileNavigationProps) {
   const [toolsOpen, setToolsOpen] = useState(false);
@@ -132,6 +134,7 @@ export default function MobileNavigation({
                 soundTools={soundTools} 
                 lipsyncTools={lipsyncTools}
                 editingTools={editingTools}
+                gptShortcuts={gptShortcuts}
                 isMobile={true} 
                 onItemClick={onToggleMenu} 
               />
