@@ -41,45 +41,40 @@ export default function Footer() {
               <div className="space-y-3 mt-4">
                 <a href="https://chatgpt.com/g/g-35psQsJil-movie-script-writer-gpt-original-version-1" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-purple-500/20 via-purple-400/10 to-purple-600/20 hover:from-purple-500/30 hover:to-purple-600/30 border-purple-500/30 hover:border-purple-400 transition-all duration-300 group overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    <Film className="mr-2 h-4 w-4 text-purple-400 shrink-0 group-hover:animate-pulse-subtle" />
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Film className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
                     <span>Movie Script Writer GPT v1</span>
                   </Button>
                 </a>
                 
                 <a href="https://chatgpt.com/g/g-ZoZ12NUed-movie-script-writer-gpt" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-purple-500/20 via-purple-400/10 to-purple-600/20 hover:from-purple-500/30 hover:to-purple-600/30 border-purple-500/30 hover:border-purple-400 transition-all duration-300 group overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    <Film className="mr-2 h-4 w-4 text-purple-400 shrink-0 group-hover:animate-pulse-subtle" />
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Film className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
                     <span>Movie Script Writer GPT v2</span>
                   </Button>
                 </a>
                 
                 <a href="https://moviescenemakergpt.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-blue-500/20 via-blue-400/10 to-blue-600/20 hover:from-blue-500/30 hover:to-blue-600/30 border-blue-500/30 hover:border-blue-400 transition-all duration-300 group overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    <Video className="mr-2 h-4 w-4 text-blue-400 shrink-0 group-hover:animate-pulse-subtle" />
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Video className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
                     <span>Movie Scene Maker GPT</span>
                   </Button>
                 </a>
                 
                 <a href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-orange-500/20 via-orange-400/10 to-orange-600/20 hover:from-orange-500/30 hover:to-orange-600/30 border-orange-500/30 hover:border-orange-400 transition-all duration-300 group overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    <Image className="mr-2 h-4 w-4 text-orange-400 shrink-0 group-hover:animate-pulse-subtle" />
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Image className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
                     <span>Movie Trailer Poster Maker</span>
                   </Button>
                 </a>
                 
                 <a href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" 
                    className="block">
-                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-green-500/20 via-green-400/10 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30 border-green-500/30 hover:border-green-400 transition-all duration-300 group overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    <Music className="mr-2 h-4 w-4 text-green-400 shrink-0 group-hover:animate-pulse-subtle" />
+                  <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
+                    <Music className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
                     <span>Music Video Maker GPT</span>
                   </Button>
                 </a>
