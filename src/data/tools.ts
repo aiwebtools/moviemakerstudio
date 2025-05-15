@@ -31,8 +31,8 @@ export const editingTools: Tool[] = [
 ];
 
 export const gptShortcuts: Tool[] = [
-  { name: "Music Video Maker GPT", url: "https://musicvideomakergpt.lovable.app/?via=aiwebtools" },
-  { name: "Movie Scene Maker GPT", url: "https://moviescenemakergpt.lovable.app/?via=aiwebtools" },
   { name: "Movie Script Writer GPT", url: "https://moviescriptwritergpt.lovable.app/select-version" },
+  { name: "Movie Scene Maker GPT", url: "https://moviescenemakergpt.lovable.app/?via=aiwebtools" },
   { name: "Movie Trailer Poster GPT", url: "https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" },
+  { name: "Music Video Maker GPT", url: "https://musicvideomakergpt.lovable.app/?via=aiwebtools" },
 ];

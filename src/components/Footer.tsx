@@ -1,5 +1,5 @@
 
-import { Clapperboard, Film, BookText, PenTool, Video, BookOpen, Sparkles, Music } from "lucide-react";
+import { Clapperboard, Film, BookText, PenTool, Video, BookOpen, Sparkles, Music, Image } from "lucide-react";
 import AnimationSoundTools from "@/components/header/AnimationSoundTools";
 import { animationTools, soundTools, lipsyncTools, editingTools } from "@/data/tools";
 import { Button } from "@/components/ui/button";
@@ -66,7 +66,7 @@ export default function Footer() {
                 <a href="https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" target="_blank" rel="noopener noreferrer" 
                    className="block">
                   <Button variant="outline" className="w-full h-auto py-2 justify-start bg-gradient-to-r from-script-accent/10 to-transparent hover:from-script-accent/20 border-script-accent/30 hover:border-script-accent transition-all duration-300 group">
-                    <PenTool className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
+                    <Image className="mr-2 h-4 w-4 text-script-accent shrink-0 group-hover:animate-pulse-subtle" />
                     <span>Movie Trailer Poster Maker</span>
                   </Button>
                 </a>

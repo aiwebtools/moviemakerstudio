@@ -1,5 +1,5 @@
 
-import { Film, Music, Headphones, Scissors, Sparkles } from "lucide-react";
+import { Film, Music, Headphones, Scissors, Sparkles, Video, Image } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -156,7 +156,11 @@ export default function AnimationSoundTools({
                 onClick={onItemClick}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <span className="mr-1">✨</span> {tool.name}
+                {tool.name === "Movie Script Writer GPT" && <Film className="h-4 w-4 mr-1" />}
+                {tool.name === "Movie Scene Maker GPT" && <Video className="h-4 w-4 mr-1" />}
+                {tool.name === "Movie Trailer Poster GPT" && <Image className="h-4 w-4 mr-1" />}
+                {tool.name === "Music Video Maker GPT" && <Music className="h-4 w-4 mr-1" />}
+                {tool.name}
               </a>
             ))}
           </div>
