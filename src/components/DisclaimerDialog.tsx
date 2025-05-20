@@ -9,7 +9,7 @@ import {
   DialogTitle 
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { FileText, Shield, Gavel } from "lucide-react";
+import { FileText, Shield, Gavel, Info } from "lucide-react";
 
 export default function DisclaimerDialog() {
   const [open, setOpen] = useState(false);
@@ -53,6 +53,15 @@ export default function DisclaimerDialog() {
                   This website and all tools provided herein (including but not limited to Movie Script Writer, 
                   Movie Scene Maker, Movie Trailer Poster Maker, StageMaster AI Suite, and all animation and sound tools) 
                   are provided for research, informational, and educational productivity purposes only.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <Info className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                <p className="bg-yellow-400/10 p-2 rounded-md border border-yellow-400/20">
+                  <span className="font-semibold text-yellow-400">Usage Information:</span> Unrestricted usage of these tools is 
+                  completely FREE with a ChatGPT Plus account or higher. Free ChatGPT accounts have limited interactions 
+                  every few hours.
                 </p>
               </div>
 
