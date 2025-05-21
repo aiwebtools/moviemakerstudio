@@ -22,6 +22,7 @@ export const soundTools: Tool[] = [
 
 export const lipsyncTools: Tool[] = [
   { name: "Hedra", url: "https://www.hedra.com/" },
+  { name: "VEO FLOW", url: "https://labs.google/fx/tools/flow" },
 ];
 
 export const editingTools: Tool[] = [
