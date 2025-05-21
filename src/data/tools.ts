@@ -18,6 +18,7 @@ export const soundTools: Tool[] = [
   { name: "SUNO Music Generator", url: "https://suno.com/invite/@aiwebtools" },
   { name: "UDIO", url: "https://www.udio.com/" },
   { name: "Eleven Labs Voice & Sound Generator", url: "https://elevenlabs.io/?from=kennybastian5304" },
+  { name: "FLEXCLIP - Add Sound Effects To Video", url: "https://www.flexclip.com/ai/video-to-ai-sfx-generator/" },
 ];
 
 export const lipsyncTools: Tool[] = [
