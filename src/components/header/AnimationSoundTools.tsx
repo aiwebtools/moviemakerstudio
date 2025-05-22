@@ -54,11 +54,17 @@ export default function AnimationSoundTools({
                 onClick={onItemClick}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                {tool.name === "Movie Script Writer GPT" && <Film className="h-4 w-4 mr-1" />}
-                {tool.name === "Movie Scene Maker GPT" && <Video className="h-4 w-4 mr-1" />}
-                {tool.name === "Movie Trailer Poster GPT" && <Image className="h-4 w-4 mr-1" />}
-                {tool.name === "Music Video Maker GPT" && <Music className="h-4 w-4 mr-1" />}
-                {tool.name}
+                {tool.name.includes("VEO 3") ? (
+                  <span dangerouslySetInnerHTML={{ __html: tool.name }} />
+                ) : (
+                  <>
+                    {tool.name === "Movie Script Writer GPT" && <Film className="h-4 w-4 mr-1" />}
+                    {tool.name === "Movie Scene Maker GPT" && <Video className="h-4 w-4 mr-1" />}
+                    {tool.name === "Movie Trailer Poster GPT" && <Image className="h-4 w-4 mr-1" />}
+                    {tool.name === "Music Video Maker GPT" && <Music className="h-4 w-4 mr-1" />}
+                    {tool.name}
+                  </>
+                )}
               </a>
             ))}
           </div>
