@@ -24,6 +24,7 @@ export const soundTools: Tool[] = [
 export const lipsyncTools: Tool[] = [
   { name: "Hedra", url: "https://www.hedra.com/" },
   { name: "VEO FLOW", url: "https://labs.google/fx/tools/flow" },
+  { name: "⭐ VEO 3 PROMPT Generator", url: "https://chatgpt.com/g/g-682faef24c608191808180e89719cb09-veo3-text-to-video-prompt-maker" },
 ];
 
 export const editingTools: Tool[] = [

@@ -1,4 +1,3 @@
-
 import { Film, Music, Headphones, Scissors, Sparkles, Video, Image } from "lucide-react";
 import {
   Accordion,
@@ -117,7 +116,13 @@ export default function AnimationSoundTools({
                 onClick={onItemClick}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <span className="mr-1">👄</span> {tool.name}
+                {tool.name.includes("VEO 3") ? (
+                  <span dangerouslySetInnerHTML={{ __html: tool.name }} />
+                ) : (
+                  <>
+                    <span className="mr-1">👄</span> {tool.name}
+                  </>
+                )}
               </a>
             ))}
           </div>
