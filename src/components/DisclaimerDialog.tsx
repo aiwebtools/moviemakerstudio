@@ -9,7 +9,7 @@ import {
   DialogTitle 
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { FileText, Shield, Gavel, Info } from "lucide-react";
+import { Shield } from "lucide-react";
 
 export default function DisclaimerDialog() {
   const [open, setOpen] = useState(false);
@@ -39,58 +39,38 @@ export default function DisclaimerDialog() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-lg max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-script-accent flex items-center gap-2">
             <Shield className="h-5 w-5" />
             Terms of Use & Disclaimer
           </DialogTitle>
-          <DialogDescription className="pt-3 text-sm sm:text-base">
-            <div className="space-y-4">
-              <div className="flex items-start gap-2">
-                <FileText className="h-5 w-5 text-script-accent flex-shrink-0 mt-0.5" />
-                <p>
-                  This website and all tools provided herein (including but not limited to Movie Script Writer, 
-                  Movie Scene Maker, Movie Trailer Poster Maker, StageMaster AI Suite, and all animation and sound tools) 
-                  are provided for research, informational, and educational productivity purposes only.
-                </p>
-              </div>
+          <DialogDescription className="pt-3 text-sm sm:text-base space-y-3">
+            <p>
+              This website and all AI tools (Movie Script Writer, Scene Maker, Trailer Poster Maker, StageMaster AI Suite, and animation/sound tools) are provided for research, educational, and productivity purposes only.
+            </p>
 
-              <div className="flex items-start gap-2">
-                <Info className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5" />
-                <p className="bg-yellow-400/10 p-2 rounded-md border border-yellow-400/20">
-                  <span className="font-semibold text-yellow-400">Usage Information:</span> Unrestricted usage of these tools is 
-                  completely FREE with a ChatGPT Plus account or higher. Free ChatGPT accounts have limited interactions 
-                  every few hours.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-2">
-                <Gavel className="h-5 w-5 text-script-accent flex-shrink-0 mt-0.5" />
-                <p>
-                  <span className="font-semibold">Content Ownership:</span> You, the user, own all rights to the content 
-                  generated entirely through these services. We claim no ownership over any content you create.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-2">
-                <Shield className="h-5 w-5 text-script-accent flex-shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-semibold">Ethical Use Agreement:</span> By using these tools, you agree to:
-                  <ul className="list-disc pl-5 mt-1 space-y-1">
-                    <li>Use these tools in an ethical manner</li>
-                    <li>Obtain permission for any likeness or persona being cloned or included in your productions</li>
-                    <li>Not infringe on any copyrights or intellectual property rights</li>
-                    <li>Take full responsibility for the content you create and how you use it</li>
-                  </ul>
-                </div>
-              </div>
-
-              <p className="font-semibold text-script-accent pt-2">
-                By clicking "I AGREE & CONTINUE" below, you acknowledge that you have read, understood, and agree to 
-                these terms and conditions.
+            <div className="bg-yellow-400/10 p-3 rounded-md border border-yellow-400/20">
+              <p className="text-yellow-400 font-semibold text-sm">
+                Usage: FREE with ChatGPT Plus or higher. Free accounts have limited interactions.
               </p>
             </div>
+
+            <div className="space-y-2 text-sm">
+              <p><strong>Content Ownership:</strong> You own all rights to content you create. We claim no ownership.</p>
+              
+              <p><strong>Ethical Use Agreement:</strong> By using these tools, you agree to:</p>
+              <ul className="list-disc pl-5 space-y-1 text-xs">
+                <li>Use tools ethically and responsibly</li>
+                <li>Obtain permission for any likeness or persona cloning</li>
+                <li>Not infringe on copyrights or intellectual property</li>
+                <li>Take full responsibility for your content and its usage</li>
+              </ul>
+            </div>
+
+            <p className="font-semibold text-script-accent text-sm pt-2">
+              By clicking "I AGREE & CONTINUE" you acknowledge reading and agreeing to these terms.
+            </p>
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="sm:justify-center pt-2">
