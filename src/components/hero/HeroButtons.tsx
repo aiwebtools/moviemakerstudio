@@ -65,6 +65,24 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
           </span>
         </Button>
       </a>
+      <a 
+        href="https://stagemasterai.lovable.app/" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full md:w-auto transition-transform duration-300"
+        onMouseEnter={() => setHoveredButton(3)}
+        onMouseLeave={() => setHoveredButton(null)}
+      >
+        <Button 
+          size={isMobile ? "default" : "lg"} 
+          variant="outline" 
+          className={`w-full md:w-auto font-medium border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 transition-all duration-300 text-base md:text-lg transform ${hoveredButton === 3 ? 'scale-105' : ''} ${isMobile ? 'h-11 py-1.5' : ''}`}
+        >
+          <span className="bg-gradient-to-r from-purple-400 via-white to-purple-400 bg-size-200 animate-gradient-slow bg-clip-text text-transparent hover:text-purple-400">
+            StageMaster AI Suite for Performing Arts
+          </span>
+        </Button>
+      </a>
     </div>
   );
 }
