@@ -42,7 +42,7 @@ export const VideoPreview = ({ loaded }: VideoPreviewProps) => {
         <iframe 
           width="100%" 
           height="100%" 
-          src="https://www.youtube.com/embed/Zdthelofv_E?rel=0&autoplay=1&mute=0&playsinline=1&enablejsapi=1&modestbranding=1&origin=https://www.aiwebtools.ai&vq=hd1080&playlist=Zdthelofv_E&controls=1" 
+          src="https://www.youtube.com/embed/Zdthelofv_E?rel=0&autoplay=1&mute=0&playsinline=1&enablejsapi=1&modestbranding=1&origin=https://www.aiwebtools.ai&vq=hd1080&hd=1&playlist=Zdthelofv_E&controls=1" 
           title="MOVIE Maker Studio Demo Video"
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
