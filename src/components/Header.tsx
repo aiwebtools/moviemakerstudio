@@ -32,7 +32,9 @@ export default function Header() {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 transition-all duration-300 py-3 px-0 md:px-0 border-b-0 z-50",
+      "fixed top-0 left-0 right-0 transition-all duration-300 border-b-0 z-50",
+      // Reduced padding on mobile to move logo up
+      "py-1 px-0 md:py-3 md:px-0",
       isScrolled 
         ? isFacebookBrowser 
           ? "bg-script-bg" 
@@ -51,9 +53,9 @@ export default function Header() {
       <div className="w-full mx-0 px-3 md:px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Clapperboard className="h-8 w-8 md:h-10 md:w-10 text-script-accent mr-2" />
+            <Clapperboard className="h-6 w-6 md:h-10 md:w-10 text-script-accent mr-2" />
             <div className="flex flex-col items-start">
-              <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
+              <span className="text-sm sm:text-lg md:text-2xl font-bold font-display tracking-tight group">
                 MOVIE MAKER <a 
                   href="https://www.aiwebtools.ai" 
                   target="_blank" 
@@ -67,7 +69,7 @@ export default function Header() {
                 href="https://www.aiwebtools.ai" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-xs text-gray-400 hover:text-script-accent transition-colors hover:underline"
+                className="text-[0.6rem] sm:text-xs text-gray-400 hover:text-script-accent transition-colors hover:underline"
               >
                 Presented By AiWebTools.Ai
               </a>
@@ -131,17 +133,17 @@ export default function Header() {
             </a>
           </div>
           
-          {/* Fixed mobile hamburger menu button */}
-          <div className="md:hidden fixed top-3 right-3 z-60">
+          {/* Fixed mobile hamburger menu button - moved up */}
+          <div className="md:hidden fixed top-1 right-3 z-60">
             <Button 
               variant="ghost" 
               size="icon" 
-              className="text-white hover:bg-script-accent/20 transition-colors bg-black/20 backdrop-blur-sm"
+              className="text-white hover:bg-script-accent/20 transition-colors bg-black/20 backdrop-blur-sm h-8 w-8"
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
             >
               <Menu className={cn(
-                "h-6 w-6 transition-transform duration-300",
+                "h-5 w-5 transition-transform duration-300",
                 mobileMenuOpen ? "transform rotate-90" : ""
               )} />
             </Button>
