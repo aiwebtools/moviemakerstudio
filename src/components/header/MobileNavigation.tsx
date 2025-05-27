@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, ExternalLink, ChevronDown, Clapperboard, ArrowDown } from "lucide-react";
+import { Home, ExternalLink, ChevronDown, Clapperboard, ArrowDown, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
@@ -65,8 +64,21 @@ export default function MobileNavigation({
             ? "bg-script-bg" 
             : "bg-script-bg/95 backdrop-blur-md"
         )}>
+          {/* Top close button */}
+          <div className="flex justify-end p-3 border-b border-white/10">
+            <Button
+              onClick={onToggleMenu}
+              size="icon"
+              variant="ghost"
+              className="h-8 w-8 text-gray-300 hover:text-script-accent hover:bg-white/5"
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5" />
+            </Button>
+          </div>
+
           <ScrollArea className="h-full w-full">
-            <div className="w-full px-3 flex flex-col space-y-2 pb-20 pt-2 min-h-[calc(100vh-60px)]">
+            <div className="w-full px-3 flex flex-col space-y-2 pb-20 pt-2 min-h-[calc(100vh-120px)]">
               <Link 
                 to="/" 
                 className={cn(
@@ -189,8 +201,17 @@ export default function MobileNavigation({
             </div>
           </ScrollArea>
           
-          {/* Fixed scroll down button */}
-          <div className="absolute bottom-4 right-4 z-50">
+          {/* Bottom close button and scroll down button */}
+          <div className="absolute bottom-4 left-0 right-0 flex justify-between items-center px-4 z-50">
+            <Button
+              onClick={onToggleMenu}
+              size="icon"
+              className="bg-gray-700 hover:bg-gray-600 text-white rounded-full h-12 w-12 transition-all duration-300 transform hover:scale-110"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </Button>
+            
             <Button
               onClick={scrollToBottom}
               size="icon"

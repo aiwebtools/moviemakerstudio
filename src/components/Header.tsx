@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -132,18 +131,21 @@ export default function Header() {
             </a>
           </div>
           
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="md:hidden text-white hover:bg-script-accent/20 transition-colors"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
-          >
-            <Menu className={cn(
-              "h-6 w-6 transition-transform duration-300",
-              mobileMenuOpen ? "transform rotate-90" : ""
-            )} />
-          </Button>
+          {/* Fixed mobile hamburger menu button */}
+          <div className="md:hidden fixed top-3 right-3 z-60">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="text-white hover:bg-script-accent/20 transition-colors bg-black/20 backdrop-blur-sm"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+            >
+              <Menu className={cn(
+                "h-6 w-6 transition-transform duration-300",
+                mobileMenuOpen ? "transform rotate-90" : ""
+              )} />
+            </Button>
+          </div>
         </div>
       </div>
       
