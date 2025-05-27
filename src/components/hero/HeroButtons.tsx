@@ -23,11 +23,11 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
       >
         <Button 
           size="sm"
-          className={`w-full md:w-auto font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 text-sm transform ${hoveredButton === 0 ? 'scale-105' : ''} h-9 px-3`}
+          className={`w-full md:w-auto font-medium bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 text-xs transform ${hoveredButton === 0 ? 'scale-105' : ''} h-8 px-2`}
         >
-          <FileText className="w-4 h-4 mr-1.5" />
+          <FileText className="w-3 h-3 mr-1" />
           <span className="bg-gradient-to-r from-white via-white/80 to-white bg-size-200 animate-gradient-x bg-clip-text">
-            Write Script
+            Write Movie Script
           </span>
         </Button>
       </a>
@@ -42,11 +42,11 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
         <Button 
           size="sm"
           variant="outline" 
-          className={`w-full md:w-auto font-medium border-2 border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300 text-sm transform ${hoveredButton === 1 ? 'scale-105' : ''} h-9 px-3`}
+          className={`w-full md:w-auto font-medium border-2 border-script-accent/50 text-script-accent hover:bg-script-accent/10 transition-all duration-300 text-xs transform ${hoveredButton === 1 ? 'scale-105' : ''} h-8 px-2`}
         >
-          <Film className="w-4 h-4 mr-1.5" />
+          <Film className="w-3 h-3 mr-1" />
           <span className="bg-gradient-to-r from-[#E50914] via-[#1EAEDB] to-[#E50914] bg-size-200 animate-gradient-slow bg-clip-text text-transparent hover:text-script-accent">
-            Scene Visuals
+            Star In Your Own Film
           </span>
         </Button>
       </a>
@@ -61,11 +61,11 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
         <Button 
           size="sm"
           variant="outline" 
-          className={`w-full md:w-auto font-medium border-2 border-[#1EAEDB]/50 text-[#1EAEDB] hover:bg-[#1EAEDB]/10 transition-all duration-300 text-sm transform ${hoveredButton === 2 ? 'scale-105' : ''} h-9 px-3`}
+          className={`w-full md:w-auto font-medium border-2 border-[#1EAEDB]/50 text-[#1EAEDB] hover:bg-[#1EAEDB]/10 transition-all duration-300 text-xs transform ${hoveredButton === 2 ? 'scale-105' : ''} h-8 px-2`}
         >
-          <Image className="w-4 h-4 mr-1.5" />
+          <Image className="w-3 h-3 mr-1" />
           <span className="bg-gradient-to-r from-[#1EAEDB] via-white to-[#1EAEDB] bg-size-200 animate-gradient-slow bg-clip-text text-transparent hover:text-[#1EAEDB]">
-            Trailer Poster
+            Movie Trailer Posters
           </span>
         </Button>
       </a>
@@ -80,11 +80,11 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
         <Button 
           size="sm"
           variant="outline" 
-          className={`w-full md:w-auto font-medium border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 transition-all duration-300 text-sm transform ${hoveredButton === 3 ? 'scale-105' : ''} h-9 px-3`}
+          className={`w-full md:w-auto font-medium border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 transition-all duration-300 text-xs transform ${hoveredButton === 3 ? 'scale-105' : ''} h-8 px-2`}
         >
-          <Theater className="w-4 h-4 mr-1.5" />
+          <Theater className="w-3 h-3 mr-1" />
           <span className="bg-gradient-to-r from-purple-400 via-white to-purple-400 bg-size-200 animate-gradient-slow bg-clip-text text-transparent hover:text-purple-400">
-            StageMaster AI
+            StageMaster Ai For Preforming Arts
           </span>
         </Button>
       </a>
