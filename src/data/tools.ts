@@ -38,5 +38,6 @@ export const gptShortcuts: Tool[] = [
   { name: "Movie Scene Maker GPT", url: "https://moviescenemakergpt.lovable.app/?via=aiwebtools" },
   { name: "Movie Trailer Poster GPT", url: "https://chatgpt.com/g/g-6814ab172de081918023593ce10d791d-movie-trailer-poster-gpt" },
   { name: "Music Video Maker GPT", url: "https://musicvideomakergpt.lovable.app/?via=aiwebtools" },
+  { name: "StageMaster AI Suite", url: "https://stagemasterai.lovable.app/" },
   { name: "⭐ VEO 3 PROMPT Generator", url: "https://chatgpt.com/g/g-682faef24c608191808180e89719cb09-veo3-text-to-video-prompt-maker" },
 ];
