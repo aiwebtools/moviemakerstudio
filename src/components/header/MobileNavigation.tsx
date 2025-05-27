@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, ExternalLink, ChevronDown, Clapperboard } from "lucide-react";
@@ -38,17 +37,16 @@ export default function MobileNavigation({
   // Determine if a route is active
   const isActiveRoute = (path: string) => location.pathname === path;
 
+  if (!isOpen) return null;
+
   return (
     <div className={cn(
-      "absolute top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-20 border-t-0 pointer-events-none",
+      "absolute top-[60px] left-0 right-0 shadow-lg transition-all duration-300 z-10 border-t-0 bg-script-bg",
       isFacebookBrowser 
         ? "bg-script-bg" 
-        : "bg-script-bg/95 backdrop-blur-md",
-      isOpen 
-        ? "max-h-screen py-2 animate-fade-in pointer-events-auto" 
-        : "max-h-0 animate-fade-out"
+        : "bg-script-bg/95 backdrop-blur-md"
     )}>
-      <div className="w-full px-3 flex flex-col space-y-2 pb-3">
+      <div className="w-full px-3 flex flex-col space-y-2 pb-3 pt-2">
         <Link 
           to="/" 
           className={cn(

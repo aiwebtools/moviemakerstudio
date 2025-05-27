@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -33,9 +32,7 @@ export default function Header() {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 transition-all duration-300 py-3 px-0 md:px-0 border-b-0",
-      // Lower z-index when mobile menu is open to allow scrolling
-      mobileMenuOpen ? "z-30" : "z-50",
+      "fixed top-0 left-0 right-0 transition-all duration-300 py-3 px-0 md:px-0 border-b-0 z-50",
       isScrolled 
         ? isFacebookBrowser 
           ? "bg-script-bg" 
