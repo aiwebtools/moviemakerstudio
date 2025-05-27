@@ -42,6 +42,13 @@ export default function Header() {
           ? "bg-script-bg" 
           : "bg-transparent"
     )}>
+      {/* Tagline positioned in top right corner */}
+      <div className="absolute top-2 right-4 z-60 hidden md:block">
+        <p className="text-xs text-gray-400 italic">
+          "Your Launch Pad to the Tools That Power Your Story."
+        </p>
+      </div>
+      
       <div className="w-full mx-0 px-3 md:px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -58,9 +65,6 @@ export default function Header() {
               >
                 Presented by AiWebTools.Ai
               </a>
-              <p className="text-xs text-gray-500 mt-1 italic">
-                "Your Launch Pad to the Tools That Power Your Story."
-              </p>
             </div>
           </div>
           
