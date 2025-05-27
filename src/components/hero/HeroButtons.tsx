@@ -70,7 +70,7 @@ export const HeroButtons = ({ loaded, isMobile }: HeroButtonsProps) => {
         </Button>
       </a>
       <a 
-        href="https://stagemasterai.lovable.app/" 
+        href="https://stagemasterai.lovable.app/?via=aiwebtools" 
         target="_blank"
         rel="noopener noreferrer"
         className="w-full md:w-auto transition-transform duration-300"
