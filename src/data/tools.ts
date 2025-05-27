@@ -13,7 +13,7 @@ export const animationTools: Tool[] = [
   { name: "PIKA LABS", url: "https://pika.art/" },
   { name: "Luma Labs", url: "https://lumalabs.ai/dream-machine" },
   { name: "Google Veo 2", url: "https://aistudio.google.com/generate-video" },
-  { name: "Google Flow (Veo 3)", url: "https://labs.google/fx/tools/flow" },
+  { name: "⭐ Google Flow (Veo 3) - PICTURE AND SOUND!", url: "https://labs.google/fx/tools/flow" },
 ];
 
 export const soundTools: Tool[] = [
