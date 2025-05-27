@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, ExternalLink, ChevronDown, Clapperboard, ArrowDown, X } from "lucide-react";
+import { Home, ExternalLink, ChevronDown, Clapperboard, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
@@ -201,8 +201,8 @@ export default function MobileNavigation({
             </div>
           </ScrollArea>
           
-          {/* Bottom close button and scroll down button */}
-          <div className="absolute bottom-4 left-0 right-0 flex justify-between items-center px-4 z-50">
+          {/* Bottom close button only - removed the scroll down button */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-50">
             <Button
               onClick={onToggleMenu}
               size="icon"
@@ -210,15 +210,6 @@ export default function MobileNavigation({
               aria-label="Close menu"
             >
               <X className="h-6 w-6" />
-            </Button>
-            
-            <Button
-              onClick={scrollToBottom}
-              size="icon"
-              className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon rounded-full h-12 w-12 transition-all duration-300 transform hover:scale-110"
-              aria-label="Scroll down"
-            >
-              <ArrowDown className="h-6 w-6 animate-bounce" />
             </Button>
           </div>
         </div>
