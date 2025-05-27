@@ -22,9 +22,17 @@ export default function MobileMenuHeader({ onToggleMenu }: MobileMenuHeaderProps
         </Button>
       </div>
 
-      {/* Tagline with glowing gold effect */}
+      {/* Taglines with glowing gold effect */}
       <div className="text-center py-6 px-3 border-b border-white/10 relative overflow-hidden">
         <div className="relative">
+          {/* Smaller tagline */}
+          <div className="mb-2">
+            <p className="text-gray-400 text-sm font-medium tracking-wide uppercase">
+              Lights, Camera, Action
+            </p>
+          </div>
+          
+          {/* Main tagline */}
           <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-xl font-bold animate-fade-in transition-all duration-300 hover:scale-105 cursor-pointer relative"
               style={{
                 textShadow: '0 0 20px rgba(251, 191, 36, 0.8), 0 0 40px rgba(251, 191, 36, 0.4)',
