@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, ExternalLink, ChevronDown, Clapperboard, X } from "lucide-react";
@@ -75,6 +76,13 @@ export default function MobileNavigation({
             >
               <X className="h-5 w-5" />
             </Button>
+          </div>
+
+          {/* Tagline */}
+          <div className="text-center py-4 px-3 border-b border-white/10">
+            <h2 className="text-script-accent text-lg font-bold animate-fade-in">
+              Become the Star You Are
+            </h2>
           </div>
 
           <ScrollArea className="h-full w-full">
