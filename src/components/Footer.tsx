@@ -25,6 +25,9 @@ export default function Footer() {
               >
                 Presented by AiWebTools.Ai
               </a>
+              <p className="text-xs text-gray-500 mt-1 italic">
+                "Your Launch Pad to the Tools That Power Your Story."
+              </p>
             </div>
             <p className="text-xs text-script-muted mt-2 max-w-md">
               The ultimate all-in-one AI suite for creating professional movie content from concept to final production.
