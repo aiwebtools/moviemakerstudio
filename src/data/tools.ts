@@ -1,3 +1,4 @@
+
 export interface Tool {
   name: string;
   url: string;
@@ -10,6 +11,7 @@ export const animationTools: Tool[] = [
   { name: "Higgsfield", url: "https://higgsfield.ai/" },
   { name: "RunwayML", url: "https://runwayml.com/" },
   { name: "PIKA LABS", url: "https://pika.art/" },
+  { name: "Luma Labs", url: "https://lumalabs.ai/dream-machine" },
   { name: "Google Veo 2", url: "https://aistudio.google.com/generate-video" },
   { name: "Google Flow (Veo 3)", url: "https://labs.google/fx/tools/flow" },
 ];
