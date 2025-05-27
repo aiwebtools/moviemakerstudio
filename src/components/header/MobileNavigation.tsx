@@ -40,7 +40,7 @@ export default function MobileNavigation({
 
   return (
     <div className={cn(
-      "fixed top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-50 border-t-0",
+      "absolute top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-40 border-t-0",
       isFacebookBrowser 
         ? "bg-script-bg" 
         : "bg-script-bg/95 backdrop-blur-md",
