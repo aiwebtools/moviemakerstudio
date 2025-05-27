@@ -58,6 +58,9 @@ export default function Header() {
               >
                 Presented by AiWebTools.Ai
               </a>
+              <p className="text-xs text-gray-500 mt-1 italic">
+                "Your Launch Pad to the Tools That Power Your Story."
+              </p>
             </div>
           </div>
           
