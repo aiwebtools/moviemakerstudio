@@ -40,12 +40,12 @@ export default function MobileNavigation({
 
   return (
     <div className={cn(
-      "absolute top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-40 border-t-0",
+      "absolute top-[60px] left-0 right-0 shadow-lg transition-all duration-300 overflow-hidden z-20 border-t-0 pointer-events-none",
       isFacebookBrowser 
         ? "bg-script-bg" 
         : "bg-script-bg/95 backdrop-blur-md",
       isOpen 
-        ? "max-h-screen py-2 animate-fade-in" 
+        ? "max-h-screen py-2 animate-fade-in pointer-events-auto" 
         : "max-h-0 animate-fade-out"
     )}>
       <div className="w-full px-3 flex flex-col space-y-2 pb-3">
