@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -54,11 +55,23 @@ export default function Header() {
             <Clapperboard className="h-8 w-8 md:h-10 md:w-10 text-script-accent mr-2" />
             <div className="flex flex-col items-start">
               <span className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight group">
-                MOVIE MAKER <span className="text-script-accent group-hover:animate-pulse-glow">AITOOLS.STUDIO</span>
+                MOVIE MAKER <a 
+                  href="https://www.aiwebtools.ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-script-accent group-hover:animate-pulse-glow hover:underline"
+                >
+                  AITOOLS.STUDIO
+                </a>
               </span>
-              <span className="text-xs text-gray-400">
+              <a 
+                href="https://www.aiwebtools.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 hover:text-script-accent transition-colors hover:underline"
+              >
                 Presented By AiWebTools.Ai
-              </span>
+              </a>
             </div>
           </div>
           

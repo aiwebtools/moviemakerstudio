@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { Clapperboard, Film, BookText, PenTool, Video, Sparkles, Music, Image, Headphones, Scissors } from "lucide-react";
 import AnimationSoundTools from "@/components/header/AnimationSoundTools";
 import { animationTools, soundTools, lipsyncTools, editingTools } from "@/data/tools";
@@ -14,16 +15,23 @@ export default function Footer() {
               <div className="flex items-center">
                 <Clapperboard className="h-6 w-6 md:h-8 md:w-8 text-script-accent mr-2" />
                 <span className="text-base font-bold font-display tracking-tight group">
-                  MOVIE Maker <span className="text-script-accent group-hover:animate-pulse-glow">Studio</span>
+                  MOVIE MAKER <a 
+                    href="https://www.aiwebtools.ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-script-accent group-hover:animate-pulse-glow hover:underline"
+                  >
+                    AITOOLS.STUDIO
+                  </a>
                 </span>
               </div>
               <a 
                 href="https://www.aiwebtools.ai" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-xs text-gray-400 hover:text-script-accent transition-colors"
+                className="text-xs text-gray-400 hover:text-script-accent transition-colors hover:underline"
               >
-                Presented by AiWebTools.Ai
+                Presented By AiWebTools.Ai
               </a>
               <p className="text-xs text-gray-500 mt-1 italic">
                 "Your Launch Pad to the Tools That Power Your Story."
