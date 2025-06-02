@@ -1,10 +1,9 @@
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function MouseSpotlight() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
-  const spotlightRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -16,59 +15,55 @@ export default function MouseSpotlight() {
       setIsVisible(false);
     };
 
-    const handleMouseEnter = () => {
-      setIsVisible(true);
-    };
-
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseenter', handleMouseEnter);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('mouseenter', handleMouseEnter);
     };
   }, []);
 
   return (
     <div
-      ref={spotlightRef}
-      className={`fixed top-0 left-0 w-96 h-96 pointer-events-none z-50 transition-opacity duration-300 ${
+      className={`fixed inset-0 pointer-events-none z-30 transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       style={{
-        transform: `translate(${mousePosition.x - 192}px, ${mousePosition.y - 192}px)`,
-        background: `radial-gradient(circle at center, 
-          rgba(255, 255, 255, 0.15) 0%, 
-          rgba(255, 255, 255, 0.08) 20%, 
-          rgba(229, 9, 20, 0.05) 40%, 
-          transparent 70%)`,
-        filter: 'blur(1px)',
+        background: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, 
+          rgba(255, 255, 255, 0.1) 0%, 
+          rgba(255, 255, 255, 0.05) 20%, 
+          rgba(229, 9, 20, 0.03) 40%, 
+          transparent 60%)`,
         mixBlendMode: 'screen',
       }}
     >
-      {/* Inner bright core */}
+      {/* Inner bright spotlight */}
       <div
-        className="absolute top-1/2 left-1/2 w-32 h-32 transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute w-32 h-32 rounded-full"
         style={{
-          background: `radial-gradient(circle at center, 
-            rgba(255, 255, 255, 0.3) 0%, 
-            rgba(255, 255, 255, 0.1) 50%, 
+          left: mousePosition.x - 64,
+          top: mousePosition.y - 64,
+          background: `radial-gradient(circle, 
+            rgba(255, 255, 255, 0.2) 0%, 
+            rgba(255, 255, 255, 0.1) 30%, 
+            rgba(255, 255, 255, 0.05) 60%, 
             transparent 100%)`,
-          filter: 'blur(0.5px)',
+          filter: 'blur(8px)',
         }}
       />
       
       {/* Outer glow */}
       <div
-        className="absolute top-1/2 left-1/2 w-80 h-80 transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute w-96 h-96 rounded-full"
         style={{
-          background: `radial-gradient(circle at center, 
-            rgba(229, 9, 20, 0.08) 0%, 
-            rgba(229, 9, 20, 0.03) 30%, 
-            transparent 70%)`,
-          filter: 'blur(2px)',
+          left: mousePosition.x - 192,
+          top: mousePosition.y - 192,
+          background: `radial-gradient(circle, 
+            rgba(229, 9, 20, 0.06) 0%, 
+            rgba(229, 9, 20, 0.02) 50%, 
+            transparent 80%)`,
+          filter: 'blur(20px)',
         }}
       />
     </div>
