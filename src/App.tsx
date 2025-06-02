@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingButton from './components/FloatingButton';
 import MouseSpotlight from './components/MouseSpotlight';
+import DivineBackground from './components/DivineBackground';
 import { Toaster } from "@/components/ui/sonner";
 import DisclaimerDialog from './components/DisclaimerDialog';
 import './App.css';
@@ -15,6 +16,7 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <DivineBackground />
       <DisclaimerDialog />
       <MouseSpotlight />
       <Header />
