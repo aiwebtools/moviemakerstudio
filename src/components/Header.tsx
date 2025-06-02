@@ -60,7 +60,11 @@ export default function Header() {
                   href="https://www.aiwebtools.ai" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-script-accent group-hover:animate-pulse-glow hover:underline"
+                  className="text-transparent bg-gradient-to-r from-yellow-300 via-gold-400 to-yellow-500 bg-clip-text animate-gradient-x bg-size-200 hover:from-yellow-200 hover:via-gold-300 hover:to-yellow-400 transition-all duration-300 relative"
+                  style={{
+                    textShadow: '0 0 20px rgba(251, 191, 36, 0.8), 0 0 40px rgba(251, 191, 36, 0.6), 0 0 60px rgba(251, 191, 36, 0.4)',
+                    filter: 'drop-shadow(0 0 15px rgba(251, 191, 36, 0.8))',
+                  }}
                 >
                   AITOOLS.STUDIO
                 </a>
