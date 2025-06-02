@@ -57,7 +57,8 @@ export const BackgroundEffects = ({
   
   return (
     <>
-      <div className="absolute inset-0 bg-black opacity-95 z-0"></div>
+      {/* Reduced black overlay opacity to let divine background show through */}
+      <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
       
       {/* Hollywood-style spotlights */}
       {!isFacebookBrowser && !isMobile && (
@@ -71,33 +72,33 @@ export const BackgroundEffects = ({
             return (
               <div 
                 key={index}
-                className="absolute origin-bottom z-0 opacity-15"
+                className="absolute origin-bottom z-0 opacity-20"
                 style={{
                   left: `calc(${spotlight.x}% + ${xOffset}px)`,
                   bottom: '0',
                   width: `${spotlight.size}px`,
                   height: `${spotlight.size * 2}px`,
-                  background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%)',
+                  background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%)',
                   transform: `rotate(${rotation}deg) translateY(${yOffset}px)`,
                   transition: 'transform 0.5s ease-out',
-                  pointerEvents: 'none', // Make sure spotlights don't interfere with UI interactions
+                  pointerEvents: 'none',
                 }}
               ></div>
             );
           })}
           
           {/* Subtle grid pattern */}
-          <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
             <div className="absolute h-full w-full bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
           </div>
           
-          {/* Glow effects */}
+          {/* Enhanced glow effects */}
           <div 
-            className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/5 blur-[80px] animate-pulse-subtle z-0 pointer-events-none"
+            className="absolute top-1/4 right-1/4 w-60 h-60 rounded-full bg-script-accent/8 blur-[80px] animate-pulse-subtle z-0 pointer-events-none"
             style={parallaxStyle}
           ></div>
           <div 
-            className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/5 blur-[60px] animate-pulse-subtle z-0 pointer-events-none"
+            className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full bg-blue-500/8 blur-[60px] animate-pulse-subtle z-0 pointer-events-none"
             style={{
               transform: isFacebookBrowser || isMobile ? 'none' : `translate(${cursorPosition.x * 30}px, ${cursorPosition.y * 30}px)`,
               animationDelay: '0.5s'
@@ -106,8 +107,9 @@ export const BackgroundEffects = ({
         </>
       )}
       
+      {/* For Facebook browser/mobile, use a lighter overlay */}
       {(isFacebookBrowser || isMobile) && (
-        <div className="absolute inset-0 bg-black z-0"></div>
+        <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
       )}
     </>
   );
