@@ -30,10 +30,10 @@ export default function FloatingButton() {
       className="fixed bottom-4 right-4 z-50 animate-fade-in"
     >
       <Button 
-        className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 group rounded-full px-6 py-3 h-auto"
+        className="bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 group px-4 py-2 rounded-xl min-w-0 whitespace-nowrap"
       >
-        <span>MORE AI WEB TOOLS</span>
-        <ExternalLink className="h-4 w-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
+        <span className="text-sm font-medium">MORE AI WEB TOOLS</span>
+        <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-0.5 transition-transform flex-shrink-0" />
       </Button>
     </a>
   );
