@@ -24,8 +24,8 @@ export default function DivineBackground() {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
-      {/* Main divine gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-950 via-violet-950 to-indigo-950 animate-gradient-slow bg-size-200" />
+      {/* Main divine gradient background - removed all purple/violet */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-gray-950 via-indigo-950 to-slate-950 animate-gradient-slow bg-size-200" />
       
       {/* Moving divine light rays */}
       <div className="absolute inset-0">
@@ -52,7 +52,7 @@ export default function DivineBackground() {
         ))}
       </div>
       
-      {/* Divine orbs - removed purple ones and kept only subtle gold */}
+      {/* Divine orbs - only gold ones */}
       <div className="absolute top-1/4 left-1/6 w-32 h-32 rounded-full bg-gradient-radial from-gold-400/5 to-transparent blur-xl animate-float" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-20 h-20 rounded-full bg-gradient-radial from-gold-400/3 to-transparent blur-md animate-float" style={{ animationDelay: '5s' }} />
       
