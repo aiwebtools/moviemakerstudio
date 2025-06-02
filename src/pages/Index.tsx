@@ -7,6 +7,7 @@ import StepByStepGuide from '@/components/StepByStepGuide';
 import ProcessSection from '@/components/ProcessSection';
 import ExampleSection from '@/components/ExampleSection';
 import Footer from '@/components/Footer';
+import FloatingButton from '@/components/FloatingButton';
 
 // Add animation styles
 import './animationStyles.css';
@@ -72,6 +73,8 @@ const Index = () => {
           <ExampleSection />
         </section>
       </main>
+      
+      <FloatingButton />
     </div>
   );
 }
