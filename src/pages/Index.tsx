@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import StepByStepGuide from '@/components/StepByStepGuide';
 import ProcessSection from '@/components/ProcessSection';
 import ExampleSection from '@/components/ExampleSection';
 import Footer from '@/components/Footer';
@@ -53,6 +54,12 @@ const Index = () => {
           <FeaturesSection />
           {/* Divine separator */}
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent" />
+        </section>
+        
+        <section className="relative py-8 md:py-16">
+          <StepByStepGuide />
+          {/* Divine separator */}
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/30 to-transparent" />
         </section>
         
         <section className="relative py-8 md:py-16">
