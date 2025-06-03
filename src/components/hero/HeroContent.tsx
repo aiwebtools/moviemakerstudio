@@ -11,10 +11,10 @@ export const HeroContent = ({ loaded }: HeroContentProps) => {
         ✨ Complete AI-Powered Filmmaking Suite ✨
       </span>
       
-      {/* Divine title with enhanced glow */}
+      {/* SEO-optimized title with H1 tag */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-display mb-6 tracking-tight">
         <span className="block text-transparent bg-gradient-to-r from-white via-gold-200 to-white bg-clip-text drop-shadow-2xl animate-pulse-subtle">
-          Your Complete
+          AI Web Tools - Your Complete
         </span>
         <br className="hidden sm:block" />
         <span className="block text-transparent bg-gradient-to-r from-gold-300 via-yellow-200 via-gold-400 to-purple-300 bg-size-200 animate-gradient-x bg-clip-text drop-shadow-2xl">
@@ -22,14 +22,20 @@ export const HeroContent = ({ loaded }: HeroContentProps) => {
         </span>
       </h1>
       
-      {/* Divine description with enhanced styling */}
+      {/* SEO-optimized description with keywords */}
       <div className="relative mb-8">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/10 to-transparent blur-xl" />
         <p className="relative text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
           <span className="text-transparent bg-gradient-to-r from-gray-200 via-white via-gold-200 to-gray-200 bg-size-200 animate-gradient-slow bg-clip-text font-medium">
-            The most powerful AI filmmaking suite that guides you through every step of the movie creation process, from script to screen.
+            The most powerful collection of <strong>free AI tools</strong> and <strong>AI web tools</strong> that guides you through every step of the movie creation process, from script to screen.
           </span>
         </p>
+      </div>
+      
+      {/* Hidden SEO content for additional keywords */}
+      <div className="sr-only">
+        <h2>Best Free AI Tools Collection</h2>
+        <p>AiWebTools.ai offers the most comprehensive suite of artificial intelligence tools for content creators, filmmakers, and digital artists. Our AI tools include movie script writers, video generators, sound effect creators, and more.</p>
       </div>
     </div>
   );
