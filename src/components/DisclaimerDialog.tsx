@@ -66,6 +66,18 @@ export default function DisclaimerDialog() {
                 <li>Not infringe on copyrights or intellectual property</li>
                 <li>Take full responsibility for your content and its usage</li>
               </ul>
+              
+              <p className="text-xs">
+                <strong>Full Terms:</strong> For complete terms and disclaimers, visit{" "}
+                <a 
+                  href="https://aiwebtools.lovable.app/disclaimers" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-script-accent hover:underline"
+                >
+                  https://aiwebtools.lovable.app/disclaimers
+                </a>
+              </p>
             </div>
 
             <p className="font-semibold text-script-accent text-sm pt-2">
