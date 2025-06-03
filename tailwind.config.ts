@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -70,18 +71,6 @@ export default {
 					'muted': '#9CA3AF',
 					'highlight': '#2A2D3A',
 					'glow': '#E50914'
-				},
-				gold: {
-					50: '#fffdf7',
-					100: '#fffaeb',
-					200: '#fef3c7',
-					300: '#fde68a',
-					400: '#fbbf24',
-					500: '#f59e0b',
-					600: '#d97706',
-					700: '#b45309',
-					800: '#92400e',
-					900: '#78350f',
 				}
 			},
 			fontFamily: {
@@ -137,21 +126,6 @@ export default {
 				'rotate-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
-				},
-				'divine-glow': {
-					'0%, 100%': { 
-						boxShadow: '0 0 20px rgba(251, 191, 36, 0.5), 0 0 40px rgba(147, 51, 234, 0.3)',
-						opacity: '0.8'
-					},
-					'50%': { 
-						boxShadow: '0 0 40px rgba(251, 191, 36, 0.8), 0 0 80px rgba(147, 51, 234, 0.5)',
-						opacity: '1'
-					}
-				},
-				'celestial-float': {
-					'0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
-					'33%': { transform: 'translateY(-20px) rotate(2deg)' },
-					'66%': { transform: 'translateY(10px) rotate(-1deg)' }
 				}
 			},
 			animation: {
@@ -164,23 +138,19 @@ export default {
 				'pulse-subtle': 'pulse-subtle 3s infinite',
 				'pulse-glow': 'pulse-glow 2s infinite',
 				'float': 'float 6s ease-in-out infinite',
-				'rotate-slow': 'rotate-slow 20s linear infinite',
-				'divine-glow': 'divine-glow 4s ease-in-out infinite',
-				'celestial-float': 'celestial-float 8s ease-in-out infinite'
+				'rotate-slow': 'rotate-slow 20s linear infinite'
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
 				'elevation': '0 10px 30px -10px rgba(0, 0, 0, 0.3)',
 				'button': '0 4px 14px 0 rgba(0,0,0,0.10)',
-				'glow': '0 0 15px rgba(251, 191, 36, 0.7)',
-				'neon': '0 0 10px #fbbf24, 0 0 20px #fbbf24, 0 0 40px #fbbf24',
-				'divine': '0 0 30px rgba(251, 191, 36, 0.6), 0 0 60px rgba(147, 51, 234, 0.4)'
+				'glow': '0 0 15px rgba(229, 9, 20, 0.7)',
+				'neon': '0 0 10px #E50914, 0 0 20px #E50914, 0 0 40px #E50914'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'paper-texture': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMjQyNDI0Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDAgTDQgNCBNNCAwIEwwIDQiIHN0cm9rZT0iIzJBMkQzQSIgc3Ryb2tlLXdpZHRoPSIwLjUiPjwvcGF0aD4KPC9zdmc+')",
-				'dark-gradient': 'linear-gradient(to bottom, rgba(26, 31, 44, 0.8) 0%, rgba(26, 31, 44, 1) 100%)',
-				'divine-gradient': 'linear-gradient(135deg, rgba(79, 70, 229, 0.4) 0%, rgba(147, 51, 234, 0.4) 25%, rgba(168, 85, 247, 0.4) 50%, rgba(251, 191, 36, 0.3) 100%)'
+				'dark-gradient': 'linear-gradient(to bottom, rgba(26, 31, 44, 0.8) 0%, rgba(26, 31, 44, 1) 100%)'
 			}
 		}
 	},
