@@ -1,4 +1,3 @@
-
 export interface Tool {
   name: string;
   url: string;
@@ -14,6 +13,7 @@ export const animationTools: Tool[] = [
   { name: "Luma Labs", url: "https://lumalabs.ai/dream-machine" },
   { name: "Google Veo 2", url: "https://aistudio.google.com/generate-video" },
   { name: "⭐ Google Flow (Veo 3) - PICTURE AND SOUND!", url: "https://labs.google/fx/tools/flow" },
+  { name: "FREEPIK", url: "https://www.freepik.com" },
 ];
 
 export const soundTools: Tool[] = [
