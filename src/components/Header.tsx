@@ -122,6 +122,62 @@ export default function Header() {
               editingTools={editingTools}
               gptShortcuts={gptShortcuts}
             />
+
+            <a 
+              href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <Button 
+                size="sm"
+                variant="default"
+                className="bg-[#10B981] hover:bg-[#10B981]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 text-sm font-medium h-8 px-3"
+              >
+                Music Video Maker GPT
+              </Button>
+            </a>
+
+            <a 
+              href="https://chatgpt.com/g/g-681a201fe69c8191b99e1636be90139e-commercial-scene-maker-gpt" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <Button 
+                size="sm"
+                variant="default"
+                className="bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 text-sm font-medium h-8 px-3"
+              >
+                Commercial Scene Maker GPT
+              </Button>
+            </a>
+
+            <a 
+              href="https://screenplaywritergpt.lovable.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <Button 
+                size="sm"
+                variant="default"
+                className="bg-[#EC4899] hover:bg-[#EC4899]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 text-sm font-medium h-8 px-3"
+              >
+                ScreenPlay Writer GPT
+              </Button>
+            </a>
+
+            <a 
+              href="https://stagemasterai.lovable.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <Button 
+                size="sm"
+                variant="default"
+                className="bg-[#8B5CF6] hover:bg-[#8B5CF6]/90 shadow-glow hover:shadow-neon transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 text-sm font-medium h-8 px-3"
+              >
+                StageMaster AI Suite
+              </Button>
+            </a>
             
             <a 
               href="https://www.aiwebtools.ai" 

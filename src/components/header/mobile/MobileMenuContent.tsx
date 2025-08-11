@@ -102,6 +102,54 @@ export default function MobileMenuContent({
           </Button>
         </a>
         
+        <a 
+          href="https://musicvideomakergpt.lovable.app/?via=aiwebtools" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          onClick={onToggleMenu}
+          className="animate-fade-in" 
+          style={{animationDelay: '200ms'}}
+        >
+          <Button 
+            variant="default"
+            className="bg-[#10B981] hover:bg-[#10B981]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-1 text-xs sm:text-sm"
+          >
+            Music Video Maker GPT
+          </Button>
+        </a>
+
+        <a 
+          href="https://chatgpt.com/g/g-681a201fe69c8191b99e1636be90139e-commercial-scene-maker-gpt" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          onClick={onToggleMenu}
+          className="animate-fade-in" 
+          style={{animationDelay: '250ms'}}
+        >
+          <Button 
+            variant="default"
+            className="bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-1 text-xs sm:text-sm"
+          >
+            Commercial Scene Maker GPT
+          </Button>
+        </a>
+
+        <a 
+          href="https://screenplaywritergpt.lovable.app/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          onClick={onToggleMenu}
+          className="animate-fade-in" 
+          style={{animationDelay: '300ms'}}
+        >
+          <Button 
+            variant="default"
+            className="bg-[#EC4899] hover:bg-[#EC4899]/90 shadow-glow hover:shadow-neon w-full transition-all duration-300 transform hover:scale-[1.02] h-10 py-1 text-xs sm:text-sm"
+          >
+            ScreenPlay Writer GPT
+          </Button>
+        </a>
+        
         <Collapsible
           open={toolsOpen}
           onOpenChange={setToolsOpen}
