@@ -20,7 +20,7 @@ export default function MobileMenuOverlay({
       style={{ top: '60px' }}
     >
       <div className={cn(
-        "w-full h-full shadow-lg transition-all duration-300 border-t-0 relative",
+        "w-full h-full shadow-lg transition-all duration-300 border-t-0 relative flex flex-col overflow-hidden",
         isFacebookBrowser 
           ? "bg-script-bg" 
           : "bg-script-bg/95 backdrop-blur-md"

@@ -1,12 +1,12 @@
 
 import React, { useEffect, useState } from 'react';
-import Header from '@/components/Header';
+
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ProcessSection from '@/components/ProcessSection';
 import ToolsShowcase from '@/components/ToolsShowcase';
 import ExampleSection from '@/components/ExampleSection';
-import Footer from '@/components/Footer';
+
 
 // Add animation styles
 import './animationStyles.css';
@@ -41,7 +41,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      
       <main>
         <HeroSection />
         <FeaturesSection />
@@ -49,7 +49,7 @@ const Index = () => {
         <ToolsShowcase />
         <ExampleSection />
       </main>
-      <Footer />
+      
     </div>
   );
 }
