@@ -43,5 +43,6 @@ export const gptShortcuts: Tool[] = [
   { name: "Commercial Scene Maker GPT", url: "https://chatgpt.com/g/g-681a201fe69c8191b99e1636be90139e-commercial-scene-maker-gpt" },
   { name: "ScreenPlay Writer GPT", url: "https://screenplaywritergpt.lovable.app/" },
   { name: "StageMaster AI Suite", url: "https://stagemasterai.lovable.app/" },
+  { name: "TEXT TO VIDEO PROMPT GENERATORS", url: "https://texttovideoprompter.lovable.app/?via=aiwebtools" },
   { name: "⭐ VEO 3 PROMPT Generator", url: "https://chatgpt.com/g/g-682faef24c608191808180e89719cb09-veo3-text-to-video-prompt-maker" },
 ];
