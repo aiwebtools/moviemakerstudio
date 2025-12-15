@@ -83,7 +83,40 @@ export default function AnimationSoundTools({
         </AccordionTrigger>
         <AccordionContent className={isMobile ? "" : "px-2"}>
           <div className={`flex flex-col space-y-${isMobile ? '3' : '1'} ${isMobile ? 'py-2' : ''}`}>
-            {animationTools.map((tool, index) => (
+            {/* Top Rated Video Generation Tools */}
+            <div className="mb-2 pb-2 border-b border-yellow-500/30">
+              <span className="text-xs font-bold text-yellow-400 uppercase tracking-wide flex items-center gap-1 mb-2">
+                ⭐ Top Rated Video Generation Tools (Video + Sound)
+              </span>
+              <a 
+                href="https://www.sora.com"
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={`${isMobile ? 'text-sm' : 'px-3 py-2 rounded-md text-sm'} flex items-center transition-all duration-200 hover:translate-x-1 animate-fade-in mb-1 text-yellow-300 font-semibold hover:text-yellow-200`}
+                onClick={onItemClick}
+                style={{ 
+                  textShadow: '0 0 10px rgba(250, 204, 21, 0.5)',
+                  animation: 'pulse 2s infinite'
+                }}
+              >
+                <span className="mr-1">🏆</span> SORA 2 - Video + Sound Generation
+              </a>
+              <a 
+                href="https://labs.google/fx/tools/flow"
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={`${isMobile ? 'text-sm' : 'px-3 py-2 rounded-md text-sm'} flex items-center transition-all duration-200 hover:translate-x-1 animate-fade-in text-yellow-300 font-semibold hover:text-yellow-200`}
+                onClick={onItemClick}
+                style={{ 
+                  textShadow: '0 0 10px rgba(250, 204, 21, 0.5)',
+                  animation: 'pulse 2s infinite'
+                }}
+              >
+                <span className="mr-1">🏆</span> Google Veo 3 (Flow) - Video + Sound Generation
+              </a>
+            </div>
+            {/* Other Animation Tools */}
+            {animationTools.filter(tool => tool.name !== "SORA 2" && !tool.name.includes("Google Flow")).map((tool, index) => (
               <a 
                 key={tool.name}
                 href={tool.url} 
