@@ -4,7 +4,7 @@ export interface Tool {
 }
 
 export const animationTools: Tool[] = [
-  { name: "SORA", url: "https://www.sora.com" },
+  { name: "SORA 2", url: "https://www.sora.com" },
   { name: "KLING", url: "https://klingai.com" },
   { name: "HAILUO", url: "https://hailuoai.video/" },
   { name: "Higgsfield", url: "https://higgsfield.ai/" },

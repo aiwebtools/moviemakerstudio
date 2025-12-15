@@ -10,6 +10,8 @@ import {
   Scissors,
   Clapperboard,
   Wand2,
+  Trophy,
+  Award,
 } from "lucide-react";
 import {
   gptShortcuts,
@@ -96,6 +98,91 @@ function getDescription(name: string, category: "gpt"|"animation"|"lipsync"|"sou
   return defaults[category];
 }
 
+// Get today's date formatted
+const getTodayDate = () => {
+  const today = new Date();
+  return today.toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+};
+
+// Top Rated Tools Component
+function TopRatedTools() {
+  const topTools = [
+    {
+      name: "SORA 2",
+      url: "https://www.sora.com",
+      description: "OpenAI's revolutionary video generation model now with integrated sound. Generate cinematic video with synchronized audio in a single generation. Handles Steps 2-5 of your workflow.",
+      badge: "OpenAI"
+    },
+    {
+      name: "Google Veo 3 (Flow)",
+      url: "https://labs.google/fx/tools/flow",
+      description: "Google's next-generation video model with native audio generation. Create stunning visuals with perfectly matched sound effects and dialogue. Covers Steps 2-5 instantly.",
+      badge: "Google"
+    }
+  ];
+
+  return (
+    <div className="mb-12 animate-fade-in">
+      <div className="text-center mb-6">
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/40 rounded-full px-4 py-2 mb-4">
+          <Trophy className="h-5 w-5 text-yellow-400" />
+          <span className="text-yellow-300 font-semibold text-sm">Top Rated Video Generation Platforms</span>
+          <Award className="h-5 w-5 text-yellow-400" />
+        </div>
+        <p className="text-xs text-gray-400">
+          Voted #1 as of {getTodayDate()} - These tools generate video AND sound together, completing Steps 2-5 in one go!
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {topTools.map((tool) => (
+          <article key={tool.name} className="group">
+            <Card className="h-full bg-gradient-to-br from-yellow-500/10 via-amber-500/5 to-orange-500/10 border-2 border-yellow-500/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.3)] hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/5 to-transparent animate-pulse" />
+              <CardHeader className="pb-2 relative">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="inline-flex items-center gap-1 bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">
+                    <Trophy className="h-3 w-3" /> #1 RATED
+                  </span>
+                  <span className="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">{tool.badge}</span>
+                </div>
+                <CardTitle className="text-white text-xl flex items-center gap-2">
+                  <span className="text-2xl">🏆</span>
+                  <span className="text-yellow-300" style={{ textShadow: '0 0 20px rgba(250, 204, 21, 0.5)' }}>{tool.name}</span>
+                </CardTitle>
+                <CardDescription className="text-gray-200 mt-2 text-sm leading-relaxed">
+                  {tool.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-0 relative">
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded-full">✓ Video Generation</span>
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">✓ Sound Generation</span>
+                  <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">✓ All-in-One</span>
+                </div>
+              </CardContent>
+              <CardFooter className="pt-2 relative">
+                <a href={tool.url} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-400 hover:to-amber-400 text-black font-bold shadow-[0_0_20px_rgba(250,204,21,0.4)] hover:shadow-[0_0_30px_rgba(250,204,21,0.6)] transition-all">
+                    Launch {tool.name} →
+                  </Button>
+                </a>
+              </CardFooter>
+            </Card>
+          </article>
+        ))}
+      </div>
+      <p className="text-center text-xs text-gray-500 mt-4">
+        * Only manual editing (Step 5) still required after using these tools
+      </p>
+    </div>
+  );
+}
+
 type Section = {
   step: number;
   title: string;
@@ -159,6 +246,9 @@ export default function ToolsShowcase() {
             Every tool you need, organized by workflow steps. Tap a card to learn more and launch.
           </p>
         </header>
+
+        {/* Top Rated Tools Section */}
+        <TopRatedTools />
 
         {/* Sections */}
         <div className="space-y-10">
