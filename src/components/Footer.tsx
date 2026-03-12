@@ -117,7 +117,7 @@ export default function Footer() {
                   </Button>
                 </a>
                 
-                <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" 
+                <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" 
                    className="block mt-3">
                   <Button className="w-full justify-center bg-script-accent hover:bg-script-accent/90 shadow-glow hover:shadow-neon transition-all duration-300">
                     MORE AI TOOLS
