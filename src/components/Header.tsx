@@ -57,7 +57,7 @@ export default function Header() {
             <div className="flex flex-col items-start">
               <span className="text-sm sm:text-lg md:text-2xl font-bold font-display tracking-tight group">
                 MOVIE MAKER <a 
-                  href="https://www.aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-script-accent group-hover:animate-pulse-glow hover:underline"
