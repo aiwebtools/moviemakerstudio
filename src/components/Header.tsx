@@ -57,7 +57,7 @@ export default function Header() {
             <div className="flex flex-col items-start">
               <span className="text-sm sm:text-lg md:text-2xl font-bold font-display tracking-tight group">
                 MOVIE MAKER <a 
-                  href="https://www.aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-script-accent group-hover:animate-pulse-glow hover:underline"
@@ -66,7 +66,7 @@ export default function Header() {
                 </a>
               </span>
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[0.6rem] sm:text-xs text-gray-400 hover:text-script-accent transition-colors hover:underline"
@@ -180,9 +180,9 @@ export default function Header() {
             </a>
             
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
               className="flex items-center text-sm font-medium text-gray-300 hover:text-script-accent px-2 py-1 rounded-md hover:bg-white/5 transition-all duration-200 h-8"
             >
               MORE AI TOOLS
