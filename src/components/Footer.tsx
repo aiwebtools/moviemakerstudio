@@ -16,7 +16,7 @@ export default function Footer() {
                 <Clapperboard className="h-6 w-6 md:h-8 md:w-8 text-script-accent mr-2" />
                 <span className="text-base font-bold font-display tracking-tight group">
                   MOVIE MAKER <a 
-                    href="https://www.aiwebtools.ai" 
+                    href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-script-accent group-hover:animate-pulse-glow hover:underline"
