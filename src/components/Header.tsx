@@ -66,7 +66,7 @@ export default function Header() {
                 </a>
               </span>
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[0.6rem] sm:text-xs text-gray-400 hover:text-script-accent transition-colors hover:underline"
