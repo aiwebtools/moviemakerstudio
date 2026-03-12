@@ -24,7 +24,7 @@ export default function FloatingButton() {
   
   return (
     <a 
-      href="https://www.aiwebtools.ai" 
+      href="https://aiwebtools.lovable.app/?via=aiwebtools" 
       target="_blank" 
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 z-50 animate-fade-in"
